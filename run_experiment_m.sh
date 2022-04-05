@@ -4,11 +4,12 @@
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=8gb
 #SBATCH --nodes=1
-#SBATCH --output=run_experiment_m.log
+#SBATCH --output=/home/u26/ariesutiono/run_experiment_m.log
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=ariesutiono@email.arizona.edu
 #SBATCH --account=clu-ling
 #SBATCH --gres=gpu:1
+#SBATCH --time=00:30:00
 
 module load anaconda/2020
 conda init bash
