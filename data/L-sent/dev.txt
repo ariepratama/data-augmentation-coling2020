@@ -1,0 +1,202 @@
+
+HO B-test
+evaluation I-test
+
+
+DOCUSATE B-treatment
+SODIUM I-treatment
+100 O
+MG O
+PO O
+BID O
+PRN O
+IBUPROFEN B-treatment
+200-600 O
+MG O
+PO O
+Q4-6H O
+PRN O
+PAIN B-problem
+
+
+OB O
+Clinic O
+2 O
+weeks O
+and O
+6 O
+weeks O
+, O
+No O
+Known B-problem
+Allergies I-problem
+
+
+postdates B-problem
+pregnancy I-problem
+
+
+Responsible O
+After O
+Study O
+for O
+Causing O
+Admission O
+) O
+s O
+/ O
+p O
+NSVD B-problem
+
+
+Post B-problem
+dates I-problem
+
+
+Initial B-test
+newborn I-test
+exam I-test
+: O
+
+
+No O
+observed B-problem
+abnormalities I-problem
+
+
+Apgars B-test
+8,9 O
+
+
+Weight B-test
+: O
+
+
+Nothing O
+in O
+the O
+vagina O
+for O
+6 O
+weeks O
+- O
+no O
+tampons B-treatment
+, O
+no O
+douching B-treatment
+, O
+no O
+intercourse O
+. O
+
+
+If O
+you O
+experience O
+fever B-problem
+&gt; O
+100.4 O
+, O
+bleeding B-problem
+&gt; O
+1 O
+pad O
+/ O
+hour O
+, O
+foul B-problem
+smelling I-problem
+discharge I-problem
+, O
+abdominal B-problem
+pain I-problem
+, O
+or O
+other B-problem
+worrisome I-problem
+symptoms I-problem
+, O
+please O
+call O
+your O
+doctor O
+or O
+return O
+to O
+the O
+hospital O
+. O
+L B-problem
+SHOULDER I-problem
+INJ I-problem
+
+
+The O
+patient O
+was O
+given O
+printed O
+instructions O
+for O
+neck B-problem
+strains I-problem
+( O
+English O
+) O
+. O
+
+
+Left B-problem
+Shoulder I-problem
+/ I-problem
+Neck I-problem
+strain I-problem
+/ I-problem
+sprain I-problem
+. O
+
+
+Dilaudid B-treatment
+2mg O
+PO O
+x O
+1 O
+Flexeril B-treatment
+10 O
+mg O
+x O
+1 O
+
+
+Flexeril B-treatment
+10mg O
+TID O
+
+
+Take O
+codeine B-treatment
+prescribed O
+by O
+PCP O
+with O
+food O
+and O
+water O
+to O
+prevent O
+nausea B-problem
+and O
+constipation B-problem
+. O
+
+
+Do O
+not O
+drive O
+if O
+taking O
+flexeril B-treatment
+and O
+codeine B-treatment
+. O

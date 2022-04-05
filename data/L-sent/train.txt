@@ -1,0 +1,8606 @@
+
+C5-6 B-problem
+disc I-problem
+herniation I-problem
+with O
+cord B-problem
+compression I-problem
+and O
+myelopathy B-problem
+. O
+
+
+Microscopic B-treatment
+anterior I-treatment
+cervical I-treatment
+diskectomy I-treatment
+at I-treatment
+C5-6 I-treatment
+and O
+fusion B-treatment
+. O
+
+
+The O
+patient O
+is O
+a O
+63-year-old O
+female O
+with O
+a O
+three-year O
+history O
+of O
+bilateral B-problem
+hand I-problem
+numbness I-problem
+and O
+occasional B-problem
+weakness I-problem
+. O
+
+
+Within O
+the O
+past O
+year O
+, O
+these B-problem
+symptoms I-problem
+have O
+progressively O
+gotten O
+worse O
+, O
+to O
+encompass O
+also O
+her O
+feet O
+. O
+
+
+She O
+had O
+a B-test
+workup I-test
+by O
+her O
+neurologist O
+and O
+an B-test
+MRI I-test
+revealed O
+a B-problem
+C5-6 I-problem
+disc I-problem
+herniation I-problem
+with O
+cord B-problem
+compression I-problem
+and O
+a B-problem
+T2 I-problem
+signal I-problem
+change I-problem
+at O
+that O
+level O
+. O
+
+
+Significant O
+for O
+hypertension B-problem
+, O
+hyperlipidemia B-problem
+. O
+
+
+Lipitor B-treatment
+, O
+Flexeril B-treatment
+, O
+hydrochlorothiazide B-treatment
+and O
+Norvasc B-treatment
+. O
+
+
+She O
+has O
+no O
+known B-problem
+drug I-problem
+allergy I-problem
+. O
+
+
+She O
+had O
+a B-test
+Hoffman I-test
+&apos;s I-test
+sign I-test
+greater O
+on O
+the O
+right O
+than O
+the O
+left O
+and O
+she O
+had O
+10 B-problem
+beats I-problem
+of I-problem
+clonus I-problem
+in O
+the O
+right O
+foot O
+and O
+3-5 B-problem
+beats I-problem
+in I-problem
+the I-problem
+left I-problem
+foot I-problem
+. O
+
+
+She O
+had O
+hyperreflexia B-problem
+in O
+both O
+the O
+bilateral O
+upper O
+and O
+lower O
+extremities O
+. O
+
+
+The O
+patient O
+tolerated O
+a B-treatment
+C5-6 I-treatment
+ACDF I-treatment
+by O
+Dr. O
+Miezetri O
+Gach O
+quite O
+well O
+. O
+
+
+She O
+had O
+a B-test
+postoperative I-test
+CT I-test
+scan I-test
+that O
+revealed O
+partial B-problem
+decompression I-problem
+of I-problem
+the I-problem
+spinal I-problem
+canal I-problem
+and O
+good O
+placement O
+of O
+her B-treatment
+hardware I-treatment
+. O
+
+
+Immediately O
+postop O
+, O
+her B-test
+exam I-test
+only O
+improved O
+slightly O
+in O
+her B-problem
+hyperreflexia I-problem
+. O
+
+
+Her B-problem
+pain I-problem
+was O
+under O
+good O
+control O
+with O
+PO B-treatment
+pain I-treatment
+medications I-treatment
+and O
+she O
+was O
+deemed O
+suitable O
+for O
+discharge O
+. O
+
+
+The O
+patient O
+was O
+asked O
+to O
+call O
+Dr. O
+Miezetri O
+Gach O
+&apos;s O
+office O
+for O
+a O
+follow-up O
+appointment O
+and O
+wound B-test
+check I-test
+. O
+
+
+She O
+is O
+asked O
+to O
+call O
+with O
+any O
+fevers B-problem
+, O
+chills B-problem
+, O
+increasing B-problem
+weakness I-problem
+or O
+numbness B-problem
+or O
+any O
+bowel B-problem
+and I-problem
+bladder I-problem
+disruption I-problem
+. O
+
+
+1. O
+Colace B-treatment
+, O
+100 O
+mg O
+PO O
+bid O
+. O
+
+
+2. O
+Zantac B-treatment
+, O
+150 O
+mg O
+PO O
+bid O
+. O
+
+
+3. O
+Percocet B-treatment
+, O
+5/325 O
+, O
+1-2 O
+tabs O
+PO O
+q4-6h O
+prn O
+pain B-problem
+. O
+
+
+4. O
+Lipitor B-treatment
+, O
+10 O
+mg O
+PO O
+daily O
+. O
+
+
+5. O
+Hydrochlorothiazide B-treatment
+, O
+25 O
+mg O
+PO O
+daily O
+. O
+
+
+6. O
+Norvasc B-treatment
+, O
+5 O
+mg O
+PO O
+daily O
+. O
+L B-problem
+SHOULDER I-problem
+INJ I-problem
+
+
+The O
+patient O
+was O
+given O
+printed O
+instructions O
+for O
+neck B-problem
+strains I-problem
+( O
+English O
+) O
+. O
+
+
+Left B-problem
+Shoulder I-problem
+/ I-problem
+Neck I-problem
+strain I-problem
+/ I-problem
+sprain I-problem
+. O
+
+
+Dilaudid B-treatment
+2mg O
+PO O
+x O
+1 O
+Flexeril B-treatment
+10 O
+mg O
+x O
+1 O
+
+
+Flexeril B-treatment
+10mg O
+TID O
+
+
+Take O
+codeine B-treatment
+prescribed O
+by O
+PCP O
+with O
+food O
+and O
+water O
+to O
+prevent O
+nausea B-problem
+and O
+constipation B-problem
+. O
+
+
+Do O
+not O
+drive O
+if O
+taking O
+flexeril B-treatment
+and O
+codeine B-treatment
+. O
+NEAR B-problem
+SYNCOPE I-problem
+Standardized O
+Discharge O
+Instructions O
+: O
+
+
+The O
+patient O
+was O
+given O
+printed O
+instructions O
+for O
+dizziness B-problem
+( O
+English O
+) O
+. O
+
+
+near B-problem
+syncope I-problem
+, O
+dehydration B-problem
+vs O
+cardiogenic B-problem
+
+
+IVF B-treatment
+, O
+cbc B-test
+( O
+hct B-test
+36 O
+) O
+, O
+normal O
+chem O
+7 O
+, O
+negative O
+cardiac O
+enzymes O
+, O
+negative O
+stool O
+guaiac O
+, O
+normal O
+CXR O
+
+
+Dr. O
+Foutchner O
+will O
+arrange O
+for O
+an B-test
+outpatient I-test
+Holter I-test
+monitor I-test
+. O
+
+
+The O
+patient O
+is O
+to O
+return O
+to O
+the O
+ED O
+for O
+recurrent B-problem
+dizziness I-problem
+, O
+chest B-problem
+pain I-problem
+, O
+shortness B-problem
+of I-problem
+breath I-problem
+or O
+weakness B-problem
+. O
+COPD B-problem
+flare I-problem
+
+
+ACETYLSALICYLIC B-treatment
+ACID I-treatment
+81 O
+MG O
+PO O
+DAILY O
+ALBUTEROL B-treatment
+NEBULIZER I-treatment
+2.5 O
+MG O
+NEB O
+Q4H O
+Starting O
+Today O
+( O
+03/17 O
+) O
+PRN O
+Shortness B-problem
+of I-problem
+Breath I-problem
+LISINOPRIL B-treatment
+10 O
+MG O
+PO O
+DAILY O
+NIFEREX-150 B-treatment
+150 O
+MG O
+PO O
+BID O
+PREDNISONE B-treatment
+Taper I-treatment
+PO I-treatment
+Give O
+50 O
+mg O
+q O
+24 O
+h O
+X O
+1 O
+dose O
+( O
+s O
+) O
+, O
+then O
+Give O
+40 O
+mg O
+q O
+24 O
+h O
+X O
+1 O
+dose O
+( O
+s O
+) O
+, O
+then O
+Give O
+30 O
+mg O
+q O
+24 O
+h O
+X O
+1 O
+dose O
+( O
+s O
+) O
+, O
+then O
+Give O
+20 O
+mg O
+q O
+24 O
+h O
+X O
+1 O
+dose O
+( O
+s O
+) O
+, O
+then O
+Give O
+10 O
+mg O
+q O
+24 O
+h O
+X O
+1 O
+dose O
+( O
+s O
+) O
+, O
+then O
+Starting O
+Today O
+( O
+03/17 O
+) O
+CLARITIN B-treatment
+( I-treatment
+LORATADINE I-treatment
+) I-treatment
+10 O
+MG O
+PO O
+DAILY O
+
+
+Give O
+on O
+an O
+empty O
+stomach O
+( O
+give O
+1hr O
+before O
+or O
+2hr O
+after O
+food O
+) O
+SINGULAIR B-treatment
+( I-treatment
+MONTELUKAST I-treatment
+) I-treatment
+10 O
+MG O
+PO O
+BEDTIME O
+ADVAIR B-treatment
+DISKUS I-treatment
+500/50 I-treatment
+( I-treatment
+FLUTICASONE I-treatment
+PROPIONATE/... I-treatment
+) I-treatment
+1 O
+PUFF O
+INH O
+BID O
+CALTRATE B-treatment
++ I-treatment
+D I-treatment
+1 O
+TAB O
+PO O
+BID O
+LANTUS B-treatment
+( I-treatment
+INSULIN I-treatment
+GLARGINE I-treatment
+) I-treatment
+35 O
+UNITS O
+SC O
+QAM O
+DUONEB B-treatment
+( I-treatment
+ALBUTEROL I-treatment
+AND I-treatment
+IPRATROPIUM I-treatment
+NEBULIZER I-treatment
+) I-treatment
+3/0.5 O
+MG O
+NEB O
+Q6H O
+Starting O
+Today O
+( O
+03/17 O
+) O
+PRN O
+Shortness B-problem
+of I-problem
+Breath I-problem
+, O
+Wheezing B-problem
+NOVOLOG B-treatment
+( I-treatment
+INSULIN I-treatment
+ASPART I-treatment
+) I-treatment
+4 O
+UNITS O
+SC O
+AC O
+
+
+standing B-treatment
+pre-meal I-treatment
+novolog I-treatment
+. O
+
+
+NOVOLOG B-treatment
+( I-treatment
+INSULIN I-treatment
+ASPART I-treatment
+) I-treatment
+Sliding O
+Scale O
+( O
+subcutaneously O
+) O
+SC O
+AC O
+
+
+give O
+in O
+addition O
+to O
+standing B-treatment
+pre-meal I-treatment
+novolog I-treatment
+when O
+patient O
+will O
+eat O
+and O
+food O
+is O
+in O
+the O
+room O
+. O
+
+
+If O
+BS B-test
+is O
+less O
+than O
+125 O
+, O
+then O
+give O
+0 O
+units O
+subcutaneously O
+If O
+BS B-test
+is O
+125-150 O
+, O
+then O
+give O
+2 O
+units O
+subcutaneously O
+If O
+BS B-test
+is O
+151-200 O
+, O
+then O
+give O
+3 O
+units O
+subcutaneously O
+If O
+BS B-test
+is O
+201-250 O
+, O
+then O
+give O
+4 O
+units O
+subcutaneously O
+If O
+BS B-test
+is O
+251-300 O
+, O
+then O
+give O
+6 O
+units O
+subcutaneously O
+If O
+BS B-test
+is O
+301-350 O
+, O
+then O
+give O
+8 O
+units O
+subcutaneously O
+If O
+BS B-test
+is O
+351-400 O
+, O
+then O
+give O
+10 O
+units O
+subcutaneously O
+and O
+call O
+HO O
+Call O
+HO O
+if O
+BS B-test
+is O
+greater O
+than O
+400 O
+PROTONIX B-treatment
+( I-treatment
+PANTOPRAZOLE I-treatment
+) I-treatment
+40 O
+MG O
+PO O
+DAILY O
+COMBIVENT B-treatment
+( I-treatment
+IPRATROPIUM I-treatment
+AND I-treatment
+ALBUTEROL I-treatment
+SULFATE I-treatment
+) I-treatment
+2 O
+PUFF O
+INH O
+QID O
+FOSAMAX B-treatment
+( I-treatment
+ALENDRONATE I-treatment
+) I-treatment
+70 O
+MG O
+PO O
+QWEEK O
+
+
+Take O
+with O
+8 O
+oz O
+of O
+plain O
+water O
+SPIRIVA B-treatment
+( I-treatment
+TIOTROPIUM I-treatment
+) I-treatment
+18 O
+
+
+walk O
+with O
+assist O
+per O
+PT B-test
+eval I-test
+
+
+COPD B-problem
+flare I-problem
+
+
+Responsible O
+After O
+Study O
+for O
+Causing O
+Admission O
+) O
+COPD B-problem
+flare I-problem
+
+
+COPD B-problem
+( I-problem
+chronic I-problem
+obstructive I-problem
+pulmonary I-problem
+disease I-problem
+) I-problem
+DM B-problem
+cervical B-problem
+DJD I-problem
+( O
+) O
+iron B-problem
+deficiency I-problem
+anemia I-problem
+( I-problem
+iron I-problem
+deficiency I-problem
+anemia I-problem
+) I-problem
+cervical B-problem
+and I-problem
+lumbar I-problem
+djd I-problem
+( O
+12 O
+) O
+osa B-problem
+( I-problem
+sleep I-problem
+apnea I-problem
+) I-problem
+s O
+/ O
+p O
+tb B-treatment
+treatment I-treatment
+( O
+5 O
+) O
+
+
+weakness B-problem
+
+
+75 O
+y O
+/ O
+o O
+F O
+with O
+DM B-problem
+, O
+COPD B-problem
+on O
+2L B-treatment
+NC I-treatment
+and O
+Bipap B-treatment
+at O
+night O
+p O
+/ O
+w O
+generalized B-problem
+weakness I-problem
+and O
+fatigue B-problem
+, O
+urinary B-problem
+incontinence I-problem
+and O
+shaking B-problem
+as O
+well O
+as O
+increased B-problem
+sputum I-problem
+production I-problem
+. O
+
+
+Per O
+daughter O
+these B-problem
+symptoms I-problem
+are O
+typical O
+of O
+COPD B-problem
+flare I-problem
+. O
+
+
+REc&apos;d O
+duonebs B-treatment
+, O
+solumedrol B-treatment
+125 O
+
+
+t97.5 O
+, O
+hr B-test
+117 O
+, O
+bp156/81 O
+, O
+rr28 O
+, O
+o2 B-test
+sats I-test
+87% O
+RA O
+; O
+95% O
+4L O
+
+
+NAD B-problem
+, O
+pleasant O
+, O
+speaking O
+in O
+complete O
+sentences O
+, O
+poor B-problem
+air I-problem
+movement I-problem
+bilaterally I-problem
+, O
+L O
+&gt; O
+R O
+, O
+no O
+wheezes B-problem
+or O
+rales B-problem
+, O
+rrr O
+, O
+distant O
+, O
+abd O
+benign O
+, O
+no O
+edema B-problem
+, O
+alert O
+and O
+oriented O
+times O
+three O
+, O
+no O
+focal B-problem
+deficits I-problem
+, O
+conversant O
+Studies O
+: O
+
+
+- O
+EKG B-test
+sinus O
+92 O
+, O
+no O
+ST B-problem
+changes I-problem
+
+
+- O
+CXR B-test
+no O
+focal B-problem
+consolidation I-problem
+or O
+edema B-problem
+, O
+old B-problem
+biapical I-problem
+scarring I-problem
+ABG B-test
+7.34/79/74 O
+U B-test
+/ I-test
+A I-test
+negative O
+
+
+improving O
+, O
+but O
+still B-problem
+poor I-problem
+air I-problem
+movement I-problem
+, O
+diffusely B-problem
+wheezy I-problem
+on O
+exam B-test
+, O
+at O
+baseline O
+2L B-treatment
+o2 I-treatment
+requirement I-treatment
+
+
+75 O
+y O
+/ O
+o O
+F O
+with O
+h O
+/ O
+o O
+COPD B-problem
+c O
+/ O
+b O
+frequent B-problem
+exacerbations I-problem
+p O
+/ O
+w O
+typical B-problem
+flare I-problem
+symptoms I-problem
+. O
+
+
+CV O
+- O
+Ischemia B-problem
+ASA B-treatment
+, O
+lisinopril B-treatment
+Pump I-treatment
+no O
+evidence O
+of O
+failure B-problem
+
+
+Rhythm O
+Resp O
+- O
+COPD B-problem
+
+
+flare B-problem
+- O
+steroids B-treatment
+, O
+cont O
+prednisone B-treatment
+60 O
+, O
+taper O
+slowly O
+as O
+tolerated O
+, O
+duonebs B-treatment
+, O
+advair B-treatment
+, O
+singulair B-treatment
+, O
+spiriva B-treatment
+, O
+claritin B-treatment
+azithromycin B-treatment
+for O
+atypical B-problem
+bronchitis I-problem
+to O
+complete O
+a O
+5 O
+day O
+course O
+, O
+keep O
+o2 B-test
+sat I-test
+90-94 O
+, O
+home B-treatment
+nocturnal I-treatment
+CPAP I-treatment
+not O
+tolerated O
+in O
+house O
+, O
+does O
+well O
+on O
+nc B-treatment
+, O
+appears O
+ato O
+be O
+at O
+baseline O
+
+
+Cr B-test
+0.8 O
+, O
+stress B-problem
+incontinence I-problem
+by O
+symptoms B-problem
+with O
+increased B-problem
+cough I-problem
+, O
+no O
+evidence O
+of O
+uti B-problem
+, O
+cont O
+to O
+closely O
+monitor O
+
+
+GI O
+- O
+Bowel B-treatment
+regimen I-treatment
+
+
+Heme O
+- O
+Chronic B-problem
+Fe I-problem
+deficiency I-problem
+anemia I-problem
+, O
+cont O
+iron B-treatment
+
+
+Endo O
+- O
+DM B-problem
+on O
+insulin B-treatment
+with O
+steroids B-treatment
+
+
+ID O
+- O
+afebrile B-problem
+, O
+no O
+wbc B-test
+, O
+started O
+on O
+Azithromycin B-treatment
+for O
+COPD B-problem
+flare I-problem
+
+
+PPx O
+- O
+Lovenox B-treatment
+, O
+PPI B-treatment
+
+
+Dispo O
+- O
+to O
+rehab O
+when O
+resp B-problem
+status I-problem
+improved O
+, O
+PT O
+consulted O
+
+
+f O
+/ O
+u O
+with O
+PCP O
+and O
+Dr. O
+Pump O
+as O
+scheduled O
+, O
+return O
+to O
+ED O
+with O
+worsening B-problem
+sob I-problem
+or O
+increased B-problem
+cough I-problem
+or O
+sputum B-problem
+production I-problem
+DIZZINESS B-problem
+
+
+The O
+patient O
+was O
+given O
+printed O
+instructions O
+for O
+dizziness B-problem
+( O
+English O
+) O
+. O
+
+
+Benign B-problem
+positional I-problem
+vertigo I-problem
+vs O
+labyrinthitis B-problem
+
+
+Head B-test
+CT I-test
+negative O
+. O
+
+
+Meclizine B-treatment
+25 O
+mg O
+po O
+bid O
+. O
+
+
+Return O
+to O
+ED O
+or O
+call O
+PCP O
+if O
+symptoms B-problem
+worsen O
+or O
+if O
+fever B-problem
+with O
+headache B-problem
+. O
+SWOLLEN B-problem
+PAINFUL I-problem
+L I-problem
+SIDE I-problem
+FC I-problem
+
+
+L B-problem
+upper I-problem
+lip I-problem
+/ I-problem
+L I-problem
+nostril I-problem
+abscess I-problem
+
+
+5 O
+cc O
+of O
+purulent B-problem
+material I-problem
+drained O
+by O
+needle B-treatment
+aspiration I-treatment
+
+
+Augmentin B-treatment
+875 O
+mg O
+twice O
+a O
+day O
+for O
+10 O
+days O
+. O
+
+
+Return O
+immediately O
+for O
+worsening O
+signs O
+of O
+infection B-problem
+( O
+increased B-problem
+swelling I-problem
+, O
+pain B-problem
+, O
+redness B-problem
+) O
+or O
+for O
+any B-problem
+neurologic I-problem
+changes I-problem
+( O
+blurry B-problem
+or I-problem
+double I-problem
+vision I-problem
+, O
+headaches B-problem
+, O
+trouble B-problem
+walking I-problem
+, O
+etc O
+) O
+. O
+Right B-problem
+parietal I-problem
+occipital I-problem
+temporal I-problem
+tumor I-problem
+. O
+
+
+5/5/05 O
+right B-treatment
+parietal I-treatment
+occipital I-treatment
+craniotomy I-treatment
+and O
+debulking B-treatment
+of I-treatment
+tumor I-treatment
+using O
+stulz B-treatment
+neuro I-treatment
+navigation I-treatment
+. O
+
+
+The O
+patient O
+is O
+a O
+pleasant O
+83-year-old O
+retired O
+psychiatrist O
+who O
+presents O
+with O
+a O
+chief O
+complaint O
+of O
+gait B-problem
+difficulty I-problem
+for O
+the O
+last O
+five O
+to O
+six O
+months O
+. O
+
+
+The O
+patient O
+has O
+a O
+history O
+of O
+laryngeal B-problem
+cancer I-problem
+in O
+2000 O
+and O
+2001 O
+, O
+CVA B-problem
+in O
+2001 O
+to O
+2002 O
+and O
+hypertension B-problem
+, O
+who O
+has O
+a O
+six O
+month O
+history O
+of O
+progressive B-problem
+difficulty I-problem
+in I-problem
+ambulation I-problem
+. O
+
+
+The O
+patient O
+was O
+in O
+previously O
+good O
+health O
+when O
+he O
+reports O
+starting O
+to O
+notice O
+problems B-problem
+ambulating I-problem
+about O
+six O
+months O
+ago O
+. O
+
+
+His O
+partner O
+also O
+reports O
+that O
+he O
+has O
+been O
+having O
+more B-problem
+difficulty I-problem
+with I-problem
+ADLs I-problem
+. O
+
+
+He O
+reported O
+that O
+he O
+began O
+with O
+difficulty B-problem
+buttoning I-problem
+his I-problem
+shirt I-problem
+for O
+many O
+years O
+since O
+after O
+a B-problem
+stroke I-problem
+but O
+now O
+reports O
+that O
+on O
+occasion O
+she O
+would O
+ask O
+him O
+why O
+he O
+was O
+doing O
+certain O
+things O
+and O
+he O
+could O
+not O
+give O
+a O
+concrete O
+example O
+. O
+
+
+The O
+patient O
+was O
+having O
+a B-problem
+hard I-problem
+time I-problem
+walking I-problem
+and O
+reports O
+that O
+he O
+has O
+felt O
+weaker O
+. O
+
+
+He O
+has O
+had O
+uncoordination B-problem
+of I-problem
+his I-problem
+feet I-problem
+and O
+began O
+having O
+a B-treatment
+cane I-treatment
+four O
+to O
+five O
+months O
+ago O
+with O
+the B-problem
+increasing I-problem
+weakness I-problem
+. O
+
+
+The O
+patient O
+has O
+seen O
+his O
+primary O
+care O
+physician O
+who O
+referred O
+him O
+to O
+physical O
+therapy O
+for O
+his B-problem
+gait I-problem
+weakness I-problem
+but O
+his B-problem
+symptoms I-problem
+failed O
+to O
+improve O
+. O
+
+
+He O
+continued O
+to O
+progress O
+until O
+two O
+weeks O
+prior O
+to O
+admission O
+when O
+he O
+was O
+found O
+in O
+the O
+bathtub O
+, O
+unsteady B-problem
+and O
+fell O
+trying O
+to O
+steady O
+himself O
+. O
+
+
+Since O
+that O
+time O
+he O
+had O
+been O
+ambulating O
+with O
+a B-treatment
+walker I-treatment
+and O
+has O
+had O
+increasing B-problem
+difficulty I-problem
+with I-problem
+falls I-problem
+in O
+the O
+last O
+two O
+weeks O
+. O
+
+
+The O
+patient O
+was O
+again O
+seen O
+by O
+his O
+primary O
+care O
+physician O
+and O
+a B-test
+CG I-test
+scan I-test
+revealed O
+a B-problem
+mass I-problem
+in I-problem
+the I-problem
+right I-problem
+parietal I-problem
+lobe I-problem
+. O
+
+
+The O
+patient O
+was O
+referred O
+to O
+the O
+Neurology O
+Service O
+for O
+further B-test
+workup I-test
+of O
+the B-problem
+mass I-problem
+. O
+
+
+The O
+patient O
+denied O
+blurry B-problem
+vision I-problem
+, O
+headache B-problem
+, O
+nausea B-problem
+, O
+vomiting B-problem
+, O
+paresthesias B-problem
+, O
+pain B-problem
+in I-problem
+mental I-problem
+status I-problem
+, O
+confusion B-problem
+or O
+seizures B-problem
+. O
+
+
+The O
+patient O
+is O
+status O
+post O
+radiation B-treatment
+therapy I-treatment
+and O
+resection B-treatment
+and O
+reconstruction B-treatment
+for O
+his B-problem
+laryngeal I-problem
+cancer I-problem
+. O
+
+
+Positive B-problem
+weakness I-problem
+, O
+otherwise O
+negative O
+. O
+
+
+Hypertension B-problem
+, O
+CVA B-problem
+2001 O
+, O
+2002 O
+diabetes B-problem
+, O
+laryngeal B-problem
+cancer I-problem
+, O
+right B-treatment
+CEA I-treatment
+, O
+prostatectomy B-treatment
+for O
+BPH B-problem
+, O
+total B-treatment
+knee I-treatment
+replacement I-treatment
+, O
+status O
+post O
+appendectomy B-treatment
+. O
+
+
+Plavix B-treatment
+75 O
+mg O
+every O
+day O
+, O
+Lipitor B-treatment
+40 O
+mg O
+every O
+day O
+, O
+HCTZ B-treatment
+50 O
+mg O
+, O
+Monopril B-treatment
+10 O
+mg O
+every O
+day O
+, O
+Viagra B-treatment
+100 O
+mg O
+prn O
+. O
+
+
+NKDA B-problem
+. O
+
+
+Father O
+with O
+CAD B-problem
+at O
+90 O
+, O
+diabetes B-problem
+, O
+CVA B-problem
+, O
+hypercholesterolemia B-problem
+. O
+
+
+Afebrile B-problem
+, O
+vital B-test
+signs I-test
+stable O
+but O
+notable O
+for O
+a B-test
+blood I-test
+pressure I-test
+of O
+164/80 O
+. O
+
+
+Generally O
+a O
+well O
+developed O
+elderly O
+man O
+in O
+no O
+apparent B-problem
+distress I-problem
+sitting O
+in O
+bed O
+. O
+
+
+No O
+nystagmus B-problem
+. O
+
+
+No O
+retinal B-problem
+hemorrhages I-problem
+. O
+
+
+Moist O
+buccal O
+mucosa O
+, O
+poor B-problem
+dentition I-problem
+, O
+no O
+erythema B-problem
+or I-problem
+exudates I-problem
+in I-problem
+the I-problem
+posterior I-problem
+pharynx I-problem
+. O
+
+
+Prominent B-problem
+salivary I-problem
+glands I-problem
+bilaterally I-problem
+. O
+
+
+No O
+other B-problem
+masses I-problem
+or O
+thyromegaly B-problem
+noted O
+. O
+
+
+No O
+cervical B-problem
+, I-problem
+para-auricular I-problem
+or I-problem
+clavicular I-problem
+lymphadenopathy I-problem
+. O
+
+
+Crackles B-problem
+in I-problem
+the I-problem
+right I-problem
+lung I-problem
+field I-problem
+. O
+
+
+No O
+egophony B-problem
+. O
+
+
+no O
+palpable B-problem
+thrill I-problem
+or O
+heave B-problem
+. O
+
+
+3/6 B-problem
+systolic I-problem
+ejection I-problem
+murmur I-problem
+heard O
+best O
+at O
+the O
+apex O
+. O
+
+
+The O
+abdomen O
+was O
+soft O
+, O
+nontender B-problem
+, O
+nondistended B-problem
+, O
+positive O
+bowel O
+sounds O
+. O
+
+
+No O
+hepato B-problem
+or O
+splenomegaly B-problem
+. O
+
+
+Right B-problem
+lower I-problem
+quadrant I-problem
+scar I-problem
+and O
+inferior B-problem
+midline I-problem
+scar I-problem
+that O
+are O
+well O
+healed O
+. O
+
+
+No O
+CVA B-problem
+tenderness I-problem
+. O
+
+
+No O
+petechiae B-problem
+. O
+
+
+Cranial O
+nerves O
+II O
+through O
+XII O
+grossly O
+intact O
+with O
+a B-problem
+slight I-problem
+deviation I-problem
+of I-problem
+the I-problem
+uvula I-problem
+and I-problem
+tongue I-problem
+to O
+the O
+right O
+. O
+
+
+There O
+is O
+increased B-problem
+tone I-problem
+in I-problem
+his I-problem
+right I-problem
+upper I-problem
+extremity I-problem
+with O
+a B-problem
+slight I-problem
+left I-problem
+pronator I-problem
+drift I-problem
+. O
+
+
+The O
+patient O
+has O
+an B-problem
+intention I-problem
+tremor I-problem
+with I-problem
+the I-problem
+left I-problem
+hand I-problem
+. O
+
+
+White B-test
+blood I-test
+cell I-test
+count I-test
+on O
+admission O
+6.1 O
+, O
+INR B-test
+on O
+admission O
+1.0 O
+, O
+relevant B-test
+imaging I-test
+. O
+
+
+Echocardiogram B-test
+June O
+2004 O
+showed O
+an B-test
+EF I-test
+of O
+77% O
+. O
+
+
+Chest B-test
+xray I-test
+reveals O
+no O
+consolidation B-problem
+or O
+signs B-problem
+of I-problem
+edema I-problem
+. O
+
+
+CT B-test
+shows O
+a B-problem
+right I-problem
+parietal I-problem
+hyperdense I-problem
+and I-problem
+heterogenously I-problem
+enhancing I-problem
+mass I-problem
+measuring O
+6.5 O
+x O
+5 O
+cm O
+with O
+the B-problem
+surrounding I-problem
+vasogenic I-problem
+edema I-problem
+in O
+effacement O
+of O
+the O
+right O
+lateral O
+ventricle O
+. O
+
+
+The O
+finding O
+was O
+most O
+consistent O
+with O
+metastatic B-problem
+disease I-problem
+and O
+less O
+likely O
+primary B-problem
+CNS I-problem
+neoplasm I-problem
+such O
+as O
+glioblastoma B-problem
+. O
+
+
+MRI B-test
+showed O
+a B-problem
+large I-problem
+heterogenous I-problem
+enhancing I-problem
+right I-problem
+parietal I-problem
+mass I-problem
+lesion I-problem
+with O
+a O
+possible O
+ependymal B-problem
+spread I-problem
+. O
+
+
+The O
+patient O
+was O
+admitted O
+to O
+the O
+Neurologic O
+Service O
+for O
+workup B-test
+of O
+his B-problem
+tumor I-problem
+. O
+
+
+The O
+neuro-oncologist O
+felt O
+that O
+because O
+of O
+the B-problem
+tremendous I-problem
+tumor I-problem
+burden I-problem
+that O
+was O
+likely O
+causing O
+his B-problem
+symptoms I-problem
+the O
+patient O
+will O
+require O
+open B-treatment
+debulking I-treatment
+as O
+well O
+as O
+obtaining O
+issue O
+for O
+a B-test
+pathologic I-test
+diagnosis I-test
+. O
+
+
+On O
+May O
+5 O
+, O
+2005 O
+the O
+patient O
+was O
+taken O
+to O
+the O
+operating O
+room O
+for O
+a B-treatment
+right I-treatment
+parietal I-treatment
+occipital I-treatment
+craniotomy I-treatment
+and O
+debulking B-treatment
+of O
+the B-problem
+tumor I-problem
+using O
+stulz B-treatment
+neuro I-treatment
+navigation I-treatment
+. O
+
+
+Please O
+see O
+the O
+separately O
+dictated O
+operative O
+report O
+for O
+further O
+details O
+of O
+the B-treatment
+procedure I-treatment
+. O
+
+
+Of O
+note O
+the O
+patient O
+was O
+seen O
+by O
+cardiology O
+for O
+preoperative B-test
+assessment I-test
+. O
+
+
+A B-test
+postoperative I-test
+MRI I-test
+was O
+obtained O
+which O
+revealed O
+no O
+remarkable B-problem
+findings I-problem
+but O
+only O
+post B-problem
+surgical I-problem
+changes I-problem
+. O
+
+
+Transcranial B-test
+Dopplers I-test
+were O
+checked O
+following O
+surgery B-treatment
+and O
+the O
+patient O
+was O
+started O
+on O
+Decadron B-treatment
+4 O
+mg O
+q6 O
+to O
+prevent O
+swelling B-problem
+. O
+
+
+The O
+patient O
+was O
+started O
+on O
+Fragmin B-treatment
+for O
+DVT B-treatment
+prophylaxis I-treatment
+and O
+the O
+patient O
+was O
+also O
+started O
+on O
+Dilantin B-test
+levels I-test
+. O
+
+
+Of O
+note O
+on O
+5/9/05 O
+the O
+patient O
+was O
+seen O
+by O
+Urology O
+due O
+to O
+an B-problem
+inability I-problem
+to I-problem
+void I-problem
+and O
+a B-treatment
+16 I-treatment
+French I-treatment
+Coude I-treatment
+catheter I-treatment
+was O
+placed O
+. O
+
+
+The O
+patient O
+then O
+was O
+given O
+voiding B-treatment
+trials I-treatment
+but O
+eventually O
+he O
+needed O
+to O
+be O
+straight O
+cathed O
+prn O
+. O
+
+
+At O
+the O
+time O
+of O
+transfer O
+, O
+a B-treatment
+16 I-treatment
+Coude I-treatment
+catheter I-treatment
+was O
+in O
+place O
+and O
+draining O
+well O
+. O
+
+
+The O
+patient O
+can O
+have O
+voiding B-treatment
+trials I-treatment
+at O
+rehab O
+and O
+he O
+is O
+being O
+maintained O
+on O
+Flomax B-treatment
+. O
+
+
+The O
+patient O
+had O
+a O
+relatively O
+unremarkable O
+course O
+and O
+his O
+neurologic O
+status O
+continued O
+to O
+improve O
+following O
+the B-treatment
+operation I-treatment
+. O
+
+
+On O
+5/11/05 O
+repeat B-test
+imaging I-test
+revealed O
+some B-problem
+edema I-problem
+and O
+mass B-problem
+affect I-problem
+. O
+
+
+The O
+patient O
+was O
+given O
+an B-treatment
+IV I-treatment
+load I-treatment
+of I-treatment
+Decadron I-treatment
+and O
+restarted O
+on O
+IV B-treatment
+Decadron I-treatment
+which O
+was O
+eventually O
+transferred O
+to O
+po B-treatment
+Decadron I-treatment
+. O
+
+
+The O
+patient O
+was O
+also O
+started O
+on O
+Mannitol B-treatment
+. O
+
+
+His B-test
+pathology I-test
+came O
+back O
+as O
+a B-problem
+large I-problem
+grade I-problem
+IV I-problem
+glioma I-problem
+. O
+
+
+The B-problem
+patient I-problem
+&apos;s I-problem
+pain I-problem
+was O
+initially O
+controlled O
+with O
+IV B-treatment
+pain I-treatment
+medications I-treatment
+but O
+at O
+the O
+time O
+of O
+discharge O
+to O
+the O
+rehab O
+facility O
+he O
+was O
+able O
+to O
+control O
+his B-problem
+pain I-problem
+on O
+po B-treatment
+pain I-treatment
+medications I-treatment
+. O
+
+
+The O
+patient O
+did O
+have O
+a B-test
+postoperative I-test
+serum I-test
+sodium I-test
+in O
+the O
+120s O
+from O
+the O
+130s O
+three O
+days O
+postoperatively O
+. O
+
+
+An O
+endocrine O
+consult O
+was O
+obtained O
+to O
+help O
+manage O
+his B-test
+serum I-test
+electrolytes I-test
+. O
+
+
+The O
+patient O
+was O
+started O
+on O
+three O
+grams O
+of O
+sodium B-treatment
+, O
+3x O
+a O
+day O
+with O
+fluid B-treatment
+restriction I-treatment
+. O
+
+
+Over O
+the O
+next O
+several O
+days O
+his B-test
+sodium I-test
+levels I-test
+were O
+followed O
+and O
+by O
+5/12/05 O
+his B-test
+plasma I-test
+sodium I-test
+was O
+back O
+to O
+136 O
+. O
+
+
+The O
+patient O
+was O
+taken O
+off O
+fluid B-treatment
+restriction I-treatment
+. O
+
+
+On O
+5/14/05 O
+Mannitol B-treatment
+was O
+tapered O
+and O
+then O
+d O
+/ O
+c&apos;d. O
+
+
+At O
+the O
+time O
+of O
+transfer O
+the O
+patient O
+was O
+stable O
+and O
+needed O
+only O
+physical B-treatment
+and I-treatment
+occupational I-treatment
+therapy I-treatment
+. O
+
+
+The O
+patient O
+is O
+hard B-problem
+of I-problem
+hearing I-problem
+. O
+
+
+The O
+patient O
+had O
+no O
+complaints B-problem
+of I-problem
+pain I-problem
+. O
+
+
+1. O
+Lipitor B-treatment
+40 O
+mg O
+po O
+every O
+day O
+. O
+
+
+2. O
+Captopril B-treatment
+12.5 O
+mg O
+po O
+tid O
+. O
+
+
+3. O
+Nexium B-treatment
+40 O
+mg O
+po O
+every O
+day O
+. O
+
+
+4. O
+Colace B-treatment
+100 O
+mg O
+po O
+bid O
+. O
+
+
+5. O
+Ativan B-treatment
+0.5 O
+mg O
+po O
+q4 O
+hours O
+prn O
+for O
+anxiety B-problem
+. O
+
+
+6. O
+Allegra B-treatment
+60 O
+mg O
+po O
+bid O
+. O
+
+
+7. O
+Dilantin B-treatment
+100 O
+mg O
+IV O
+tid O
+which O
+can O
+be O
+changed O
+to O
+a B-treatment
+po I-treatment
+regimen I-treatment
+in O
+seven O
+days O
+. O
+
+
+8. O
+Zinc B-treatment
+220 O
+mg O
+po O
+every O
+day O
+. O
+
+
+9. O
+Vitamin B-treatment
+C I-treatment
+500 O
+mg O
+po O
+bid O
+. O
+
+
+10. O
+Flomax B-treatment
+0.4 O
+mg O
+po O
+every O
+day O
+. O
+
+
+11. O
+Fragmin B-treatment
+2500 O
+units O
+subcut O
+every O
+day O
+. O
+
+
+12. O
+Levofloxacin B-treatment
+500 O
+mg O
+po O
+q O
+daily O
+x10 O
+days O
+. O
+
+
+13. O
+Dexamethasone B-treatment
+4 O
+mg O
+po O
+q6 O
+hours O
+. O
+
+
+14. O
+The B-treatment
+steroid I-treatment
+will O
+be O
+kept O
+for O
+now O
+and O
+tapered O
+at O
+a O
+later O
+date O
+on O
+follow O
+up O
+with O
+Dr. O
+Coma O
+. O
+
+
+15. O
+Regular B-treatment
+insulin I-treatment
+sliding I-treatment
+scale I-treatment
+with O
+finger O
+sticks O
+qac O
+and O
+qhs O
+. O
+
+
+16. O
+Neutra-Phos B-treatment
+1.25 O
+grams O
+po O
+as O
+needed O
+. O
+
+
+The B-treatment
+staples I-treatment
+were O
+removed O
+prior O
+to O
+discharge O
+. O
+
+
+The O
+patient O
+is O
+asked O
+to O
+see O
+a O
+physician O
+immediately O
+or O
+go O
+to O
+the O
+nearest O
+emergency O
+room O
+if O
+any B-problem
+bleeding I-problem
+, O
+wound B-problem
+infection I-problem
+, O
+fever B-problem
+greater O
+than O
+100.8 O
+, O
+intractable B-problem
+nausea I-problem
+and I-problem
+vomiting I-problem
+, O
+headache B-problem
+, O
+dizziness B-problem
+, O
+numbness B-problem
+, O
+pain B-problem
+or O
+weakness B-problem
+occurs O
+. O
+
+
+The O
+patient O
+instructed O
+to O
+call O
+Dr. O
+Coma O
+&apos;s O
+office O
+at O
+496-260-3297 O
+to O
+arrange O
+for O
+a O
+follow O
+up O
+appointment O
+in O
+the O
+Saintaelfoote O
+Hospital O
+at O
+the O
+first O
+available O
+time O
+, O
+one O
+to O
+two O
+months O
+after O
+surgery B-treatment
+. O
+
+
+The O
+patient O
+is O
+asked O
+to O
+take O
+a O
+course O
+of O
+Dilantin B-treatment
+for O
+ten O
+more O
+days O
+. O
+Pancreatic B-problem
+carcinoma I-problem
+. O
+
+
+Laparoscopy B-test
+with O
+biopsy B-test
+for O
+diagnosis O
+. O
+
+
+Ms. O
+Sterpkoteneish O
+is O
+a O
+69-year-old O
+woman O
+, O
+who O
+over O
+the O
+past O
+six O
+months O
+has O
+noted O
+increasing B-problem
+pain I-problem
+in I-problem
+her I-problem
+left I-problem
+upper I-problem
+quadrant I-problem
+radiating O
+to O
+the O
+back O
+. O
+
+
+She O
+described O
+the B-problem
+pain I-problem
+as O
+being O
+exacerbated O
+by O
+eating O
+and O
+described O
+an B-problem
+associated I-problem
+weight I-problem
+loss I-problem
+. O
+
+
+She O
+presented O
+to O
+her O
+primary O
+care O
+physician O
+, O
+Dr. O
+Tlandtaze O
+, O
+in O
+Aersing O
+Rocuch O
+Sun O
+, O
+who O
+obtained O
+a B-test
+CT I-test
+scan I-test
+, O
+which O
+demonstrated O
+a B-problem
+mass I-problem
+in O
+the O
+tail O
+of O
+the O
+pancreas O
+. O
+
+
+She O
+was O
+then O
+referred O
+to O
+the O
+Fairm O
+of O
+Ijordcompmac O
+Hospital O
+under O
+the O
+El O
+Memorial O
+and O
+was O
+seen O
+by O
+Dr. O
+Blinjesc O
+, O
+who O
+scheduled O
+her O
+for O
+an B-test
+exploratory I-test
+laparoscopy I-test
+. O
+
+
+Is O
+significant O
+for O
+spinal B-problem
+stenosis I-problem
+and O
+a O
+series O
+of O
+operations B-treatment
+including O
+repair B-treatment
+of O
+a B-problem
+ureteral I-problem
+stricture I-problem
+; O
+cataract B-treatment
+implants I-treatment
+; O
+two B-treatment
+partial I-treatment
+hysterectomies I-treatment
+; O
+and O
+an B-treatment
+appendectomy I-treatment
+. O
+
+
+Oxycontin B-treatment
+10 O
+mg O
+PO O
+q.day O
+. O
+
+
+Darvocet B-treatment
+. O
+
+
+Estratab B-treatment
+. O
+
+
+Aspirin B-treatment
+325 O
+mg O
+PO O
+q.day O
+. O
+
+
+No O
+known B-problem
+drug I-problem
+allergies I-problem
+. O
+
+
+The B-test
+blood I-test
+pressure I-test
+was O
+150/86 O
+; O
+pulse B-test
+82 O
+; O
+respirations B-test
+16 O
+. O
+
+
+Lungs O
+were O
+clear O
+to O
+auscultation B-test
+bilaterally O
+. O
+
+
+regular O
+S1 O
+and O
+S2 O
+; O
+no O
+murmurs B-problem
+. O
+
+
+soft O
+; O
+nontender O
+; O
+no O
+palpable B-problem
+masses I-problem
+. O
+
+
+The O
+patient O
+was O
+admitted O
+through O
+same O
+day O
+surgery O
+and O
+taken O
+to O
+the O
+operating O
+room O
+where O
+Dr. O
+Blinjesc O
+, O
+assisted O
+by O
+Dr. O
+Zockbeathe O
+, O
+performed O
+a B-test
+diagnostic I-test
+laparoscopy I-test
+with O
+peritoneal B-treatment
+washings I-treatment
+. O
+
+
+Findings O
+included O
+no B-problem
+gross I-problem
+evidence I-problem
+seating I-problem
+in I-problem
+the I-problem
+abdominal I-problem
+wall I-problem
+; O
+one B-problem
+nodule I-problem
+on O
+the O
+posterior O
+surface O
+of O
+the O
+right O
+lobe O
+of O
+the O
+liver O
+; O
+one B-problem
+nodule I-problem
+in O
+the O
+inferior O
+edge O
+of O
+the O
+falciform O
+ligament O
+. O
+
+
+Specimens B-test
+sent O
+to O
+pathology O
+included O
+peritoneal B-test
+washings I-test
+and O
+permanent B-test
+specimens I-test
+from I-test
+the I-test
+liver I-test
+and O
+falciform B-problem
+nodules I-problem
+. O
+
+
+There O
+were O
+no O
+complications B-problem
+, O
+and O
+the O
+patient O
+tolerated O
+the B-treatment
+procedure I-treatment
+well O
+. O
+
+
+Postoperatively O
+, O
+the O
+patient O
+had O
+some B-problem
+abdominal I-problem
+bloating I-problem
+with O
+evidence O
+of O
+subcutaneous B-problem
+emphysema I-problem
+over I-problem
+the I-problem
+abdomen I-problem
+. O
+
+
+She O
+was O
+uncomfortable B-problem
+and O
+slow O
+to O
+have O
+bowel O
+movements O
+, O
+although O
+she O
+did O
+have O
+flatus O
+. O
+
+
+She O
+tolerated O
+a O
+full O
+diet O
+well O
+, O
+but O
+continued O
+to O
+have O
+abdominal B-problem
+cramping I-problem
+and O
+a B-problem
+mild I-problem
+ileus I-problem
+for O
+the O
+following O
+three O
+days O
+. O
+
+
+She O
+was O
+treated O
+with O
+repeated B-treatment
+Fleet I-treatment
+&apos;s I-treatment
+enemas I-treatment
+, O
+and O
+on O
+postoperative O
+day O
+three O
+, O
+she O
+had O
+a O
+number O
+of O
+bowel O
+movements O
+, O
+was O
+considerably O
+more O
+comfortable O
+, O
+and O
+deemed O
+ready O
+for O
+discharge O
+. O
+
+
+Included O
+aspirin B-treatment
+325 O
+mg O
+PO O
+q.day O
+. O
+
+
+Percocet B-treatment
+one O
+to O
+two O
+whenever O
+necessary O
+q. O
+four O
+to O
+six O
+hours O
+for O
+pain B-problem
+. O
+
+
+Estratab B-treatment
+one O
+PO O
+q.day O
+. O
+
+
+At O
+the O
+time O
+of O
+discharge O
+, O
+cytopathology B-test
+specimens I-test
+had O
+been O
+negative O
+, O
+and O
+surgical B-test
+pathology I-test
+specimens I-test
+were O
+still O
+pending O
+. O
+
+
+She O
+was O
+instructed O
+to O
+call O
+Dr. O
+Blinjesc O
+for O
+the O
+results O
+of O
+these B-test
+tests I-test
+and O
+to O
+follow O
+up O
+with O
+him O
+for O
+further O
+management O
+if O
+necessary O
+. O
+HO B-test
+evaluation I-test
+
+
+DOCUSATE B-treatment
+SODIUM I-treatment
+100 O
+MG O
+PO O
+BID O
+PRN O
+IBUPROFEN B-treatment
+200-600 O
+MG O
+PO O
+Q4-6H O
+PRN O
+PAIN B-problem
+
+
+OB O
+Clinic O
+2 O
+weeks O
+and O
+6 O
+weeks O
+, O
+No O
+Known B-problem
+Allergies I-problem
+
+
+postdates B-problem
+pregnancy I-problem
+
+
+Responsible O
+After O
+Study O
+for O
+Causing O
+Admission O
+) O
+s O
+/ O
+p O
+NSVD B-problem
+
+
+Post B-problem
+dates I-problem
+
+
+Initial B-test
+newborn I-test
+exam I-test
+: O
+
+
+No O
+observed B-problem
+abnormalities I-problem
+
+
+Apgars B-test
+8,9 O
+
+
+Weight B-test
+: O
+
+
+Nothing O
+in O
+the O
+vagina O
+for O
+6 O
+weeks O
+- O
+no O
+tampons B-treatment
+, O
+no O
+douching B-treatment
+, O
+no O
+intercourse O
+. O
+
+
+If O
+you O
+experience O
+fever B-problem
+&gt; O
+100.4 O
+, O
+bleeding B-problem
+&gt; O
+1 O
+pad O
+/ O
+hour O
+, O
+foul B-problem
+smelling I-problem
+discharge I-problem
+, O
+abdominal B-problem
+pain I-problem
+, O
+or O
+other B-problem
+worrisome I-problem
+symptoms I-problem
+, O
+please O
+call O
+your O
+doctor O
+or O
+return O
+to O
+the O
+hospital O
+. O
+RIGHT B-problem
+OCCIPITAL I-problem
+HEMORRHAGIC I-problem
+STROKE I-problem
+. O
+
+
+Right B-problem
+occipital I-problem
+hemorrhagic I-problem
+stroke I-problem
+. O
+
+
+Ms. O
+Tlandkotesmitskote O
+is O
+a O
+patient O
+who O
+came O
+complaining O
+of O
+feeling O
+dizzy B-problem
+and O
+bumping O
+into O
+objects O
+on O
+her O
+left O
+side O
+. O
+
+
+She O
+is O
+a O
+seventy-one O
+year O
+old O
+female O
+with O
+a O
+history O
+of O
+hypertension B-problem
+who O
+is O
+in O
+otherwise O
+good O
+health O
+. O
+
+
+She O
+also O
+felt O
+dizzy B-problem
+and O
+the O
+room O
+was O
+spinning O
+. O
+
+
+She O
+also O
+complained O
+of O
+a B-problem
+dull I-problem
+, I-problem
+right I-problem
+sided I-problem
+headache I-problem
+over I-problem
+the I-problem
+right I-problem
+eyebrow I-problem
+. O
+
+
+Symptoms B-problem
+lasted O
+about O
+five O
+hours O
+and O
+then O
+gradually O
+resolved O
+except O
+for O
+the B-problem
+change I-problem
+in I-problem
+vision I-problem
+. O
+
+
+She O
+denied O
+having O
+any O
+weakness B-problem
+, O
+numbness B-problem
+, O
+or O
+pain B-problem
+. O
+
+
+She O
+also O
+denies O
+having O
+hoarseness B-problem
+, O
+difficulties B-problem
+in I-problem
+finding I-problem
+words I-problem
+, O
+speaking O
+, O
+hiccups B-problem
+, O
+or O
+diplopia B-problem
+. O
+
+
+The O
+past O
+medical O
+history O
+is O
+significant O
+for O
+hypertension B-problem
+. O
+
+
+Atenolol B-treatment
+, O
+25 O
+mg O
+PO O
+qd O
+. O
+
+
+The O
+patient O
+has O
+no O
+known B-problem
+drug I-problem
+allergies I-problem
+. O
+
+
+On O
+review O
+of O
+systems O
+, O
+the O
+patient O
+denied O
+any O
+history O
+of O
+transient B-problem
+ischemic I-problem
+attacks I-problem
+. O
+
+
+Father O
+and O
+mother O
+died O
+in O
+their O
+eighties O
+of O
+heart B-problem
+disease I-problem
+. O
+
+
+On O
+physical B-test
+examination I-test
+, O
+she O
+was O
+a O
+very O
+pleasant O
+, O
+moderately O
+obese O
+female O
+in O
+no O
+apparent B-problem
+distress I-problem
+. O
+
+
+She O
+was O
+afebrile B-problem
+and O
+her B-test
+vital I-test
+signs I-test
+were O
+stable O
+. O
+
+
+The O
+head O
+was O
+normocephalic O
+and O
+atraumatic B-problem
+. O
+
+
+The O
+lungs O
+were O
+clear O
+to O
+auscultation B-test
+bilaterally O
+, O
+without O
+rales B-problem
+or O
+wheezes B-problem
+. O
+
+
+The O
+abdomen O
+was O
+soft O
+, O
+nontender B-problem
+, O
+nondistended B-problem
+. O
+
+
+Extremities O
+revealed O
+2+ B-problem
+pitting I-problem
+edema I-problem
+in I-problem
+the I-problem
+knees I-problem
+bilaterally I-problem
+. O
+
+
+The B-test
+neurological I-test
+examination I-test
+revealed O
+that O
+the O
+patient O
+was O
+awake O
+, O
+alert O
+and O
+oriented O
+to O
+person O
+, O
+place O
+and O
+time O
+. O
+
+
+She O
+was O
+able O
+to O
+subtract O
+serial O
+sevens O
+, O
+remember O
+three O
+out O
+of O
+three O
+objects O
+after O
+five O
+minutes O
+, O
+and O
+there O
+was O
+notable B-problem
+aphasia I-problem
+or O
+word B-problem
+finding I-problem
+difficulty I-problem
+. I-problem
+
+
+There O
+was O
+a B-problem
+dense I-problem
+hemianopsia I-problem
+on I-problem
+the I-problem
+left I-problem
+side I-problem
+. O
+
+
+Sensation O
+was O
+intact O
+to O
+light B-test
+touch I-test
+and O
+pin B-test
+prick I-test
+bilaterally O
+. O
+
+
+There O
+was O
+no O
+pronator B-problem
+drift I-problem
+. O
+
+
+Sensation O
+was O
+intact O
+to O
+light B-test
+touch I-test
+, O
+pin B-test
+prick I-test
+, O
+and O
+proprioception B-test
+. O
+
+
+Cerebellar B-test
+examination I-test
+revealed O
+in O
+intention B-problem
+tremor I-problem
+on I-problem
+the I-problem
+right I-problem
+side I-problem
+. O
+
+
+The O
+patient O
+had O
+considerable B-problem
+difficulty I-problem
+with I-problem
+left I-problem
+finger-to-nose I-problem
+movement I-problem
+, O
+most O
+likely O
+secondary O
+to O
+hemianopsia B-problem
+. O
+
+
+There O
+was O
+no O
+nystagmus B-problem
+, O
+except O
+for O
+some B-problem
+fine I-problem
+fast I-problem
+beat I-problem
+nystagmus I-problem
+bilateral I-problem
+extremes I-problem
+of I-problem
+abduction I-problem
+. O
+
+
+patient O
+had O
+difficulty B-problem
+with I-problem
+tandem I-problem
+gait I-problem
+and O
+fell O
+forward O
+while O
+standing O
+on O
+his O
+his O
+toes O
+. O
+
+
+Laboratory O
+studies O
+on O
+admission O
+demonstrated O
+a B-test
+sodium I-test
+of O
+144 O
+, O
+potassium B-test
+4.1 O
+, O
+chloride B-test
+106 O
+, O
+bicarbonate B-test
+20.0 O
+, O
+BUN B-test
+and O
+creatinine B-test
+12/0.7 O
+, O
+glucose B-test
+99 O
+, O
+white B-test
+blood I-test
+count I-test
+of O
+5.7 O
+, O
+hematocrit B-test
+of O
+40.6 O
+, O
+platelet B-test
+count I-test
+of O
+226 O
+, O
+prothrombin B-test
+time I-test
+was O
+9.4 O
+, O
+partial B-test
+thromboplastin I-test
+time I-test
+was O
+29 O
+. O
+
+
+The B-test
+computerized I-test
+tomography I-test
+scan I-test
+was O
+performed O
+and O
+showed O
+a B-problem
+right I-problem
+occipital I-problem
+hemorrhage I-problem
+. O
+
+
+The O
+patient O
+is O
+a O
+seventy-one O
+year O
+old O
+female O
+with O
+a O
+history O
+of O
+hypertension B-problem
+who O
+now O
+presents O
+with O
+a B-problem
+right I-problem
+occipital I-problem
+hemorrhagic I-problem
+stroke I-problem
+. O
+
+
+The O
+patient O
+was O
+admitted O
+to O
+the O
+hospital O
+for O
+further B-test
+evaluation I-test
+and O
+work B-test
+up I-test
+. O
+
+
+However O
+, O
+she O
+was O
+soon O
+moved O
+out O
+of O
+there O
+as O
+her B-test
+examination I-test
+appeared O
+to O
+be O
+stable O
+. O
+
+
+A O
+Neurosurgery O
+Service O
+consultation O
+was O
+obtained O
+and O
+they O
+felt O
+that O
+no O
+surgical B-treatment
+intervention I-treatment
+was O
+required O
+. O
+
+
+The O
+patient O
+underwent O
+a O
+number O
+of O
+tests B-test
+. O
+
+
+She O
+had O
+a B-test
+magnetic I-test
+resonance I-test
+imaging I-test
+study I-test
+and O
+magnetic B-test
+resonance I-test
+imaging I-test
+angiogram I-test
+performed O
+which O
+showed O
+a B-problem
+large I-problem
+hemorrhagic I-problem
+lesion I-problem
+on I-problem
+the I-problem
+occipital I-problem
+lobe I-problem
+. O
+
+
+There O
+was O
+no O
+clear B-problem
+enhancing I-problem
+mass I-problem
+, O
+but O
+follow O
+up O
+was O
+suggested O
+. O
+
+
+So O
+an B-test
+magnetic I-test
+resonance I-test
+imaging I-test
+angiogram I-test
+was O
+obtained O
+and O
+showed O
+the B-problem
+right I-problem
+parietal I-problem
+occipital I-problem
+hemorrhage I-problem
+. O
+
+
+The B-test
+MRA I-test
+showed O
+mild B-problem
+narrowing I-problem
+of I-problem
+the I-problem
+left I-problem
+ICA I-problem
+just O
+distal O
+to O
+the O
+bifurcation O
+. O
+
+
+There O
+was O
+also O
+scattered B-problem
+T2 I-problem
+hyperintense I-problem
+foci I-problem
+within I-problem
+the I-problem
+periventricular I-problem
+and I-problem
+left I-problem
+frontal I-problem
+white I-problem
+matter I-problem
+consistent O
+with O
+small B-problem
+vessel I-problem
+disease I-problem
+, O
+gliosis B-problem
+or O
+demyelination B-problem
+. O
+
+
+A B-test
+Holter I-test
+monitor I-test
+was O
+obtained O
+and O
+showed O
+that O
+the O
+patient O
+was O
+in O
+normal O
+sinus O
+rhythm O
+. O
+
+
+The B-test
+heart I-test
+rate I-test
+was O
+53 O
+to O
+106 O
+. O
+
+
+There O
+were O
+some B-problem
+very I-problem
+rare I-problem
+atrial I-problem
+premature I-problem
+contractions I-problem
+. O
+
+
+There O
+were O
+no O
+ventricular B-problem
+premature I-problem
+contractions I-problem
+. O
+
+
+An B-test
+echocardiogram I-test
+was O
+obtained O
+and O
+showed O
+that O
+the B-test
+ejection I-test
+fraction I-test
+was O
+60% O
+and O
+there O
+was O
+no O
+thrombus B-problem
+. O
+
+
+Over O
+the O
+ensuing O
+days O
+, O
+the O
+patient O
+had O
+several O
+episodes O
+of O
+confusion B-problem
+at O
+night O
+. O
+
+
+She O
+also O
+developed O
+what O
+appeared O
+to O
+be O
+urinary B-problem
+tract I-problem
+infection I-problem
+and O
+was O
+placed O
+on O
+PO B-treatment
+Bactrim I-treatment
+. O
+
+
+At O
+that O
+time O
+, O
+she O
+was O
+afebrile B-problem
+and O
+her B-test
+vital I-test
+signs I-test
+were O
+stable O
+. O
+
+
+She O
+continued O
+to O
+have O
+a B-problem
+dense I-problem
+left I-problem
+hemianopsia I-problem
+, O
+but O
+otherwise O
+was O
+neurologically O
+intact O
+. O
+
+
+The O
+patient O
+was O
+discharged O
+on O
+Tenormin B-treatment
+, O
+25 O
+mg O
+PO O
+qd O
+; O
+Bactrim B-treatment
+DS I-treatment
+, O
+one O
+PO O
+bid O
+x5 O
+days O
+. O
+DEEP B-problem
+VENOUS I-problem
+THROMBOSIS I-problem
+OF I-problem
+RIGHT I-problem
+LOWER I-problem
+EXTREMITY I-problem
+. O
+
+
+Deep B-problem
+venous I-problem
+thrombosis I-problem
+of I-problem
+right I-problem
+lower I-problem
+extremity I-problem
+. O
+
+
+Metastatic B-problem
+melanoma I-problem
+. O
+
+
+This O
+is O
+the O
+second O
+Fairm O
+of O
+Ijordcompmac O
+Hospital O
+admission O
+for O
+Taroby O
+Patient O
+, O
+a O
+70 O
+year O
+old O
+male O
+with O
+a O
+history O
+of O
+metastatic B-problem
+melanoma I-problem
+. O
+
+
+His B-problem
+melanoma I-problem
+was O
+originally O
+diagnosed O
+last O
+fall O
+when O
+he O
+presented O
+with O
+lesions B-problem
+in I-problem
+the I-problem
+liver I-problem
+and I-problem
+spleen I-problem
+, O
+and O
+a B-test
+chest I-test
+CT I-test
+showed O
+left B-problem
+upper I-problem
+lobe I-problem
+nodules I-problem
+. O
+
+
+A B-test
+head I-test
+CT I-test
+scan I-test
+was O
+negative O
+, O
+but O
+an B-test
+MRI I-test
+scan I-test
+of I-test
+the I-test
+spine I-test
+showed O
+an O
+L5 B-problem
+metastasis I-problem
+with O
+a B-problem
+fracture I-problem
+and O
+had O
+with O
+epidural B-problem
+and I-problem
+paraspinal I-problem
+extension I-problem
+. O
+
+
+In O
+addition O
+, O
+there O
+was O
+a B-problem
+T11 I-problem
+metastasis I-problem
+with O
+cord B-problem
+compression I-problem
+. O
+
+
+Approximately O
+one O
+week O
+ago O
+, O
+he O
+was O
+admitted O
+to O
+the O
+Fairm O
+of O
+Ijordcompmac O
+Hospital O
+for O
+chemotherapy B-treatment
+with O
+DTIC B-treatment
+and O
+Tamoxifen B-treatment
+. O
+
+
+At O
+that O
+time O
+, O
+he O
+also O
+began O
+radiation B-treatment
+therapy I-treatment
+to O
+his O
+lumbosacral O
+spine O
+. O
+
+
+He O
+is O
+continuing O
+on O
+the B-treatment
+radiation I-treatment
+therapy I-treatment
+to O
+date O
+. O
+
+
+On O
+February O
+23 O
+, O
+Mr. O
+Patient O
+presented O
+to O
+Dr. O
+Patient O
+&apos;s O
+office O
+with O
+two B-problem
+major I-problem
+symptoms I-problem
+. O
+
+
+First O
+, O
+he O
+had O
+right B-problem
+lower I-problem
+extremity I-problem
+swelling I-problem
+and O
+lower B-test
+extremity I-test
+noninvasives I-test
+confirmed O
+the O
+diagnosis O
+of O
+a B-problem
+femoral I-problem
+deep I-problem
+venous I-problem
+thrombosis I-problem
+. O
+
+
+Second O
+, O
+he O
+had O
+a B-problem
+witnessed I-problem
+episode I-problem
+in O
+which O
+his O
+eyes O
+rolled O
+to O
+the O
+back O
+of O
+his O
+head O
+and O
+there O
+was O
+a O
+question O
+of O
+some B-problem
+seizure I-problem
+activity I-problem
+. O
+
+
+In O
+the O
+past O
+, O
+he O
+has O
+not O
+been O
+known O
+to O
+have O
+a O
+history O
+of O
+CNS B-problem
+metastases I-problem
+. O
+
+
+The O
+episode O
+of O
+potential B-problem
+seizure I-problem
+activity I-problem
+occurred O
+in O
+the O
+setting O
+of O
+a O
+bowel O
+movement O
+and O
+may O
+have O
+been O
+associated O
+with O
+vasovagal B-problem
+activity I-problem
+. O
+
+
+The B-test
+review I-test
+of I-test
+systems I-test
+is O
+negative O
+, O
+except O
+as O
+above O
+. O
+
+
+The O
+patient O
+has O
+no O
+known B-problem
+drug I-problem
+allergies I-problem
+. O
+
+
+The B-test
+physical I-test
+examination I-test
+reveals O
+a O
+pleasant O
+70 O
+year O
+old O
+male O
+in O
+no O
+acute B-problem
+distress I-problem
+. O
+
+
+The B-test
+blood I-test
+pressure I-test
+was O
+113/70 O
+, O
+pulse B-test
+66 O
+, O
+respirations B-test
+20 O
+, O
+and O
+a B-test
+temperature I-test
+of O
+96.8 O
+. O
+
+
+HEENT B-test
+showed O
+pupils O
+equal O
+, O
+round O
+, O
+reactive O
+to O
+light O
+and O
+accommodation O
+, O
+and O
+extra O
+ocular O
+movements O
+intact O
+. O
+
+
+The O
+neck O
+was O
+supple O
+, O
+without O
+jugular B-problem
+venous I-problem
+distention I-problem
+or O
+increased B-problem
+thyroid I-problem
+. O
+
+
+There O
+was O
+no O
+appreciable B-problem
+cervical I-problem
+, I-problem
+supraclavicular I-problem
+, I-problem
+axillary I-problem
+, I-problem
+or I-problem
+inguinal I-problem
+adenopathy I-problem
+. O
+
+
+The O
+chest O
+was O
+clear O
+to O
+auscultation B-test
+and O
+percussion B-test
+. O
+
+
+regular O
+rate O
+and O
+rhythm O
+, O
+with O
+a B-problem
+I I-problem
+/ I-problem
+VI I-problem
+systolic I-problem
+ejection I-problem
+murmur I-problem
+. O
+
+
+The B-test
+extremity I-test
+exam I-test
+was O
+notable O
+for O
+2+ B-problem
+pitting I-problem
+edema I-problem
+in I-problem
+the I-problem
+right I-problem
+lower I-problem
+extremity I-problem
+extending O
+to O
+the O
+knee O
+. O
+
+
+The B-test
+neurological I-test
+examination I-test
+was O
+nonfocal O
+. O
+
+
+Mr. O
+Patient O
+underwent O
+venogram B-test
+and O
+inferior B-treatment
+vena I-treatment
+cava I-treatment
+filter I-treatment
+placement I-treatment
+on O
+February O
+23 O
+, O
+1993 O
+and O
+was O
+then O
+he O
+was O
+admitted O
+to O
+the O
+Fairm O
+of O
+Ijordcompmac O
+Hospital O
+for O
+postoperative B-treatment
+care I-treatment
+. O
+
+
+He O
+tolerated O
+the B-treatment
+procedure I-treatment
+well O
+. O
+
+
+In O
+addition O
+, O
+the O
+second O
+major O
+event O
+that O
+had O
+occurred O
+yesterday O
+was O
+a B-problem
+neurologic I-problem
+event I-problem
+of O
+some O
+kind O
+. O
+
+
+Over O
+the O
+24 O
+hours O
+of O
+in O
+house O
+hospitalization O
+, O
+he O
+did O
+not O
+have O
+any B-problem
+further I-problem
+neurologic I-problem
+activity I-problem
+and O
+was O
+able O
+to O
+ambulate O
+without O
+assistance O
+prior O
+to O
+discharge O
+. O
+
+
+He O
+will O
+be O
+scheduled O
+for O
+an B-test
+MRI I-test
+scan I-test
+, O
+Neurology B-test
+consult I-test
+, O
+and O
+an B-test
+EEG I-test
+next O
+week O
+as O
+an O
+out O
+patient O
+. O
+
+
+Mr. O
+Patient O
+was O
+a O
+poor O
+candidate O
+for O
+anticoagulation B-treatment
+because O
+of O
+his O
+history O
+of O
+metastatic B-problem
+melanoma I-problem
+and O
+the O
+question O
+of O
+CNS B-problem
+metastases I-problem
+. O
+
+
+An B-treatment
+IVC I-treatment
+filter I-treatment
+placement I-treatment
+was O
+accomplished O
+without O
+complication B-problem
+. O
+
+
+IVC B-treatment
+filter I-treatment
+placement I-treatment
+. O
+
+
+Decadron B-treatment
+4 O
+mg O
+PO O
+bid O
+, O
+Dilantin B-treatment
+100 O
+mg O
+PO O
+tid O
+. O
+atypical B-problem
+chest I-problem
+pain I-problem
+
+
+ALBUTEROL B-treatment
+INHALER I-treatment
+2 O
+PUFF O
+INH O
+QID O
+
+
+PLEASE O
+USE O
+WITH O
+SPACER B-treatment
+( O
+PLEASE O
+INSTRUCT O
+PATIENT O
+) O
+ECASA B-treatment
+( I-treatment
+ASPIRIN I-treatment
+ENTERIC I-treatment
+COATED I-treatment
+) I-treatment
+325 O
+MG O
+PO O
+QD O
+WELLBUTRIN B-treatment
+( I-treatment
+BUPROPION I-treatment
+HCL I-treatment
+) I-treatment
+150 O
+MG O
+PO O
+BID O
+GEMFIBROZIL B-treatment
+600 O
+MG O
+PO O
+BID O
+ZESTRIL B-treatment
+( I-treatment
+LISINOPRIL I-treatment
+) I-treatment
+20 O
+MG O
+PO O
+QD O
+ZANTAC B-treatment
+( I-treatment
+RANITIDINE I-treatment
+HCL I-treatment
+) I-treatment
+150 O
+MG O
+PO O
+BID O
+SERZONE B-treatment
+( I-treatment
+NEFAZODONE I-treatment
+) I-treatment
+300 O
+MG O
+PO O
+QHS O
+ZYPREXA B-treatment
+( I-treatment
+OLANZAPINE I-treatment
+) I-treatment
+5 O
+MG O
+PO O
+QHS O
+
+
+GLUCOPHAGE B-treatment
+( I-treatment
+METFORMIN I-treatment
+) I-treatment
+850 O
+MG O
+PO O
+TID O
+Starting O
+ON O
+10/03/00 O
+( O
+10/03 O
+) O
+ACTOS B-treatment
+30 O
+MG O
+PO O
+QD O
+
+
+Penicillins B-treatment
+
+
+atypical B-problem
+cp I-problem
+
+
+PRINCIPAL O
+DISCHARGE O
+DIAGNOSIS O
+; O
+Responsible O
+After O
+Study O
+for O
+Causing O
+Admission O
+) O
+atypical B-problem
+chest I-problem
+pain I-problem
+
+
+OTHER O
+DIAGNOSIS O
+; O
+Conditions O
+, O
+Infections O
+, O
+Complications O
+, O
+affecting O
+Treatment O
+/ O
+Stay O
+dm B-problem
+( I-problem
+diabetes I-problem
+mellitus I-problem
+) I-problem
+anxiety B-problem
+( I-problem
+anxiety I-problem
+) I-problem
+htn B-problem
+( I-problem
+hypertension I-problem
+) I-problem
+gerd B-problem
+( I-problem
+esophageal I-problem
+reflux I-problem
+) I-problem
+
+
+41 O
+yo O
+man O
+with O
+CRFs B-problem
+of O
+DM B-problem
+Type I-problem
+II I-problem
+, O
+high B-problem
+cholesterol I-problem
+, O
+smoking O
+history O
+, O
+family O
+hx O
+, O
+HTN B-problem
+p O
+/ O
+w O
+episodes B-problem
+of I-problem
+atypical I-problem
+CP I-problem
+x I-problem
+1 I-problem
+week I-problem
+, O
+with O
+rest O
+and O
+exertion O
+. O
+
+
+also O
+has O
+h O
+/ O
+o O
+anxiety B-problem
+and O
+GERD B-problem
+. O
+
+
+No O
+assoicated B-problem
+Sx I-problem
+. O
+
+
+Here O
+, O
+had O
+T B-problem
+wave I-problem
+flattening I-problem
+laterally I-problem
+and I-problem
+inferiorly I-problem
+with O
+pain B-problem
+that O
+resolved O
+pain B-problem
+free O
+, O
+but O
+not O
+clear O
+that O
+lead B-test
+placement I-test
+is O
+the O
+same O
+. O
+
+
+Had O
+Chest B-test
+CT I-test
+to O
+r O
+/ O
+o O
+dissection B-problem
+( O
+due O
+to O
+back B-problem
+pain I-problem
+) O
+which O
+was O
+neg. O
+
+
+Ruled O
+out O
+for O
+MI B-problem
+. O
+
+
+Will O
+plan O
+on O
+ETT B-test
+. O
+
+
+Holding O
+Metformin B-treatment
+until O
+Friday O
+due O
+to O
+CT B-test
+with I-test
+contrast I-test
+. O
+PROSTATE B-problem
+CANCER I-problem
+. O
+
+
+Prostate B-problem
+cancer I-problem
+. O
+
+
+Radical B-treatment
+retropubic I-treatment
+prostatectomy I-treatment
+, O
+bilateral B-treatment
+lymph I-treatment
+node I-treatment
+dissection I-treatment
+. O
+
+
+The O
+patient O
+is O
+a O
+67 O
+year O
+old O
+white O
+male O
+with O
+a O
+recent O
+history O
+of O
+urinary B-problem
+frequency I-problem
+Q2-3H O
+, O
+stranguria B-problem
+, O
+nocturia B-problem
+x O
+3-4 O
+per O
+night O
+. O
+
+
+He O
+was O
+found O
+on O
+physical B-test
+exam I-test
+to O
+have O
+an B-problem
+asymmetric I-problem
+prostate I-problem
+with O
+prominence B-problem
+on I-problem
+the I-problem
+left I-problem
+and O
+a O
+question O
+of O
+a B-problem
+nodule I-problem
+. O
+
+
+Repeat B-test
+exam I-test
+one O
+month O
+later O
+showed O
+a B-problem
+firm I-problem
+left-sided I-problem
+lobe I-problem
+. O
+
+
+Transrectal B-test
+ultrasound I-test
+showed O
+a B-problem
+hypoechoic I-problem
+left-sided I-problem
+mass I-problem
+in I-problem
+the I-problem
+peripheral I-problem
+zone I-problem
+. O
+
+
+A B-test
+biopsy I-test
+showed O
+moderately B-problem
+to I-problem
+poorly I-problem
+differentiated I-problem
+Grade I-problem
+III-IV I-problem
+adenocarcinoma I-problem
+on I-problem
+the I-problem
+left I-problem
+. O
+
+
+He O
+also O
+had O
+a O
+3-4 O
+year O
+history O
+of O
+impotence B-problem
+. O
+
+
+Significant O
+for O
+non-insulin B-problem
+diabetes I-problem
+mellitus I-problem
+, O
+for O
+which O
+he O
+takes O
+Diabeta B-treatment
+, O
+one O
+QD O
+; O
+right B-problem
+eye I-problem
+cataract I-problem
+, O
+operated O
+on O
+three O
+years O
+ago O
+. O
+
+
+He O
+is O
+allergic B-problem
+to O
+Motrin B-treatment
+. O
+
+
+Diabeta B-treatment
+, O
+one O
+QD O
+. O
+
+
+His O
+neck O
+was O
+supple O
+with O
+no O
+jugular B-problem
+venous I-problem
+distention I-problem
+or O
+thyromegaly B-problem
+. O
+
+
+Chest O
+was O
+clear O
+to O
+percussion B-test
+and O
+auscultation B-test
+. O
+
+
+regular O
+rate O
+and O
+rhythm O
+with O
+normal O
+S1 O
+and O
+S2 O
+, O
+no O
+murmurs B-problem
+. I-problem
+
+
+The O
+abdomen O
+was O
+soft O
+and O
+non-tender B-problem
+with O
+no O
+masses B-problem
+or O
+organomegaly B-problem
+. O
+
+
+No O
+costovertebral B-problem
+angle I-problem
+tenderness I-problem
+. O
+
+
+His B-test
+genitourinary I-test
+exam I-test
+showed O
+an O
+uncircumcised O
+male O
+with O
+normal O
+scrotal O
+contents O
+. O
+
+
+There O
+was O
+a B-problem
+firm I-problem
+nodule I-problem
+in O
+the O
+left O
+lobe O
+of O
+the O
+prostate O
+in O
+the O
+lateral O
+aspect O
+. O
+
+
+No O
+clubbing B-problem
+, I-problem
+cyanosis B-problem
+or O
+edema B-problem
+. O
+
+
+Pulses B-test
+2+ O
+. O
+
+
+Sodium B-test
+141 O
+, O
+potassium B-test
+4.1 O
+, O
+chloride B-test
+104 O
+, O
+bicarbonate B-test
+28.8 O
+, O
+BUN B-test
+17 O
+, O
+creatinine B-test
+0.9 O
+, O
+glucose B-test
+118 O
+. O
+
+
+His B-test
+white I-test
+blood I-test
+count I-test
+was O
+7100 O
+, O
+hematocrit B-test
+35.9 O
+, O
+platelet B-test
+count I-test
+258,000 O
+. O
+
+
+PT B-test
+9.4/10.3 O
+, O
+PTT B-test
+27 O
+. O
+
+
+His B-test
+urinalysis I-test
+showed O
+marked B-problem
+occult I-problem
+blood I-problem
+and O
+positive B-problem
+white I-problem
+blood I-problem
+cell I-problem
+screen I-problem
+but O
+was O
+otherwise O
+negative O
+. O
+
+
+His B-test
+chest I-test
+X-ray I-test
+was O
+normal O
+. O
+
+
+EKG B-test
+: O
+
+
+A B-treatment
+radical I-treatment
+retropubic I-treatment
+prostatectomy I-treatment
+with O
+bilateral B-treatment
+lymph I-treatment
+node I-treatment
+dissection I-treatment
+was O
+done O
+. O
+
+
+He O
+was O
+afebrile B-problem
+postoperatively O
+with O
+vital B-test
+signs I-test
+stable O
+. O
+
+
+His B-test
+potassium I-test
+was O
+3.7 O
+and O
+his B-test
+hematocrit I-test
+33 O
+. O
+
+
+His O
+postoperative O
+course O
+was O
+remarkable O
+for O
+a B-problem
+low I-problem
+grade I-problem
+temperature I-problem
+to O
+101.7 O
+. O
+
+
+His B-test
+blood I-test
+cultures I-test
+and O
+chest B-test
+X-ray I-test
+were O
+negative O
+. O
+
+
+His B-treatment
+Jackson-Pratt I-treatment
+drained O
+about O
+35-40 O
+cc O
+per O
+day O
+and O
+was O
+discontinued O
+on O
+postoperative O
+day O
+# O
+3 O
+. O
+
+
+His B-test
+hematocrit I-test
+on O
+07/03 O
+was O
+28.1 O
+. O
+
+
+On O
+that O
+day O
+he O
+was O
+slightly B-problem
+diaphoretic I-problem
+with O
+some B-problem
+tachycardia I-problem
+to O
+100 O
+. O
+
+
+The O
+remaining O
+unit O
+of O
+autologous B-treatment
+packed I-treatment
+red I-treatment
+blood I-treatment
+cells I-treatment
+was O
+transfused O
+. O
+
+
+A B-test
+cardiology I-test
+consult I-test
+was O
+obtained O
+for O
+this O
+episode O
+of O
+diaphoresis B-problem
+with O
+tachycardia B-problem
+, O
+as O
+well O
+as O
+for O
+an B-test
+EKG I-test
+being O
+read O
+as O
+having O
+anterolateral B-problem
+changes I-problem
+. O
+
+
+He O
+had O
+no O
+symptoms B-problem
+of O
+chest B-problem
+pain I-problem
+or O
+myocardial B-problem
+ischemia I-problem
+. O
+
+
+A B-test
+repeat I-test
+EKG I-test
+showed O
+no O
+changes B-problem
+. O
+
+
+He O
+subsequently O
+did O
+well O
+, O
+with O
+a B-test
+repeat I-test
+hematocrit I-test
+of O
+34.3 O
+after O
+the B-test
+transfusion I-test
+. O
+
+
+His B-test
+creatinine I-test
+was O
+1.2 O
+on O
+postoperative O
+day O
+# O
+5 O
+. O
+
+
+On O
+postoperative O
+day O
+# O
+6 O
+his B-problem
+low I-problem
+grade I-problem
+temperature I-problem
+resolved O
+. O
+
+
+His B-test
+vital I-test
+signs I-test
+were O
+stable O
+. O
+
+
+He O
+was O
+discharged O
+home O
+on O
+Percocet B-treatment
+and O
+Keflex B-treatment
+. O
+The O
+patient O
+is O
+a O
+58 O
+year O
+old O
+right O
+hand O
+dominant O
+white O
+male O
+with O
+a O
+long O
+history O
+of O
+hypertension B-problem
+, O
+changed O
+his B-treatment
+medications I-treatment
+from O
+Aldomet B-treatment
+to O
+Clonidine B-treatment
+six O
+weeks O
+ago O
+. O
+
+
+The O
+patient O
+has O
+a O
+history O
+of O
+adult B-problem
+onset I-problem
+diabetes I-problem
+mellitus I-problem
+, O
+ankylosing B-problem
+spondylitis I-problem
+, O
+status O
+post O
+myocardial B-problem
+infarction I-problem
+in O
+&apos;96 O
+( O
+? O
+) O
+now O
+with O
+acute O
+onset O
+of O
+left B-problem
+face I-problem
+and I-problem
+arm I-problem
+greater I-problem
+than I-problem
+leg I-problem
+hemiplegia I-problem
+and O
+primary B-problem
+hemisensory I-problem
+loss I-problem
+on I-problem
+the I-problem
+left I-problem
+. O
+
+
+His O
+voice O
+became O
+slurred B-problem
+and O
+he O
+had O
+a B-problem
+mild I-problem
+central I-problem
+dull I-problem
+headache I-problem
+. O
+
+
+He O
+was O
+unable O
+to O
+move O
+the O
+left O
+side O
+of O
+his O
+body O
+and O
+felt O
+numb B-problem
+on I-problem
+that I-problem
+side I-problem
+. O
+
+
+He O
+was O
+taken O
+to O
+Wayskemedcalltown O
+Talmi O
+and O
+transferred O
+to O
+Heaonboburg O
+Linpack O
+Grant O
+Medical O
+Center O
+with O
+a B-test
+computerized I-test
+tomography I-test
+scan I-test
+showing O
+a B-problem
+1x2 I-problem
+thalamic I-problem
+capsular I-problem
+hemorrhage I-problem
+without O
+superficial B-problem
+mass I-problem
+effect I-problem
+. O
+
+
+His B-test
+blood I-test
+pressure I-test
+was O
+220/110 O
+there O
+. O
+
+
+He O
+denies O
+any O
+visual B-problem
+symptoms I-problem
+or O
+cortical-type B-problem
+symptoms I-problem
+. O
+
+
+Vasotec B-treatment
+40 O
+mg O
+q.day O
+, O
+Soma B-treatment
+1 O
+tablet O
+q.day O
+, O
+Demerolprn B-treatment
+, O
+Clonidine B-treatment
+. O
+
+
+The O
+patient O
+has O
+no O
+known B-problem
+drug I-problem
+allergies I-problem
+. O
+
+
+The O
+family O
+history O
+is O
+positive O
+for O
+diabetes B-problem
+mellitus I-problem
+, O
+positive O
+for O
+cancer B-problem
+. O
+
+
+On B-test
+physical I-test
+examination I-test
+, O
+patient O
+is O
+in O
+no O
+acute B-problem
+distress I-problem
+, O
+afebrile B-problem
+, O
+blood B-test
+pressure I-test
+134/80 O
+, O
+heart B-test
+rate I-test
+80 O
+and O
+regular O
+, O
+no O
+bruits B-problem
+. O
+
+
+Cardiovascular B-test
+exam I-test
+: O
+
+
+regular O
+rate O
+and O
+rhythm O
+with O
+a B-problem
+I/VI I-problem
+systolic I-problem
+ejection I-problem
+murmur I-problem
+. O
+
+
+His O
+lungs O
+were O
+clear O
+to O
+auscultation B-test
+and O
+percussion B-test
+. O
+
+
+The O
+abdomen O
+was O
+soft O
+and O
+non-tender B-problem
+, O
+obese B-problem
+, O
+with O
+normal O
+bowel O
+sounds O
+. O
+
+
+Back O
+and O
+neck O
+were O
+stiff B-problem
+and O
+sore B-problem
+, O
+without O
+localizing B-problem
+tenderness I-problem
+. O
+
+
+On O
+neurological B-test
+examination I-test
+, O
+mental O
+status O
+alert O
+and O
+oriented O
+x O
+three O
+, O
+good O
+memory O
+, O
+fluent O
+speech O
+, O
+good O
+repetition O
+and O
+naming O
+. O
+
+
+The O
+cranial O
+nerves O
+showed O
+full O
+visual O
+fields O
+without O
+extinction B-problem
+, O
+pupils O
+5 O
+to O
+3 O
+bilaterally O
+and O
+equal O
+, O
+disks O
+flat O
+, O
+lower B-problem
+left I-problem
+facial I-problem
+decreased I-problem
+sensation I-problem
+to I-problem
+temperature I-problem
+, O
+pin B-test
+prick I-test
+on O
+the O
+left O
+V1 O
+through O
+V3 O
+, O
+tongue O
+deviates O
+to O
+the O
+left O
+, O
+good O
+gag O
+, O
+decreased B-problem
+shrug I-problem
+on I-problem
+the I-problem
+left I-problem
+. O
+
+
+Motor B-test
+examination I-test
+showed O
+full O
+power O
+on O
+the O
+right O
+arm O
+and O
+leg O
+, O
+could O
+barely O
+flex O
+fingers O
+of O
+the O
+left O
+hand O
+, O
+pulls O
+left O
+arm O
+medially O
+only O
+. O
+
+
+On O
+sensory B-test
+examination I-test
+, O
+had O
+decreased O
+pin O
+prick O
+, O
+temperature O
+, O
+vibration O
+in O
+the O
+left O
+side O
+of O
+the O
+body O
+. O
+
+
+The B-test
+finger-to-nose I-test
+was O
+okay O
+on O
+the O
+right O
+. O
+
+
+On O
+reflex B-test
+examination I-test
+, O
+2 O
+on O
+the O
+right O
+upper O
+extremity O
+, O
+2+ O
+on O
+the O
+left O
+upper O
+extremity O
+, O
+2 O
+on O
+the O
+right O
+knee O
+, O
+0 O
+on O
+the O
+right O
+ankle O
+, O
+with O
+down O
+going O
+toe O
+on O
+the O
+right O
+. O
+
+
+Three O
+on O
+the O
+left O
+knee O
+, O
+4 O
+on O
+the O
+left O
+ankle O
+with O
+upgoing O
+toe O
+and O
+clonus B-problem
+on O
+the O
+left O
+. O
+
+
+Electrolytes B-test
+were O
+within O
+normal O
+limits O
+, O
+glucose B-test
+192 O
+, O
+BUN B-test
+and O
+creatinine B-test
+9/0.7 O
+, O
+hematocrit B-test
+49.5 O
+, O
+white B-test
+blood I-test
+count I-test
+7.9 O
+, O
+platelet B-test
+count I-test
+166,000 O
+, O
+65% O
+polys B-test
+, O
+3 O
+bands B-test
+, O
+24% O
+lymphs B-test
+. O
+
+
+The B-test
+electrocardiogram I-test
+showed O
+normal O
+sinus O
+rhythm O
+with O
+old B-problem
+Q I-problem
+wave I-problem
+inferior I-problem
+myocardial I-problem
+infarction I-problem
+. O
+
+
+Head B-test
+computerized I-test
+tomography I-test
+scan I-test
+showed O
+1.5 B-problem
+to I-problem
+2 I-problem
+centimeter I-problem
+bleed I-problem
+in I-problem
+the I-problem
+right I-problem
+thalamus I-problem
+extending O
+to O
+the O
+internal O
+capsule O
+with O
+mild B-problem
+distortion I-problem
+only O
+, O
+no O
+shift B-problem
+. O
+
+
+The B-test
+chest I-test
+X-ray I-test
+was O
+clear O
+. O
+
+
+The B-test
+neurological I-test
+examination I-test
+on O
+discharge O
+was O
+no O
+movement B-problem
+in I-problem
+the I-problem
+hand I-problem
+on O
+the O
+left O
+or O
+arm O
+. O
+
+
+On O
+the O
+lower O
+extremity O
+, O
+could O
+wiggle B-test
+toes I-test
+, O
+flexor B-test
+and O
+plantar B-test
+, O
+3+/5 O
+, O
+quadriceps O
+4/5 O
+on O
+the O
+left O
+. O
+
+
+2. O
+hypertension B-problem
+. O
+
+
+The O
+patient O
+was O
+managed O
+with O
+Vasotec B-treatment
+, O
+Nifedipine B-treatment
+and O
+Clonidine B-treatment
+with O
+blood B-test
+pressure I-test
+under O
+good O
+control O
+at O
+the O
+time O
+of O
+discharge O
+, O
+average O
+125 O
+systolic B-test
+, O
+70 O
+diastolic B-test
+, O
+heart B-test
+rate I-test
+of O
+72 O
+. O
+
+
+Also O
+managed O
+with O
+Valium B-treatment
+5 O
+mg O
+PO O
+t.i.d. O
+
+
+Muscle B-problem
+spasms I-problem
+were O
+managed O
+with O
+Flexeril B-treatment
+10 O
+PO O
+t.i.d. O
+
+
+3. O
+diabetes B-problem
+mellitus I-problem
+. O
+
+
+The O
+patient O
+was O
+started O
+on O
+2.5 O
+of O
+Micronase B-treatment
+with O
+resulting B-test
+sugars I-test
+as O
+low O
+as O
+63 O
+, O
+decreased O
+to O
+1.25 O
+mg O
+q.day O
+. O
+
+
+Vasotec B-treatment
+20 O
+mg O
+PO O
+b.i.d. O
+, O
+Clonidine B-treatment
+0.2 O
+mg O
+PO O
+b.i.d. O
+, O
+Nifedipine B-treatment
+20 O
+mg O
+PO O
+t.i.d. O
+, O
+Flexeril B-treatment
+10 O
+mg O
+PO O
+t.i.d. O
+, O
+Valium B-treatment
+5 O
+mg O
+PO O
+t.i.d. O
+, O
+Micronase B-treatment
+1.25 O
+mg O
+q.day O
+. O
+
+
+The O
+patient O
+was O
+found O
+to O
+be O
+allergic B-problem
+to O
+Percocet B-treatment
+and O
+Percodan B-treatment
+during O
+his O
+hospital O
+course O
+. O
+
+
+Right B-problem
+thalamic I-problem
+hemorrhage I-problem
+, O
+hypertension B-problem
+, O
+diabetes B-problem
+mellitus I-problem
+. O
+MITRAL B-problem
+STENOSIS I-problem
+
+
+Mitral B-problem
+stenosis I-problem
+
+
+Tricuspid B-problem
+regurgitation I-problem
+, O
+heart B-problem
+failure I-problem
+, O
+chronic B-problem
+atrial I-problem
+fibrillation I-problem
+, O
+chronic B-problem
+ventricular I-problem
+ectopy I-problem
+, O
+chronic B-problem
+obstructive I-problem
+lung I-problem
+disease I-problem
+. O
+
+
+Epistaxis B-problem
+to O
+Coumadin B-treatment
+in O
+the O
+past O
+. O
+
+
+Cardiac B-test
+catheterization I-test
+11/03 O
+. O
+
+
+Pulmonary B-test
+function I-test
+test I-test
+11/04 O
+. O
+
+
+This O
+68-year-old O
+patient O
+of O
+Dr. O
+Naka O
+Jesc O
+had O
+two O
+episodes O
+of O
+rheumatic B-problem
+fever I-problem
+as O
+a O
+teenager O
+. O
+
+
+She O
+has O
+had O
+chronic B-problem
+atrial I-problem
+fibrillation I-problem
+. O
+
+
+Coumadin B-treatment
+has O
+caused O
+bleeding B-problem
+from I-problem
+the I-problem
+mouth I-problem
+and I-problem
+nose I-problem
+on O
+two O
+occasions O
+, O
+on O
+one O
+occasion O
+with O
+prothrombin B-test
+time I-test
+13 O
+, O
+and O
+has O
+been O
+replaced O
+by O
+anti-platelet B-treatment
+agents I-treatment
+. O
+
+
+She O
+has O
+had O
+recurrent B-problem
+syncope I-problem
+since O
+age O
+6 O
+. O
+
+
+She O
+has O
+now O
+had O
+progressive B-problem
+heart I-problem
+failure I-problem
+. O
+
+
+A B-test
+Holter I-test
+showed O
+atrial B-problem
+fibrillation I-problem
+with O
+period O
+of O
+ventricular B-problem
+bigemini I-problem
+. O
+
+
+She O
+has O
+not O
+had O
+hypertension B-problem
+or O
+diabetes B-problem
+, O
+and O
+says O
+he O
+has O
+lowered O
+her B-test
+cholesterol I-test
+from O
+333 O
+to O
+197 O
+by O
+changing O
+her O
+diet O
+. O
+
+
+There O
+is O
+no O
+family O
+history O
+of O
+heart B-problem
+disease I-problem
+. O
+
+
+She O
+has O
+been O
+treated O
+with O
+Vanceril B-treatment
+for O
+chronic B-problem
+obstructive I-problem
+pulmonary I-problem
+disease I-problem
+. O
+
+
+She O
+has O
+had O
+one O
+gram O
+per O
+day O
+proteinuria B-treatment
+with O
+normal O
+creatinine O
+. O
+
+
+She O
+had O
+a B-treatment
+partial I-treatment
+gastrectomy I-treatment
+in O
+1972 O
+for O
+a B-problem
+&quot; I-problem
+tumor I-problem
+&quot; I-problem
+. O
+
+
+She O
+has O
+had O
+an B-treatment
+appendectomy I-treatment
+and O
+cholecystectomy B-treatment
+. O
+
+
+Digoxin B-treatment
+0.125 O
+mg O
+po O
+q.d. O
+, O
+Lasix B-treatment
+40 O
+mg O
+b.i.d. O
+, O
+aspirin B-treatment
+held O
+, O
+and O
+Vanceril B-treatment
+three O
+puffs O
+b.i.d. O
+
+
+Transdermal B-treatment
+nitroglycerin I-treatment
+caused O
+headache B-problem
+. O
+
+
+Heart B-test
+rate I-test
+86 O
+, O
+irregularly O
+irregular O
+, O
+blood B-test
+pressure I-test
+142/86 O
+. O
+
+
+Neck B-problem
+veins I-problem
+distended I-problem
+. O
+
+
+Apical B-test
+impulse I-test
+not O
+palpable O
+. O
+
+
+Right B-problem
+ventricular I-problem
+heave I-problem
+. O
+
+
+S2 O
+narrowly B-problem
+physiologically I-problem
+split I-problem
+with O
+accentuation B-problem
+of O
+P2 O
+. O
+
+
+No O
+S3 B-problem
+or O
+opening B-problem
+snap I-problem
+. O
+
+
+Grade B-problem
+II I-problem
+systolic I-problem
+murmur I-problem
+at I-problem
+the I-problem
+left I-problem
+lower I-problem
+sternal I-problem
+border I-problem
+. O
+
+
+Grade B-problem
+II I-problem
+decrescendo I-problem
+diastolic I-problem
+murmur I-problem
+at I-problem
+the I-problem
+left I-problem
+lower I-problem
+sternal I-problem
+border I-problem
+. O
+
+
+Diastolic B-problem
+rumble I-problem
+at I-problem
+the I-problem
+apex I-problem
+. O
+
+
+Liver B-problem
+slightly I-problem
+pulsatile I-problem
+but O
+no O
+enlarged B-problem
+. O
+
+
+Pulses B-test
+normal O
+to O
+the O
+femorals O
+with O
+weak B-problem
+dorsalis I-problem
+pedis I-problem
+pulses I-problem
+. O
+
+
+Superficial B-problem
+varicose I-problem
+veins I-problem
+. O
+
+
+No O
+edema B-problem
+. O
+
+
+Hematocrit B-test
+44 O
+, O
+potassium B-test
+4.0 O
+, O
+BUN B-test
+23 O
+, O
+creatinine B-test
+1.2 O
+, O
+blood B-test
+sugar I-test
+115 O
+, O
+Digoxin B-test
+1.4 O
+. O
+
+
+Electrocardiogram B-test
+showed O
+atrial B-problem
+fibrillation I-problem
+, O
+moderate B-problem
+ventricular I-problem
+response I-problem
+, O
+incomplete B-problem
+right I-problem
+bundle I-problem
+branch I-problem
+block I-problem
+, O
+right B-problem
+axis I-problem
+deviation I-problem
+, O
+right B-problem
+ventricular I-problem
+hypertrophy I-problem
+and O
+possible O
+apical B-problem
+infarction I-problem
+. O
+
+
+Chest B-test
+x-ray I-test
+showed O
+left B-problem
+atrial I-problem
+, I-problem
+right I-problem
+ventricular I-problem
+and I-problem
+pulmonary I-problem
+arterial I-problem
+enlargement I-problem
+and O
+interstitial B-problem
+edema I-problem
+with O
+small B-problem
+, I-problem
+bilateral I-problem
+effusions I-problem
+. O
+
+
+Cardiac B-treatment
+catheterization I-treatment
+was O
+performed O
+without O
+complication B-problem
+from O
+the O
+right O
+neck O
+and O
+right O
+groin O
+on O
+the O
+day O
+of O
+admission O
+. O
+
+
+Right B-test
+atrial I-test
+pressure I-test
+was O
+12 O
+with O
+a O
+wave O
+form O
+consistent O
+with O
+tricuspid B-problem
+regurgitation I-problem
+. O
+
+
+There O
+was O
+no O
+tricuspid B-problem
+valve I-problem
+gradient I-problem
+. O
+
+
+Pulmonary B-test
+artery I-test
+pressure I-test
+was O
+markedly B-problem
+elevated I-problem
+at O
+120/60 O
+. O
+
+
+Pulmonary B-test
+capillary I-test
+wedge I-test
+pressure I-test
+was O
+markedly B-problem
+elevated I-problem
+at O
+38 O
+, O
+with O
+a B-problem
+very I-problem
+large I-problem
+mitral I-problem
+valve I-problem
+gradient I-problem
+. O
+
+
+There O
+was O
+little O
+or O
+no O
+aortic B-problem
+valve I-problem
+gradient I-problem
+. O
+
+
+Fich B-test
+cardiac I-test
+output I-test
+was O
+3.0 O
+and O
+indexed O
+2.0 O
+. O
+
+
+Arterial B-test
+oxygen I-test
+saturation I-test
+was O
+85 O
+percent O
+. O
+
+
+There O
+was O
+minimal B-problem
+mitral I-problem
+valve I-problem
+calcification I-problem
+, O
+normal O
+left O
+ventricular O
+contraction O
+, O
+and O
+2+ B-problem
+mitral I-problem
+regurgitation I-problem
+into I-problem
+a I-problem
+large I-problem
+left I-problem
+atrium I-problem
+. O
+
+
+There O
+was O
+minimal B-problem
+aortic I-problem
+valve I-problem
+calcification I-problem
+, O
+mild B-problem
+______________ I-problem
+thickening I-problem
+, O
+normal O
+open O
+, O
+and O
+mild B-problem
+aortic I-problem
+regurgitation I-problem
+. O
+
+
+There O
+was O
+mild B-problem
+atherosclerosis I-problem
+of I-problem
+the I-problem
+mid I-problem
+left I-problem
+anterior I-problem
+descending I-problem
+. O
+
+
+FVC B-test
+was O
+1.6 O
+or O
+58 O
+percent O
+of O
+predicted O
+and O
+FEV1 B-test
+0.95 O
+or O
+45 O
+percent O
+of O
+predicted O
+. O
+
+
+Room B-test
+air I-test
+arterial I-test
+blood I-test
+gas I-test
+was O
+56/40/7.45 O
+. O
+
+
+Because O
+it O
+would O
+be O
+ideal O
+to O
+place O
+a B-treatment
+mechanical I-treatment
+valve I-treatment
+if O
+valve B-treatment
+replacement I-treatment
+rather O
+that O
+commissurotomy B-treatment
+is O
+needed O
+, O
+she O
+was O
+seen O
+by O
+Dr. O
+Ca O
+Shuff O
+of O
+ENT O
+for O
+her O
+history O
+of O
+epistaxis B-problem
+. O
+
+
+He O
+identified O
+no O
+bleeding B-problem
+source I-problem
+, O
+but O
+felt O
+that O
+the O
+risk O
+of O
+nasal B-problem
+hemorrhage I-problem
+on O
+Coumadin B-treatment
+could O
+be O
+minimized O
+interventional B-treatment
+neuroradiology I-treatment
+occlusion I-treatment
+of O
+the O
+arteries O
+to O
+the O
+nose O
+bilaterally O
+. O
+
+
+The B-treatment
+procedure I-treatment
+could O
+not O
+be O
+scheduled O
+during O
+this O
+admission O
+. O
+
+
+The O
+patient O
+is O
+, O
+therefore O
+, O
+discharged O
+after O
+a O
+three O
+day O
+hospitalization O
+, O
+with O
+plans O
+for O
+re-admission O
+for O
+the B-treatment
+neuroradiology I-treatment
+procedure I-treatment
+. O
+
+
+This O
+will O
+be O
+followed O
+by O
+a O
+trial O
+of O
+Coumadin B-treatment
+, O
+and O
+then O
+by O
+mitral B-treatment
+commissurotomy I-treatment
+or O
+replacement B-treatment
+and O
+probable O
+tricuspid B-treatment
+annuloplasty I-treatment
+by O
+Dr. O
+Riemund O
+C. O
+Wave O
+. O
+
+
+In O
+the O
+meantime O
+, O
+Lasix B-treatment
+dosage O
+is O
+increased O
+. O
+
+
+Potassium B-treatment
+replacement I-treatment
+has O
+caused O
+, O
+according O
+to O
+the O
+patient O
+, O
+marked B-problem
+hyperkalemia I-problem
+in O
+the O
+past O
+. O
+
+
+Digoxin B-treatment
+0.125 O
+mg O
+q.d. O
+, O
+Lasix B-treatment
+80 O
+mg O
+q.a.m. O
+and O
+40 O
+mg O
+q.p.m. O
+aspirin B-treatment
+1 O
+q.d. O
+, O
+and O
+Vanceril B-treatment
+three O
+puffs O
+b.i.d. O
+FLANK B-problem
+PAIN I-problem
+URI B-problem
+? O
+
+
+The O
+patient O
+was O
+given O
+printed O
+instructions O
+for O
+urinary B-problem
+tract I-problem
+infection I-problem
+( O
+Portugese O
+) O
+. O
+
+
+Urinary B-problem
+Tract I-problem
+Infection I-problem
+
+
+Exam B-test
+, O
+urinalysis B-test
+, O
+medication B-treatment
+
+
+Levofloxacin B-treatment
+500 O
+mg O
+every O
+day O
+for O
+7 O
+days O
+
+
+Return O
+to O
+the O
+ER O
+for O
+high B-problem
+fevers I-problem
+, O
+vomiting B-problem
+, O
+uncontrolled B-problem
+pains I-problem
+or O
+other B-problem
+concerns I-problem
+as O
+needed O
+. O
+CHRONIC B-problem
+MYELOGENOUS I-problem
+LEUKEMIA I-problem
+
+
+CML B-problem
+. O
+
+
+1. O
+STATUS O
+POST O
+BONE B-treatment
+MARROW I-treatment
+TRANSPLANT I-treatment
+. O
+
+
+2. O
+INTRAPARENCHYMAL B-problem
+BLEED I-problem
+. O
+
+
+Mr. O
+Larsen O
+was O
+a O
+50-year-old O
+salesman O
+who O
+in O
+12/26 O
+was O
+noted O
+to O
+have O
+an B-problem
+elevated I-problem
+platelet I-problem
+count I-problem
+of O
+778,000 O
+. O
+
+
+He O
+was O
+found O
+to O
+have O
+CML B-problem
+. O
+
+
+He O
+was O
+admitted O
+on O
+06/07/00 O
+for O
+a B-treatment
+matched I-treatment
+, I-treatment
+unrelated I-treatment
+donor I-treatment
+bone I-treatment
+marrow I-treatment
+transplant I-treatment
+. O
+
+
+White B-test
+blood I-test
+cell I-test
+count I-test
+of O
+24.409 O
+and O
+platelets B-test
+of O
+956,000 O
+. O
+
+
+The O
+patient O
+received O
+his B-treatment
+bone I-treatment
+marrow I-treatment
+transplant I-treatment
+on O
+06/12/00 O
+. O
+
+
+His O
+course O
+was O
+then O
+complicated O
+by O
+fevers B-problem
+and O
+neutropenia B-problem
+which O
+were O
+treated O
+with O
+antibiotics B-treatment
+and O
+a B-problem
+diffuse I-problem
+erythroderm I-problem
+felt O
+to O
+be O
+a B-problem
+drug I-problem
+reaction I-problem
+. O
+
+
+On O
+06/24/00 O
+the O
+patient O
+was O
+found O
+to O
+have O
+pulmonary B-problem
+infiltrates I-problem
+and O
+some B-problem
+hemoptysis I-problem
+. O
+
+
+A B-test
+bronchoscopy I-test
+was O
+done O
+and O
+there O
+was O
+blood B-problem
+found O
+in O
+the O
+upper O
+airways O
+but O
+no O
+evidence O
+of O
+blood B-problem
+in I-problem
+alveoli I-problem
+so O
+it O
+was O
+not O
+felt O
+to O
+be O
+DAH B-problem
+. O
+
+
+On O
+06/26/00 O
+due O
+to O
+agitation B-problem
+, O
+change B-problem
+in I-problem
+mental I-problem
+status I-problem
+and O
+increased B-problem
+respiratory I-problem
+distress I-problem
+, O
+the O
+patient O
+was O
+intubated B-treatment
+. O
+
+
+It O
+was O
+felt O
+at O
+that O
+time O
+that O
+the B-problem
+changing I-problem
+mental I-problem
+status I-problem
+and O
+respiratory B-problem
+distress I-problem
+might O
+be O
+due O
+to O
+a O
+combination O
+of O
+medication B-treatment
+and O
+worsening B-problem
+mucositis I-problem
+. O
+
+
+Although O
+the B-treatment
+patient I-treatment
+&apos;s I-treatment
+pain I-treatment
+and I-treatment
+sedation I-treatment
+meds I-treatment
+were O
+adjusted O
+he O
+continued O
+to O
+be O
+agitated B-problem
+and O
+there O
+was O
+difficulty O
+weaning O
+him O
+off O
+the B-treatment
+vent I-treatment
+. O
+
+
+Because O
+of O
+this B-problem
+continued I-problem
+agitation I-problem
+, O
+a B-test
+head I-test
+CT I-test
+was O
+performed O
+on O
+07/01/00 O
+and O
+it O
+revealed O
+an B-problem
+intraparenchymal I-problem
+hemorrhage I-problem
+. O
+
+
+Neurosurgery O
+was O
+consulted O
+but O
+due O
+to O
+the B-problem
+severity I-problem
+of I-problem
+the I-problem
+bleed I-problem
+surgery B-treatment
+was O
+not O
+considered O
+an O
+option O
+. O
+
+
+The O
+patient O
+gradually O
+lost O
+brain O
+systolic O
+ejection O
+murmur O
+function O
+and O
+was O
+pronounced O
+dead B-problem
+on O
+07/02/00 O
+. O
+RIGHT B-problem
+CAPSULAR I-problem
+PUTAMENAL I-problem
+HEMORRHAGE I-problem
+. O
+
+
+Right B-problem
+capsular I-problem
+putamenal I-problem
+hemorrhage I-problem
+. O
+
+
+hypertension B-problem
+. O
+
+
+Mrs. O
+Dua O
+is O
+a O
+34 O
+year O
+old O
+white O
+female O
+with O
+an O
+unclear O
+history O
+of O
+hypertension B-problem
+for O
+at O
+least O
+five O
+years O
+. O
+
+
+She O
+was O
+in O
+her O
+usual O
+state O
+of O
+health O
+until O
+around O
+12:40 O
+on O
+October O
+19 O
+, O
+when O
+while O
+on O
+the O
+phone O
+, O
+started O
+to O
+have O
+difficulty B-problem
+in I-problem
+talking I-problem
+. O
+
+
+Her O
+speech O
+became O
+slurred B-problem
+, O
+this O
+was O
+followed O
+a O
+few O
+seconds O
+after O
+by O
+weakness B-problem
+and I-problem
+numbness I-problem
+of I-problem
+her I-problem
+arm I-problem
+and I-problem
+leg I-problem
+. O
+
+
+She O
+did O
+not O
+complain O
+of O
+headache B-problem
+, O
+diplopia B-problem
+, O
+or O
+any B-problem
+other I-problem
+neurological I-problem
+symptoms I-problem
+. O
+
+
+She O
+was O
+seen O
+at O
+A O
+Memorial O
+Hospital O
+where O
+her B-test
+blood I-test
+pressure I-test
+was O
+measured O
+at O
+240/120 O
+and O
+was O
+found O
+to O
+have O
+a B-problem
+mild I-problem
+left I-problem
+hemiparesis I-problem
+. O
+
+
+She O
+was O
+then O
+transferred O
+to O
+Ro O
+Woodma O
+Healthcare O
+for O
+further B-treatment
+management I-treatment
+. O
+
+
+She O
+does O
+not O
+smoke O
+, O
+does O
+not O
+use O
+birth B-treatment
+control I-treatment
+pills I-treatment
+, O
+does O
+not O
+use O
+drugs O
+. O
+
+
+Father O
+and O
+brother O
+died O
+of O
+PE B-problem
+. O
+
+
+A O
+34 O
+year O
+old O
+white O
+female O
+lying O
+in O
+bed O
+, O
+anxious B-problem
+; O
+blood B-test
+pressure I-test
+of O
+220/120 O
+, O
+afebrile B-problem
+. O
+
+
+no O
+lesions B-problem
+. O
+
+
+normocephalic O
+, O
+atraumatic B-problem
+, O
+anicteric B-problem
+. O
+
+
+supple O
+, O
+no O
+bruits B-problem
+. O
+
+
+regular O
+rhythm O
+with O
+no O
+murmur B-problem
+, O
+rub B-problem
+or O
+gallop B-problem
+. O
+
+
+clear O
+to O
+auscultation B-test
+. O
+
+
+bowel O
+sounds O
+present O
+, O
+soft O
+, O
+nontender B-problem
+, O
+nondistended B-problem
+, O
+guaiac O
+negative O
+, O
+no O
+hepatosplenomegaly B-problem
+. O
+
+
+no O
+clubbing B-problem
+, I-problem
+cyanosis B-problem
+or O
+edema B-problem
+. O
+
+
+Her O
+speech O
+was O
+fluent O
+with O
+no O
+phasic B-problem
+or I-problem
+praxic I-problem
+problems I-problem
+, O
+dysarthric B-problem
+. O
+
+
+Visual O
+fields O
+were O
+full O
+to O
+confrontation B-test
+. O
+
+
+Pupils O
+were O
+2 O
+millimeters O
+down O
+to O
+1 O
+millimeter O
+by O
+direct B-test
+and I-test
+consensual I-test
+stimuli I-test
+. O
+
+
+V1 O
+through O
+V3 O
+, O
+diminished O
+light B-test
+touch I-test
+and O
+pinprick B-test
+in O
+the O
+left O
+side O
+. O
+
+
+There O
+was O
+a B-problem
+left I-problem
+central I-problem
+facial I-problem
+paresis I-problem
+. O
+
+
+Gag B-test
+was O
+symmetric O
+. O
+
+
+There O
+was O
+a B-problem
+left I-problem
+arm I-problem
+pronator I-problem
+. O
+
+
+The B-test
+deep I-test
+tendon I-test
+reflexes I-test
+were O
+2+ O
+on O
+the O
+left O
+side O
+, O
+1+ O
+on O
+the O
+right O
+side O
+. O
+
+
+On O
+sensory B-test
+exam I-test
+there O
+was O
+a B-problem
+mild I-problem
+diminution I-problem
+of I-problem
+light I-problem
+touch I-problem
+, I-problem
+pinprick I-problem
+, I-problem
+position I-problem
+, I-problem
+and I-problem
+vibration I-problem
+sense I-problem
+in I-problem
+the I-problem
+left I-problem
+side I-problem
+. O
+
+
+the O
+fine O
+motor O
+movements O
+of O
+the O
+left O
+hand O
+were O
+diminished B-problem
+, O
+there O
+was O
+a B-problem
+mild I-problem
+dysmetria I-problem
+on I-problem
+the I-problem
+left I-problem
+side I-problem
+to O
+finger B-test
+/ I-test
+nose I-test
+and O
+heel B-test
+/ I-test
+shin I-test
+. O
+
+
+The B-problem
+walk I-problem
+was I-problem
+paretic I-problem
+in I-problem
+the I-problem
+left I-problem
+side I-problem
+. O
+
+
+sodium B-test
+140 O
+, O
+potassium B-test
+4 O
+, O
+chloride B-test
+107 O
+, O
+CO2 B-test
+25.4 O
+, O
+BUN B-test
+9 O
+, O
+creatinine B-test
+.8 O
+, O
+blood B-test
+sugar I-test
+130 O
+. O
+
+
+Uric B-test
+acid I-test
+4.7 O
+, O
+cholesterol B-test
+150 O
+, O
+triglycerides B-test
+74 O
+, O
+HDL B-test
+44 O
+, O
+LDL B-test
+91 O
+. O
+
+
+Urine B-test
+and I-test
+serum I-test
+toxicology I-test
+screen I-test
+negative O
+. O
+
+
+Thyroid B-test
+stimulation I-test
+hormone I-test
+1.9 O
+. O
+
+
+Dexamethasone B-test
+suppression I-test
+test I-test
+negative O
+with O
+a B-test
+cortisol I-test
+level I-test
+at O
+8 O
+a.m. O
+of O
+1.7 O
+. O
+
+
+Twenty-four B-test
+urine I-test
+for O
+catecholamine B-test
+, O
+metanephrines B-test
+, O
+and O
+VMA B-test
+pending O
+at O
+the O
+time O
+of O
+discharge O
+. O
+
+
+White B-test
+blood I-test
+cell I-test
+count I-test
+9.8 O
+, O
+hematocrit B-test
+44.1 O
+, O
+platelets B-test
+262 O
+, O
+prothrombin B-test
+time I-test
+10.4/ O
+10.3 O
+, O
+partial B-test
+thromboplastin I-test
+time I-test
+25.9 O
+. O
+
+
+urinalysis B-test
+: O
+
+
+specific B-test
+gravity I-test
+125 O
+, O
+PH O
+6 O
+. O
+
+
+Urine B-test
+culture I-test
+negative O
+. O
+
+
+Sedimentation B-test
+rate I-test
+2 O
+, O
+antithrombin B-test
+3 O
+. O

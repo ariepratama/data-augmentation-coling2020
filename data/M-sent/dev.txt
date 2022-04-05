@@ -1,0 +1,88 @@
+
+NEAR B-problem
+SYNCOPE I-problem
+Standardized O
+Discharge O
+Instructions O
+: O
+
+
+The O
+patient O
+was O
+given O
+printed O
+instructions O
+for O
+dizziness B-problem
+( O
+English O
+) O
+. O
+
+
+near B-problem
+syncope I-problem
+, O
+dehydration B-problem
+vs O
+cardiogenic B-problem
+
+
+IVF B-treatment
+, O
+cbc B-test
+( O
+hct B-test
+36 O
+) O
+, O
+normal O
+chem O
+7 O
+, O
+negative O
+cardiac O
+enzymes O
+, O
+negative O
+stool O
+guaiac O
+, O
+normal O
+CXR O
+
+
+Dr. O
+Foutchner O
+will O
+arrange O
+for O
+an B-test
+outpatient I-test
+Holter I-test
+monitor I-test
+. O
+
+
+The O
+patient O
+is O
+to O
+return O
+to O
+the O
+ED O
+for O
+recurrent B-problem
+dizziness I-problem
+, O
+chest B-problem
+pain I-problem
+, O
+shortness B-problem
+of I-problem
+breath I-problem
+or O
+weakness B-problem
+. O
