@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=8gb
 #SBATCH --nodes=1
-#SBATCH --output=/home/u26/ariesutiono/run_experiment_m.log
+#SBATCH --output=/home/u26/ariesutiono/da-coling2020/logs/run_experiment_m.log
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=ariesutiono@email.arizona.edu
 #SBATCH --account=clu-ling
@@ -19,4 +19,4 @@ python main.py \
 --data_folder /home/u26/ariesutiono/da-coling2020/data/M-sent \
 --embedding_type bert \
 --pretrained_dir allenai/scibert_scivocab_cased \
---result_filepath /home/u26/ariesutiono/da-coling2020/M-sent.log
+--result_filepath /home/u26/ariesutiono/da-coling2020/logs/M-sent.log
