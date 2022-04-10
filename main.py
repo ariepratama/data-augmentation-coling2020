@@ -10,7 +10,8 @@ import argparse, json, logging, numpy, os, random, sys, torch
 from data import ConllCorpus
 from train import train, final_test
 from models import TransformerEncoder, LinearCRF, MLP
-from augment import get_category2mentions, get_label2tokens
+from augment import get_category2mentions, get_label2tokens, get_idx2sentence
+from augment_clu import corpus_to_trees
 
 
 logger = logging.getLogger(__name__)
@@ -64,6 +65,8 @@ def parse_parameters(parser=None):
     parser.add_argument("--replace_ratio", default=0.3, type=float)
     parser.add_argument("--num_generated_samples", default=1, type=int)
 
+    parser.add_argument("--replaced_non_terminal", default=None)
+
     parser.add_argument("--debug", action="store_true")
 
     args, _ = parser.parse_known_args()
@@ -104,11 +107,13 @@ if __name__ == "__main__":
 
     category2mentions = get_category2mentions(corpus.train)
     label2tokens = get_label2tokens(corpus.train, args.p_power)
+    idx2sentence = get_idx2sentence(corpus.train)
+    train_corpus_trees = corpus_to_trees(corpus.train)
 
     encoder = TransformerEncoder(args, device)
     mlp = MLP(encoder.output_dim, len(tag_dict), encoder.output_dim, 1).to(device)
     crf = LinearCRF(tag_dict, device)
-    dev_scores = train(args, encoder, mlp, crf, corpus.train, corpus.dev, category2mentions, label2tokens)
+    dev_scores = train(args, encoder, mlp, crf, corpus.train, corpus.dev, category2mentions, label2tokens, idx2sentence, train_corpus_trees)
 
     args.result["dev_result"] = final_test(args, encoder, mlp, crf, corpus.dev, "dev")
     args.result["test_result"] = final_test(args, encoder, mlp, crf, corpus.test, "test")

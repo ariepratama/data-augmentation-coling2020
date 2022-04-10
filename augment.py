@@ -153,6 +153,15 @@ def get_label2tokens(dataset, p_power):
     return label2tokens
 
 
+def get_idx2sentence(dataset):
+    idx2sentence = {}
+    for idx, sentence in enumerate(dataset):
+        idx2sentence[idx] = sentence
+        idx2sentence[sentence.idx] = sentence
+
+    return idx2sentence
+
+
 def generate_sentences_by_replace_token(sentence, label2tokens, replace_ratio, num_generated_samples):
     sentences = []
     for i in range(num_generated_samples):

@@ -1,2 +1,5 @@
 .idea/
 logs/
+*.log
+__pycache__/
+_trial_temp/
