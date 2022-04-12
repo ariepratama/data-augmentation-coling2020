@@ -1,3 +1,5 @@
+import logging
+import sys
 import unittest
 from collections import defaultdict
 
@@ -5,6 +7,8 @@ from nltk import Tree
 
 from augment_clu import get_start_end_of_span, find_before_and_after_mutation_idx, to_sentence
 from data import Sentence, Token
+
+logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
 
 
 class TestAugmentClu(unittest.TestCase):
@@ -50,13 +54,13 @@ class TestAugmentClu(unittest.TestCase):
 
         start, end = get_start_end_of_span(sample_tree, 2)
         leaves = sample_tree.leaves()
-        self.assertEqual(leaves[start:end], ["to"])
+        self.assertEqual(leaves[start:end + 1], ["to"])
 
         start, end = get_start_end_of_span(sample_tree, 1)
-        self.assertEqual(leaves[start:end], ["am", "eating", "sandwich"])
+        self.assertEqual(leaves[start:end + 1], ["am", "eating", "sandwich"])
 
         start, end = get_start_end_of_span(sample_tree, 3)
-        self.assertEqual(leaves[start:end], ["fill", "me", "up"])
+        self.assertEqual(leaves[start:end + 1], ["fill", "me", "up"])
 
     def test_find_before_and_after_mutation_idx_original_sentence_is_longer(self):
         sample_sentence_text = "this sentence is ready to be mutated but this part has not"
@@ -72,7 +76,7 @@ class TestAugmentClu(unittest.TestCase):
                                                                                 start_mutated_idx, end_mutated_idx)
         print(bm_start, bm_end, am_start, am_end)
         self.assertEqual(bm_start, 0)
-        self.assertEqual(bm_end, start_mutated_idx)
+        self.assertEqual(bm_end + 1, start_mutated_idx)
         self.assertNotEqual(am_start, end_mutated_idx)
         self.assertEqual(am_start, 7)
 
@@ -90,7 +94,7 @@ class TestAugmentClu(unittest.TestCase):
                                                                                 start_mutated_idx, end_mutated_idx)
         print(bm_start, bm_end, am_start, am_end)
         self.assertEqual(bm_start, 0)
-        self.assertEqual(bm_end, start_mutated_idx)
+        self.assertEqual(bm_end + 1, start_mutated_idx)
         self.assertNotEqual(am_start, end_mutated_idx)
         self.assertEqual(am_start, 4)
 
@@ -103,7 +107,7 @@ class TestAugmentClu(unittest.TestCase):
             sample_sentence.add_token(token)
 
         start_mutated_idx = 2
-        end_mutated_idx = 5
+        end_mutated_idx = 4
         leaves = "this sentence has been mutated but this part has not".split()
         tok2tag = defaultdict(str)
         tok2tag["has"] = "B"
@@ -111,15 +115,103 @@ class TestAugmentClu(unittest.TestCase):
         tok2tag["mutated"] = "B"
 
         new_sentence = to_sentence(sample_sentence, 1, leaves, start_mutated_idx, end_mutated_idx, tok2tag)
+
         print(new_sentence)
         for token in new_sentence[:start_mutated_idx]:
             self.assertEqual(token.get_label("gold"), "O")
 
-        for token in new_sentence[start_mutated_idx:end_mutated_idx]:
+        for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
             self.assertEqual(token.get_label("gold"), "B")
 
-        for token in new_sentence[end_mutated_idx:]:
+        for token in new_sentence[end_mutated_idx + 1:]:
             self.assertEqual(token.get_label("gold"), "O")
+
+    def test_to_sentence_with_mutated_at_similar_length(self):
+        sample_sentence_text = "this sentence is mutating but this part has not"
+        sample_sentence = Sentence("sample-sentence-1")
+        for i, token_text in enumerate(sample_sentence_text.split()):
+            token = Token(token_text, i)
+            token.set_label("gold", "O")
+            sample_sentence.add_token(token)
+
+        start_mutated_idx = 2
+        end_mutated_idx = 3
+        leaves = "this sentence did mutated but this part has not".split()
+        tok2tag = defaultdict(str)
+        tok2tag["did"] = "B"
+        tok2tag["mutated"] = "B"
+
+        new_sentence = to_sentence(sample_sentence, 1, leaves, start_mutated_idx, end_mutated_idx, tok2tag)
+        print(new_sentence)
+
+        for t in new_sentence:
+            print(t.text, t.get_label("gold"))
+
+        for token in new_sentence[:start_mutated_idx]:
+            self.assertEqual(token.get_label("gold"), "O")
+
+        for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
+            self.assertEqual(token.get_label("gold"), "B")
+
+        for token in new_sentence[end_mutated_idx + 1:]:
+            self.assertEqual(token.get_label("gold"), "O")
+
+    def test_to_sentence_with_mutated_at_similar_length_and_leaves_is_longer(self):
+        sample_sentence_text = "this sentence is mutating but this part has not"
+        sample_sentence = Sentence("sample-sentence-1")
+        for i, token_text in enumerate(sample_sentence_text.split()):
+            token = Token(token_text, i)
+            token.set_label("gold", "O")
+            sample_sentence.add_token(token)
+
+        start_mutated_idx = 7
+        end_mutated_idx = 11
+        leaves = "this sentence is mutating but this part is now has been mutated".split()
+        tok2tag = defaultdict(str)
+        tok2tag["is"] = "B"
+        tok2tag["now"] = "B"
+        tok2tag["has"] = "B"
+        tok2tag["been"] = "B"
+        tok2tag["mutated"] = "B"
+
+        new_sentence = to_sentence(sample_sentence, 1, leaves, start_mutated_idx, end_mutated_idx, tok2tag)
+
+        for t in new_sentence:
+            print(t.text, t.get_label("gold"))
+
+        for token in new_sentence[:start_mutated_idx]:
+            self.assertEqual(token.get_label("gold"), "O")
+
+        for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
+            self.assertEqual(token.get_label("gold"), "B")
+
+    def test_to_sentence_with_mutated_at_beginning_and_leaves_is_longer(self):
+        sample_sentence_text = "this sentence is mutating but this part has not"
+        sample_sentence = Sentence("sample-sentence-1")
+        for i, token_text in enumerate(sample_sentence_text.split()):
+            token = Token(token_text, i)
+            token.set_label("gold", "O")
+            sample_sentence.add_token(token)
+
+        start_mutated_idx = 0
+        end_mutated_idx = 3
+        leaves = "that previous sentence a is mutating but this part has not".split()
+        tok2tag = defaultdict(str)
+        tok2tag["that"] = "B"
+        tok2tag["previous"] = "B"
+        tok2tag["sentence"] = "B"
+        tok2tag["a"] = "B"
+
+        new_sentence = to_sentence(sample_sentence, 1, leaves, start_mutated_idx, end_mutated_idx, tok2tag)
+
+        for t in new_sentence:
+            print(t.text, t.get_label("gold"))
+
+        for token in new_sentence[:start_mutated_idx]:
+            self.assertEqual(token.get_label("gold"), "O")
+
+        for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
+            self.assertEqual(token.get_label("gold"), "B")
 
 
 if __name__ == '__main__':
