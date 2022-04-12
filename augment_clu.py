@@ -48,6 +48,7 @@ def generate_sentences_by_grammar(sentence: Sentence,
     logging.info(f"Original sentence: {sentence}")
     for generation_idx, (target_parent, target_child_idx) in enumerate(
             selector.select(sentence_tree, actual_n_generated_samples)):
+        logging.info(f"selected sentence from selector, target_parent={target_parent} target_child_idx={target_child_idx}")
         mutated_parent, _, selected_corpus_indexes = mutator.transform(target_parent, target_child_idx,
                                                                        random_seed=random_state)
         tok2tag = generate_tok2label(idx2sentence, selected_corpus_indexes, sentence)
