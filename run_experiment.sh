@@ -2,7 +2,7 @@
 #SBATCH --partition=standard
 #SBATCH --account=clu-ling
 #SBATCH --mail-user=ariesutiono@email.arizona.edu
-#SBATCH --mail-type=AL
+#SBATCH --mail-type=ALL
 
 echo "data dir: ${DATA_DIR}"
 echo "log dir: ${LOG_DIR}"
