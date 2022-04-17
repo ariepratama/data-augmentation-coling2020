@@ -1,4 +1,6 @@
 #!/bin/bash
+#SBATCH --partition=standard
+#SBATCH --account=clu-ling
 
 module load anaconda/2020
 conda init bash
