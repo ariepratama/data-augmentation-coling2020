@@ -52,6 +52,7 @@ def generate_sentences_by_grammar(sentence: Sentence,
         mutated_parent, _, selected_corpus_indexes = mutator.transform(target_parent, target_child_idx,
                                                                        random_seed=random_state)
         tok2tag = generate_tok2label(idx2sentence, selected_corpus_indexes, sentence)
+        # get start and end of original sentence's mutated span
         start_mutated_idx, end_mutated_idx = get_start_end_of_span(target_parent, target_child_idx)
         generated_sentence = to_sentence(sentence, generation_idx, mutated_parent.leaves(),
                                          start_mutated_idx, end_mutated_idx, tok2tag)
@@ -127,7 +128,7 @@ def to_sentence(original_sentence, n_generated_sentence, leaves,
         if type(leave) == tuple:
             text = leave[0]
         label = "O"
-        if start_mutated_idx <= token_idx <= end_mutated_idx:
+        if start_mutated_idx <= token_idx <= end_mutated_idx + sentence_length_diff:
             label = tok2tag[text]
         elif -1 < bm_start <= token_idx < bm_end + 1:
             label = original_sentence.get_token(token_idx).get_label("gold")

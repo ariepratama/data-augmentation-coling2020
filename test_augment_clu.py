@@ -107,12 +107,13 @@ class TestAugmentClu(unittest.TestCase):
             sample_sentence.add_token(token)
 
         start_mutated_idx = 2
-        end_mutated_idx = 4
+        end_mutated_idx = 3
         leaves = "this sentence has been mutated but this part has not".split()
         tok2tag = defaultdict(str)
         tok2tag["has"] = "B"
         tok2tag["been"] = "B"
         tok2tag["mutated"] = "B"
+        sentence_diff_len = len(leaves) - len(sample_sentence_text.split())
 
         new_sentence = to_sentence(sample_sentence, 1, leaves, start_mutated_idx, end_mutated_idx, tok2tag)
 
@@ -123,7 +124,7 @@ class TestAugmentClu(unittest.TestCase):
         for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
             self.assertEqual(token.get_label("gold"), "B")
 
-        for token in new_sentence[end_mutated_idx + 1:]:
+        for token in new_sentence[end_mutated_idx + sentence_diff_len + 1:]:
             self.assertEqual(token.get_label("gold"), "O")
 
     def test_to_sentence_with_mutated_at_similar_length(self):
@@ -140,6 +141,7 @@ class TestAugmentClu(unittest.TestCase):
         tok2tag = defaultdict(str)
         tok2tag["did"] = "B"
         tok2tag["mutated"] = "B"
+        sentence_diff_len = len(leaves) - len(sample_sentence_text.split())
 
         new_sentence = to_sentence(sample_sentence, 1, leaves, start_mutated_idx, end_mutated_idx, tok2tag)
         print(new_sentence)
@@ -153,7 +155,7 @@ class TestAugmentClu(unittest.TestCase):
         for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
             self.assertEqual(token.get_label("gold"), "B")
 
-        for token in new_sentence[end_mutated_idx + 1:]:
+        for token in new_sentence[end_mutated_idx + sentence_diff_len + 1:]:
             self.assertEqual(token.get_label("gold"), "O")
 
     def test_to_sentence_with_mutated_at_similar_length_and_leaves_is_longer(self):
@@ -212,6 +214,30 @@ class TestAugmentClu(unittest.TestCase):
 
         for token in new_sentence[start_mutated_idx:end_mutated_idx + 1]:
             self.assertEqual(token.get_label("gold"), "B")
+
+    def test_to_sentence_with_mutation_from_starting_token_and_only_one_token(self):
+        sample_sentence_text = "IVF , cbc ( hct 36 ) , normal chem 7 , negative cardiac enzymes , negative stool guaiac , normal CXR"
+        sample_sentence = Sentence("sample-sentence-from-training")
+        for i, token_text in enumerate(sample_sentence_text.split()):
+            token = Token(token_text, i)
+            token.set_label("gold", "O")
+            sample_sentence.add_token(token)
+        start_mutated_idx = 0
+        end_mutated_idx = 1
+        new_leaves = [('bp156/81', 'NNP'), (',', ','), ('rr28', 'NNP'), (',', ','), ('o2', 'NNP'), ('cbc', 'NNP'),
+                      ('(', '-LRB-'), ('hct', 'NNP'), ('36', 'CD'), (')', '-RRB-'), (',', ','), ('normal', 'JJ'),
+                      ('chem', 'NNP'), ('7', 'CD'), (',', ','), ('negative', 'JJ'), ('cardiac', 'JJ'),
+                      ('enzymes', 'NNS'), (',', ','), ('negative', 'JJ'), ('stool', 'NN'), ('guaiac', 'NN'), (',', ','),
+                      ('normal', 'JJ'), ('CXR', 'NNP')]
+
+        tok2tag = defaultdict(str)
+        for token, tag in new_leaves:
+            tok2tag[token] = tag
+        new_sentence = to_sentence(sample_sentence, 1, new_leaves, start_mutated_idx, end_mutated_idx, tok2tag)
+        for i in range(5):
+            tok = new_sentence.get_token(i)
+            print(tok, tok.get_label("gold"))
+            self.assertNotEqual("O", new_sentence.get_token(i).get_label("gold"))
 
 
 if __name__ == '__main__':
