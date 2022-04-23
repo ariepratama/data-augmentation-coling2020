@@ -85,7 +85,9 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
             ori_sentence_parent_idx = ner_node_sentence.parent_index()
 
             # replace the entire subtree
-            ori_sentence_parent[ori_sentence_parent_idx] = ner_node_replacement
+            # need to use ParentedTree.convert to lose the parent, otherwise the replacement will fail
+            logging.info(f"replacing node={ner_node_sentence} with {ner_node_replacement}")
+            ori_sentence_parent[ori_sentence_parent_idx] = ParentedTree.convert(ner_node_replacement)
             mutated_sentence_tree = ori_sentence_parent
             if mutated_sentence_tree.parent() is not None:
                 mutated_sentence_tree = ori_sentence_parent.parent()
