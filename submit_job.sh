@@ -8,8 +8,10 @@ export AUGMENTATION=$5
 export DATA_DIR=/home/u26/ariesutiono/da-coling2020/data
 export LOG_DIR=/home/u26/ariesutiono/da-coling2020/logs
 
-sbatch --job-name=da-coling2020-${SIZE}-${RUN_DATETIME} \
---output=/home/u26/ariesutiono/da-coling2020/logs/${SIZE}-${RUN_DATETIME}.sbatch.log \
+NAME_SUFFIX = "${SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${RUN_DATETIME}"
+
+sbatch --job-name=da-coling2020-${NAME_SUFFIX} \
+--output=/home/u26/ariesutiono/da-coling2020/logs/${NAME_SUFFIX}.sbatch.log \
 --time=00:30:00 \
 --partition=standard \
 --account=clu-ling \

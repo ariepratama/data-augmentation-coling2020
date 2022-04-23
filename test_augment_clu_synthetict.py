@@ -2,7 +2,7 @@ import unittest
 
 from nltk import Tree
 
-from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves
+from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves, find_related_ner_spans
 from data import Sentence, Token
 
 
@@ -80,7 +80,29 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
         self.assertEqual("NER_B-something_DET", sample_pre_leaves[1].label())
         self.assertEqual("NER_I-something_N", sample_pre_leaves[2].label())
 
+    def test_find_related_ner_spans(self):
+        ner_category = "problem"
+        sample_sentence = Sentence("sample_sentence_1")
+        sample_sentence_tokens = "doing the thing".split()
+        sample_sentence_token_tags = "O B-problem I-problem".split()
 
+        for idx, (token_text, tag) in enumerate(zip(sample_sentence_tokens, sample_sentence_token_tags)):
+            token = Token(token_text, idx)
+            token.set_label("gold", tag)
+            sample_sentence.add_token(token)
+
+        replacement_sentence = Sentence("sample")
+        replacement_sentence_tokens = "This love has taken its toll on me , she said .".split()
+        replacement_sentence_tags = "O O B-problem I-problem I-problem I-problem O O O O O O".split()
+
+        for idx, (token_text, tag) in enumerate(zip(replacement_sentence_tokens, replacement_sentence_tags)):
+            token = Token(token_text, idx)
+            token.set_label("gold", tag)
+            replacement_sentence.add_token(token)
+        replacement_ner_spans = [(2, 5)]
+        related_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_ner_spans)
+        self.assertEqual(1, len(related_spans))
+        self.assertEqual(related_spans[0], replacement_ner_spans[0])
 
 
 

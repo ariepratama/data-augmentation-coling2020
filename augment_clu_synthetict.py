@@ -66,6 +66,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     spans_to_be_replaced: List[Tuple[int, int]] = random.choices(ner_spans, k=num_generated_samples)
 
     for generation_id, (start_span_to_be_replaced, _) in enumerate(spans_to_be_replaced):
+        logging.info(f"Generating sentence number={generation_id}, start_span_to_replace={start_span_to_be_replaced}...")
         ner_node_sentence = find_ner_node_given_span(sentence_tree, start_span_to_be_replaced)
         begin_ner_token: Token = sentence.get_token(start_span_to_be_replaced)
         ner_category = begin_ner_token.get_label("gold").split("-")[-1]
@@ -150,7 +151,7 @@ def find_related_ner_spans(ner_category: Text, replacement_sentence: Sentence,
                            replacement_ner_spans: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
     results = []
     for start_ner_span, end_ner_span in replacement_ner_spans:
-        replacement_ner_category = replacement_sentence[start_ner_span].get_label("gold").split()[-1]
+        replacement_ner_category = replacement_sentence[start_ner_span].get_label("gold").split("-")[-1]
         if ner_category == replacement_ner_category:
             results.append((start_ner_span, end_ner_span))
     return results
