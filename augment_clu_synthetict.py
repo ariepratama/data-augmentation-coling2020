@@ -83,9 +83,8 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
             ner_node_replacement = find_ner_node_given_span(replacement_sentence_tree, chosen_replacement_span[0])
             ori_sentence_parent = ner_node_sentence.parent()
             ori_sentence_parent_idx = ner_node_sentence.parent_index()
-            ori_sentence_parent = ori_sentence_parent.copy()
 
-            # replace the entire tree
+            # replace the entire subtree
             ori_sentence_parent[ori_sentence_parent_idx] = ner_node_replacement
             mutated_sentence_tree = ori_sentence_parent
             if mutated_sentence_tree.parent() is not None:
@@ -137,7 +136,7 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
 
 
 def find_ner_node_given_span(tree: Tree, start_span: int) -> ParentedTree:
-    parented_tree = ParentedTree.convert(tree)
+    parented_tree = ParentedTree.convert(tree.copy())
     tree_pre_leaves = pre_leaves(parented_tree)
     node_candidate = tree_pre_leaves[start_span]
 
