@@ -10,6 +10,7 @@ echo "data size: ${DATA_SIZE}"
 echo "run datetime: ${RUN_DATETIME}"
 echo "repalced non terminal: ${REPLACED_NON_TERMINAL}"
 echo "num generated sentences: ${NUM_GENERATED_SENTENCES}"
+echo "augmentation: ${AUGMENTATION}"
 
 
 module load anaconda/2020
@@ -22,7 +23,7 @@ python main.py \
 --data_folder ${DATA_DIR}/${DATA_SIZE}-sent \
 --embedding_type bert \
 --pretrained_dir allenai/scibert_scivocab_cased \
---result_filepath ${LOG_DIR}/${DATA_SIZE}-sent-${RUN_DATETIME}.log \
---augmentation GR \
+--result_filepath ${LOG_DIR}/${DATA_SIZE}-sent-${AUGMENTATION}-${RUN_DATETIME}.log \
+--augmentation ${AUGMENTATION} \
 --replaced_non_terminal ${REPLACED_NON_TERMINAL} \
 --num_generated_samples ${NUM_GENERATED_SENTENCES}
