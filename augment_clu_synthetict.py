@@ -186,12 +186,13 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
         for i in range(start_span, end_span + 1):
             current_token = original_sentence.get_token(i)
             current_token_gold_label = current_token.get_label("gold")
-            current_pre_leaf = original_pre_leaves[i]
-            original_pre_leaf_label = current_pre_leaf.label()
-            modified_pre_leaf_label = f"NER_{current_token_gold_label}_{original_pre_leaf_label}"
-            current_pre_leaf.set_label(modified_pre_leaf_label)
+            current_leaf = original_pre_leaves[i][0]
+            modified_pre_leaf_label = f"NER_{current_token_gold_label}_PLACEHOLDER"
+            new_pre_leaf = Tree(modified_pre_leaf_label, [current_leaf])
+            # replace the leaf with another pre-leaf
+            original_pre_leaves[i][0] = new_pre_leaf
             logging.info(
-                f"renaming pre-leaf label from {original_pre_leaf_label} to {modified_pre_leaf_label} for token {current_token}")
+                f"modifying pre-leaf into{new_pre_leaf} for token {current_token}")
 
     return original_sentence_tree, ner_spans
 
