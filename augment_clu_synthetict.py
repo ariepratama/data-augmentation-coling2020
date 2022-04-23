@@ -1,12 +1,16 @@
 import logging
+import random
 from typing import *
 
 from clu.daug.chunker import Chunker
-from clu.daug.mutator import RandomSelectedTreesXPMutator
-from clu.daug.selector import RandomWalkSelector
-from nltk import Tree
+from nltk import Tree, ParentedTree
 
 from data import Sentence, Token
+
+SYNTHETIC_TREES_CACHE = {}
+NER_SPANS_CACHE = {}
+CATEGORY_TO_SENTENCE_ID_MAP = {}
+SENTENCE_ID_TO_SENTENCE = {}
 
 
 def corpus_to_trees(dataset) -> List[Tree]:
@@ -21,13 +25,12 @@ def corpus_to_trees(dataset) -> List[Tree]:
     return trees
 
 
-def generate_sentences_by_grammar(sentence: Sentence,
-                                  num_generated_samples: int,
-                                  non_terminal: str,
-                                  corpus_tree: List[Tree],
-                                  idx2sentence: Dict[str, Sentence],
-                                  random_state: int = None,
-                                  is_dev_mode: bool = False) -> List[Sentence]:
+def generate_sentences_by_synthetic_tree(sentence: Sentence,
+                                         num_generated_samples: int,
+                                         train_corpus: List[Sentence],
+                                         non_terminal: str,
+                                         random_state: int = None,
+                                         is_dev_mode: bool = False) -> List[Sentence]:
     """
     for category2mentions: see get_category2mentions
     sample
@@ -36,39 +39,159 @@ def generate_sentences_by_grammar(sentence: Sentence,
         'test': ['outpatient Holter monitor']
     }
     """
+    generated_sentences = []
+    if len(SYNTHETIC_TREES_CACHE.keys()) <= 0:
+        populate_caches(sentence, train_corpus, non_terminal, is_dev_mode)
+
+    if sentence.idx not in SYNTHETIC_TREES_CACHE:
+        logging.info(f"aborting augmentation because cache the sentence {sentence} is not found on cache...")
+        return [sentence]
+
+    original_sentence_id = sentence.idx
+    sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id]
+    ner_spans = NER_SPANS_CACHE[original_sentence_id]
+
+    num_generated_samples = min(len(ner_spans), num_generated_samples)
+
+    if num_generated_samples == 0:
+        logging.info(
+            f"Will not generate more sentences because num_generated_samples={num_generated_samples}" +
+            f" ner_spans={ner_spans}")
+        return generated_sentences
+
+    if random_state:
+        random.seed(random_state)
+
+    # random sample with replacement
+    spans_to_be_replaced: List[Tuple[int, int]] = random.choices(ner_spans, k=num_generated_samples)
+
+    for generation_id, (start_span_to_be_replaced, _) in enumerate(spans_to_be_replaced):
+        ner_node_sentence = find_ner_node_given_span(sentence_tree, start_span_to_be_replaced)
+        begin_ner_token: Token = sentence.get_token(start_span_to_be_replaced)
+        ner_category = begin_ner_token.get_label("gold").split("-")[-1]
+        replacement_sentence_id = random.choice(CATEGORY_TO_SENTENCE_ID_MAP[ner_category])
+
+        replacement_sentence = SENTENCE_ID_TO_SENTENCE[replacement_sentence_id]
+        replacement_sentence_ner_spans = NER_SPANS_CACHE[replacement_sentence_id]
+        related_ner_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_sentence_ner_spans)
+
+        if len(related_ner_spans) > 0:
+            logging.info(f"related_ner_spans is not empty proceeding to replace ner {ner_category}")
+            chosen_replacement_span = random.choice(related_ner_spans)
+            replacement_sentence_tree = SYNTHETIC_TREES_CACHE[replacement_sentence_id]
+            ner_node_replacement = find_ner_node_given_span(replacement_sentence_tree, chosen_replacement_span[0])
+            ori_sentence_parent = ner_node_sentence.parent()
+            ori_sentence_parent_idx = ner_node_sentence.parent_index()
+            ori_sentence_parent = ori_sentence_parent.copy()
+
+            # replace the entire tree
+            ori_sentence_parent[ori_sentence_parent_idx] = ner_node_replacement
+            mutated_sentence_tree = ori_sentence_parent
+            if mutated_sentence_tree.parent() is not None:
+                mutated_sentence_tree = ori_sentence_parent.parent()
+
+            generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
+
+            generated_sentences.append(generated_sentence)
+
+    return generated_sentences
+
+
+def tree_to_sentence(tree: Tree, original_sentence_id: str, generation_id: int) -> Sentence:
+    tree_pre_leaves = pre_leaves(tree)
+    sentence = Sentence(f"{original_sentence_id}-generated-{generation_id}")
+
+    for i, pre_leaf in enumerate(tree_pre_leaves):
+        token_text = pre_leaf[0]
+        token_label = "O"
+        if "NER" in pre_leaf.label():
+            token_label = pre_leaf.label().split("_")[1]
+        token = Token(token_text, i)
+        token.set_label("gold", token_label)
+        sentence.add_token(token)
+
+    return sentence
+
+
+def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
+    logging.info("populating SENTENCE_ID_TO_SENTENCE cache...")
+    for train_sentence in train_corpus:
+        SENTENCE_ID_TO_SENTENCE[train_sentence.idx] = train_sentence
+
+    data = corpus_to_synthetic_trees(train_corpus, non_terminal=non_terminal, is_dev_mode=is_dev_mode)
+    for sentence_id, (synthetic_tree, ner_spans, train_sentence) in data:
+        logging.info(
+            f"populating SYNTHETIC_TREES_CACHE, NER_SPANS_CACHE, CATEGORY_TO_SENTENCE_ID_MAP for sentence {sentence_id} ...")
+        SYNTHETIC_TREES_CACHE[sentence_id] = synthetic_tree
+        NER_SPANS_CACHE[sentence_id] = ner_spans
+
+        for start_ner_span, _ in ner_spans:
+            start_ner_token = train_sentence[start_ner_span]
+            category = start_ner_token.get_label("gold").split("-")[-1]
+
+            if category not in CATEGORY_TO_SENTENCE_ID_MAP:
+                CATEGORY_TO_SENTENCE_ID_MAP[category] = []
+
+            CATEGORY_TO_SENTENCE_ID_MAP[category].append(sentence.idx)
+
+
+def find_ner_node_given_span(tree: Tree, start_span: int) -> ParentedTree:
+    parented_tree = ParentedTree.convert(tree)
+    tree_pre_leaves = pre_leaves(parented_tree)
+    node_candidate = tree_pre_leaves[start_span]
+
+    while "NER" not in node_candidate.label() and node_candidate.parent() is not None:
+        node_candidate = node_candidate.parent()
+
+    return node_candidate
+
+
+def find_related_ner_spans(ner_category: Text, replacement_sentence: Sentence,
+                           replacement_ner_spans: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
+    results = []
+    for start_ner_span, end_ner_span in replacement_ner_spans:
+        replacement_ner_category = replacement_sentence[start_ner_span].get_label("gold").split()[-1]
+        if ner_category == replacement_ner_category:
+            results.append((start_ner_span, end_ner_span))
+    return results
+
+
+def corpus_to_synthetic_trees(train_corpus: List[Sentence], non_terminal: str, is_dev_mode: bool = False) -> List[
+    Tuple[str, Tuple[Tree, List[Tuple[int, int]], Sentence]]]:
     chunker: Chunker = Chunker.default(non_terminal=non_terminal, is_dev_mode=is_dev_mode)
 
-    sentences: List[Sentence] = []
-    token_texts = [token.text for token in sentence.tokens]
-    sentence_tree = chunker.transform(token_texts)[0]
-    sentence_tree = tree_to_synthetic_ner_tree(sentence, sentence_tree)
+    results: List[str, Tuple[Tree, List[Tuple[int, int]]]] = []
+    for sentence in train_corpus:
+        token_texts = [token.text for token in sentence.tokens]
+        sentence_tree = chunker.transform(token_texts)[0]
+        sentence_tree, ner_spans = tree_to_synthetic_ner_tree(sentence, sentence_tree)
+        results.append((sentence.idx, (sentence_tree, ner_spans, sentence)))
 
-    actual_n_generated_samples = min(len(token_texts), num_generated_samples)
-    selector = RandomWalkSelector(actual_n_generated_samples)
-    mutator = RandomSelectedTreesXPMutator(non_terminal, corpus_tree)
-    logging.info(f"Original sentence: {sentence}")
-    for generation_idx, (target_parent, target_child_idx) in enumerate(
-            selector.select(sentence_tree, actual_n_generated_samples)):
-        logging.info(
-            f"selected sentence from selector, target_parent={target_parent} target_child_idx={target_child_idx}")
-        mutated_parent, _, selected_corpus_indexes = mutator.transform(target_parent, target_child_idx,
-                                                                       random_seed=random_state)
-        tok2tag = generate_tok2label(idx2sentence, selected_corpus_indexes, sentence)
-        # get start and end of original sentence's mutated span
-        start_mutated_idx, end_mutated_idx = get_start_end_of_span(target_parent, target_child_idx)
-        generated_sentence = to_sentence(sentence, generation_idx, mutated_parent.leaves(),
-                                         start_mutated_idx, end_mutated_idx, tok2tag)
-
-        logging.info(f"Generated sentence-{generation_idx}: {generated_sentence}")
-        sentences.append(generated_sentence)
-    return sentences
+    return results
 
 
-def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tree: Tree) -> Tree:
+def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tree: Tree) -> Tuple[
+    Tree, List[Tuple[int, int]]]:
     """Add NER information to the tree generated by chunker
     """
+    ner_spans = find_all_ner_spans(original_sentence)
+    original_pre_leaves = pre_leaves(original_sentence_tree)
 
-    return None
+    if len(ner_spans) <= 0:
+        return original_sentence_tree, []
+
+    for start_span, end_span in ner_spans:
+        for i in range(start_span, end_span + 1):
+            current_token = original_sentence.get_token(i)
+            current_token_gold_label = current_token.get_label("gold")
+            current_pre_leaf = original_pre_leaves[i]
+            original_pre_leaf_label = current_pre_leaf.label()
+            modified_pre_leaf_label = f"NER_{current_token_gold_label}_{original_pre_leaf_label}"
+            current_pre_leaf.set_label(modified_pre_leaf_label)
+            logging.info(
+                f"renaming pre-leaf label from {original_pre_leaf_label} to {modified_pre_leaf_label} for token {current_token}")
+
+    return original_sentence_tree, ner_spans
 
 
 def pre_leaves(tree) -> List[Tree]:
@@ -105,111 +228,3 @@ def find_all_ner_spans(original_sentence: Sentence) -> List[Tuple[int, int]]:
             start_idx = -1
 
     return result
-
-
-def get_start_end_of_span(root, selected_parent_index) -> Tuple[int, int]:
-    target_node = root[selected_parent_index]
-    leaves = []
-    return get_start_end_of_span_rec(root, target_node, leaves)
-
-
-def get_start_end_of_span_rec(explored_node, target_node, leaves):
-    # base case
-    if explored_node == target_node:
-        selected_start_span_idx = len(leaves)
-        if type(explored_node) == Tree:
-            selected_end_span_idx = selected_start_span_idx + max(len(explored_node.leaves()) - 1, 0)
-            return selected_start_span_idx, selected_end_span_idx
-
-    if type(explored_node) == Tree:
-        # doing dfs
-        for subtree_idx, subtree in enumerate(explored_node):
-            selected_start_span_idx, selected_end_span_idx = get_start_end_of_span_rec(subtree, target_node, leaves)
-            if selected_start_span_idx != -1 and selected_end_span_idx != -1:
-                return selected_start_span_idx, selected_end_span_idx
-
-        return -1, -1
-    leaves.append(explored_node)
-
-    return -1, -1
-
-
-def generate_tok2label(idx2sentence, selected_corpus_indexes, original_sentence):
-    tok2label = {}
-    selected_corpus_sentences = [idx2sentence[corpus_idx] for corpus_idx in selected_corpus_indexes]
-    selected_corpus_sentences += [original_sentence]
-    for corpus_sentence in selected_corpus_sentences:
-        for token in corpus_sentence:
-            if token.text not in tok2label:
-                label = token.get_label("gold")
-                tok2label[token.text] = label
-                if "-" in token.text:
-                    splitted_tokens = token.text.split("-")
-                    splitted_labels = [label] * len(splitted_tokens)
-                    if label.startswith("B"):
-                        category = label.split("-")[-1]
-                        for i in range(1, len(splitted_labels)):
-                            splitted_labels[i] = f"I-{category}"
-
-                    for new_token, new_label in zip(splitted_tokens, splitted_labels):
-                        tok2label[new_token] = new_label
-            else:
-                logging.debug(f"`{token.text}` is already on tok2label, skipping...")
-    return tok2label
-
-
-def to_sentence(original_sentence, n_generated_sentence, leaves,
-                start_mutated_idx, end_mutated_idx, tok2tag) -> Sentence:
-    sent = Sentence(f"{original_sentence.idx}-replace-by-grammar-{n_generated_sentence}")
-    bm_start, bm_end, am_start, am_end = find_before_and_after_mutation_idx(original_sentence, leaves,
-                                                                            start_mutated_idx, end_mutated_idx)
-    sentence_length_diff = len(leaves) - len(original_sentence.tokens)
-    logging.info(f"original sentence = {original_sentence}")
-    logging.info(f"mutation index: start={start_mutated_idx}, end={end_mutated_idx}")
-    logging.info(f"mutated leaves = {leaves}")
-
-    for token_idx, leave in enumerate(leaves):
-        text = leave
-        if type(leave) == tuple:
-            text = leave[0]
-        label = "O"
-        if start_mutated_idx <= token_idx <= end_mutated_idx + sentence_length_diff:
-            label = tok2tag[text]
-        elif -1 < bm_start <= token_idx < bm_end + 1:
-            label = original_sentence.get_token(token_idx).get_label("gold")
-        elif -1 < am_start <= token_idx:
-            new_token_idx = token_idx - sentence_length_diff
-            logging.info(
-                f"new_token_idx={new_token_idx}, am_start={am_start}, token_idx={token_idx}, end_mutated_idx={end_mutated_idx}, s={sentence_length_diff}")
-            label = original_sentence.get_token(new_token_idx).get_label("gold")
-
-        token = Token(text)
-        token.set_label("gold", label)
-
-        sent.add_token(token)
-
-    return sent
-
-
-def find_before_and_after_mutation_idx(original_sentence, leaves, start_mutated_idx, end_mutated_idx) -> Tuple[
-    int, int, int, int]:
-    # mutation happened at the beginning of sentence
-    if start_mutated_idx == 0:
-        return -1, -1, end_mutated_idx + 1, len(leaves) - 1
-
-    # mutation happened from middle to the end of sentence
-    if end_mutated_idx >= len(leaves):
-        return 0, start_mutated_idx - 1, -1, -1
-
-    bm_start, bm_end = 0, 0
-    bm_end = start_mutated_idx - 1
-    logging.info(f"leaves: {leaves}, start: {start_mutated_idx} end: {end_mutated_idx}")
-    first_after_mutation_token_text = leaves[end_mutated_idx]
-
-    first_after_mutation_token_original_idx = 0
-    for original_token_idx, token in enumerate(original_sentence[start_mutated_idx:]):
-        if token.text == first_after_mutation_token_text:
-            first_after_mutation_token_original_idx = original_token_idx + start_mutated_idx
-            break
-
-    return bm_start, bm_end, first_after_mutation_token_original_idx, -1

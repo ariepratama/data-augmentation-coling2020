@@ -9,14 +9,21 @@ The code in this file is partly based on the FLAIR library,
 cf. 3rd-party-licenses.txt file in the root directory of this source tree.
 """
 
-import itertools, logging, os, time, torch
+import itertools
+import logging
+import os
+import time
+import torch
 from collections import defaultdict
-from torch.utils.data.dataloader import DataLoader
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-from data import get_spans
-from augment import generate_sentences_by_shuffle_within_segments, generate_sentences_by_replace_mention, generate_sentences_by_replace_token, generate_sentences_by_synonym_replacement
-from augment_clu import generate_sentences_by_grammar
 
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.utils.data.dataloader import DataLoader
+
+from augment import generate_sentences_by_shuffle_within_segments, generate_sentences_by_replace_mention, \
+    generate_sentences_by_replace_token, generate_sentences_by_synonym_replacement
+from augment_clu import generate_sentences_by_grammar
+from augment_clu_synthetict import generate_sentences_by_synthetic_tree
+from data import get_spans
 
 logger = logging.getLogger(__name__)
 
@@ -82,7 +89,8 @@ class Metric:
         return sum(accuracies) / len(accuracies) if len(accuracies) > 0 else 0.0
 
     def get_classes(self):
-        all_classes = set(list(self._tps.keys()) + list(self._fps.keys()) + list(self._tns.keys()) + list(self._fns.keys()))
+        all_classes = set(
+            list(self._tps.keys()) + list(self._fps.keys()) + list(self._tns.keys()) + list(self._fns.keys()))
         return sorted([c for c in all_classes if c is not None])
 
     def to_dict(self):
@@ -154,7 +162,8 @@ def final_test(args, encoder, mlp, crf, test_data, name):
     return test_score.to_dict()
 
 
-def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2mentions, label2tokens, idx2sentence, train_corpus_trees):
+def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2mentions, label2tokens, idx2sentence,
+                train_corpus_trees):
     if len(args.augmentation) > 0:
         augmented_sentences = []
         for s in train_data:
@@ -173,11 +182,17 @@ def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2
             if "GR" in args.augmentation:
                 if args.replaced_non_terminal is None:
                     raise Exception(f"parameter replaced_non_terminal cannot be {args.replaced_non_terminal}")
-                
+
                 logging.info("Running augmentation, replacement by grammar changes...")
                 augmented_sentences += generate_sentences_by_grammar(
                     s, args.num_generated_samples, args.replaced_non_terminal,
                     train_corpus_trees, idx2sentence)
+
+            if "SYN" in args.augmentation:
+                logging.info("Running augmentation, replacement by synthetic tree...")
+                augmented_sentences += generate_sentences_by_synthetic_tree(
+                    s, args.num_generated_samples, train_data, args.replaced_non_terminal)
+
         train_data += augmented_sentences
     else:
         logger.info("No data augmentation used")
@@ -223,7 +238,8 @@ def _evaluate_after_epoch(args, encoder, mlp, crf, eval_data, scheduler, optimiz
     return score, lr
 
 
-def train(args, encoder, mlp, crf, train_data, dev_data, category2mentions, label2tokens, idx2sentence, train_corpus_trees):
+def train(args, encoder, mlp, crf, train_data, dev_data, category2mentions, label2tokens, idx2sentence,
+          train_corpus_trees):
     logger.info(f"# sentences in training set: {len(train_data)}")
     logger.info(f"# sentences in development set: {len(dev_data)}")
 
@@ -244,7 +260,8 @@ def train(args, encoder, mlp, crf, train_data, dev_data, category2mentions, labe
             break
 
         epoch_start_time = time.time()
-        train_loss = train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2mentions, label2tokens, idx2sentence, train_corpus_trees)
+        train_loss = train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2mentions, label2tokens,
+                                 idx2sentence, train_corpus_trees)
         encoder.eval()
         mlp.eval()
         crf.eval()

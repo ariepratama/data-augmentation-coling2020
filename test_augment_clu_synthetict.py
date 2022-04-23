@@ -1,6 +1,8 @@
 import unittest
 
-from augment_clu_synthetict import find_all_ner_spans
+from nltk import Tree
+
+from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves
 from data import Sentence, Token
 
 
@@ -56,6 +58,30 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
             sample_sentence.add_token(token)
         spans = find_all_ner_spans(sample_sentence)
         self.assertEqual(0, len(spans))
+
+    def test_tree_to_synthetic_ner_tree(self):
+        sample_sentence = Sentence("sample_sentence_1")
+        sample_sentence_tokens = "doing the thing".split()
+        sample_sentence_token_tags = "O B-something I-something".split()
+        for idx, (token_text, tag) in enumerate(zip(sample_sentence_tokens, sample_sentence_token_tags)):
+            token = Token(token_text, idx)
+            token.set_label("gold", tag)
+            sample_sentence.add_token(token)
+
+        sample_tree = Tree.fromstring("""
+            (S
+                (VP doing)
+                (NP 
+                    (DET the)
+                    (N thing)))
+        """)
+        synthetic_tree, ner_spans = tree_to_synthetic_ner_tree(sample_sentence, sample_tree)
+        sample_pre_leaves = pre_leaves(synthetic_tree)
+        self.assertEqual("NER_B-something_DET", sample_pre_leaves[1].label())
+        self.assertEqual("NER_I-something_N", sample_pre_leaves[2].label())
+
+
+
 
 
 if __name__ == '__main__':
