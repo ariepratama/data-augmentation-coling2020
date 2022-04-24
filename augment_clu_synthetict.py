@@ -95,8 +95,10 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
             generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
 
-            generated_sentences.append(generated_sentence)
 
+            logging.info(f"Generated sentence: {generated_sentence}")
+            generated_sentences.append(generated_sentence)
+    logging.info(f"Finished generate {len(generated_sentences)} sentences")
     return generated_sentences
 
 
