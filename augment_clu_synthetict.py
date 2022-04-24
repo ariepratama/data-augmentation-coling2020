@@ -111,6 +111,8 @@ def tree_to_sentence(tree: Tree, original_sentence_id: str, generation_id: int) 
 
     for i, pre_leaf in enumerate(tree_pre_leaves):
         token_text = pre_leaf[leaf_idx_to_parent_idx[i]]
+        if type(token_text) == tuple:
+            token_text = token_text[0]
         token_text = token_text.split("/")[0]
         token_label = "O"
         if "NER" in pre_leaf.label():
