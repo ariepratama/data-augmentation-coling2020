@@ -95,7 +95,6 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
             generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
 
-
             logging.info(f"Generated sentence: {generated_sentence}")
             generated_sentences.append(generated_sentence)
     logging.info(f"Finished generate {len(generated_sentences)} sentences")
@@ -103,11 +102,16 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
 
 def tree_to_sentence(tree: Tree, original_sentence_id: str, generation_id: int) -> Sentence:
-    tree_pre_leaves = pre_leaves(tree)
+    parented_tree = ParentedTree.convert(tree)
+    tree_pre_leaves = pre_leaves(parented_tree)
     sentence = Sentence(f"{original_sentence_id}-generated-{generation_id}")
+    leaf_idx_to_parent_idx = {}
+    for i, pre_leaf in enumerate(tree_pre_leaves):
+        leaf_idx_to_parent_idx[i] = parented_tree.leaf_treeposition(i)[-1]
 
     for i, pre_leaf in enumerate(tree_pre_leaves):
-        token_text = pre_leaf[0]
+        token_text = pre_leaf[leaf_idx_to_parent_idx[i]]
+        token_text = token_text.split("/")[0]
         token_label = "O"
         if "NER" in pre_leaf.label():
             token_label = pre_leaf.label().split("_")[1]

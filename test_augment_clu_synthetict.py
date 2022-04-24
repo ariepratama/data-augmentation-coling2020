@@ -2,7 +2,8 @@ import unittest
 
 from nltk import Tree
 
-from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves, find_related_ner_spans
+from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves, find_related_ner_spans, \
+    tree_to_sentence
 from data import Sentence, Token
 
 
@@ -106,7 +107,7 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
         self.assertEqual(1, len(related_spans))
         self.assertEqual(related_spans[0], replacement_ner_spans[0])
 
-    def test(self):
+    def test_tree_to_sentence_with_multiple_ner(self):
         sample_sentence_unparsed = """
             Do O
             not O
@@ -151,6 +152,32 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
         self.assertEqual("NER_B-treatment_PLACEHOLDER", synthetic_tree[3][1].label())
         self.assertEqual("NER_B-treatment_PLACEHOLDER", synthetic_tree[4][1].label())
         self.assertEqual("NER_B-problem_PLACEHOLDER", synthetic_tree[6].label())
+
+    def test_tree_to_sentence(self):
+        sample_tree = Tree.fromstring("""
+        (S
+          Do/VB
+          not/RB
+          (NP drive/VB if/IN)
+          (NP taking/VBG (NER_B-treatment_PLACEHOLDER flexeril/NN))
+          (NP and/CC (NER_B-treatment_PLACEHOLDER codeine/NN))
+          ./.
+          (NER_B-problem_PLACEHOLDER NEAR/NNP)
+          (NP (NER_I-problem_PLACEHOLDER SYNCOPE/NNP) Standardized/JJ)
+          (NP Discharge/NNP Instructions/NNPS :/:))
+        """)
+
+        sentence = tree_to_sentence(sample_tree, "xx", 2)
+        sentence_text = " ".join([token.text for token in sentence])
+        sentence_labels = " ".join([token.get_label("gold") for token in sentence])
+        self.assertEqual(
+            "Do not drive if taking flexeril and codeine . NEAR SYNCOPE Standardized Discharge Instructions :",
+            sentence_text
+        )
+        self.assertEqual(
+            "O O O O O B-treatment O B-treatment O B-problem I-problem O O O O",
+            sentence_labels
+        )
 
 
 if __name__ == '__main__':
