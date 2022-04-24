@@ -1,3 +1,4 @@
+import traceback
 import unittest
 
 from nltk import Tree
@@ -72,13 +73,18 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
             (S
                 (VP doing)
                 (NP 
-                    (DET the)
-                    (N thing)))
+                    the/DET
+                    thing/N))
         """)
-        synthetic_tree, ner_spans = tree_to_synthetic_ner_tree(sample_sentence, sample_tree)
+        try:
+            synthetic_tree, ner_spans = tree_to_synthetic_ner_tree(sample_sentence, sample_tree)
+        except Exception as e:
+            print(traceback.format_exc())
+            raise e
         sample_pre_leaves = pre_leaves(synthetic_tree)
-        self.assertEqual("NER_B-something_DET", sample_pre_leaves[1].label())
-        self.assertEqual("NER_I-something_N", sample_pre_leaves[2].label())
+        print(synthetic_tree)
+        self.assertEqual("NER_B-something_PLACEHOLDER", sample_pre_leaves[1].label())
+        self.assertEqual("NER_I-something_PLACEHOLDER", sample_pre_leaves[2].label())
 
     def test_find_related_ner_spans(self):
         ner_category = "problem"
