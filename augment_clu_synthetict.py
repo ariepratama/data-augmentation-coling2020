@@ -109,15 +109,17 @@ def tree_to_sentence(tree: Tree, original_sentence_id: str, generation_id: int) 
     parented_tree = ParentedTree.convert(tree)
     tree_pre_leaves = pre_leaves(parented_tree)
     sentence = Sentence(f"{original_sentence_id}-generated-{generation_id}")
-    leaf_idx_to_parent_idx = {}
-    for i, pre_leaf in enumerate(tree_pre_leaves):
-        leaf_idx_to_parent_idx[i] = parented_tree.leaf_treeposition(i)[-1]
 
     for i, pre_leaf in enumerate(tree_pre_leaves):
-        token_text = pre_leaf[leaf_idx_to_parent_idx[i]]
+        token_text = pre_leaf[
+            parented_tree.leaf_treeposition(i)[-1]
+        ]
         if type(token_text) == tuple:
             token_text = token_text[0]
-        token_text = token_text.split("/")[0]
+        try:
+            token_text = token_text.split("/")[0]
+        except Exception as e:
+            logging.error(f"something happens here, token_text={token_text}", e)
         token_label = "O"
         if "NER" in pre_leaf.label():
             token_label = pre_leaf.label().split("_")[1]
