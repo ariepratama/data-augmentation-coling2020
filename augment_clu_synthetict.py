@@ -184,7 +184,7 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
     pre_leaves_to_idx = {}
 
     if len(ner_spans) <= 0:
-        return ori_parented_tree, []
+        return Tree.convert(ori_parented_tree), []
 
     for i, pre_leaf in enumerate(original_pre_leaves):
         if str(pre_leaf) not in pre_leaves_to_idx:
@@ -206,7 +206,7 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
             logging.info(
                 f"modifying pre-leaf into{new_pre_leaf} for token {current_token}")
 
-    return ori_parented_tree, ner_spans
+    return Tree.convert(ori_parented_tree), ner_spans
 
 
 def pre_leaves(tree) -> List[Tree]:
