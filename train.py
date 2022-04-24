@@ -193,7 +193,7 @@ def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2
                 augmented_sentences += generate_sentences_by_synthetic_tree(
                     s, args.num_generated_samples,
                     train_data, args.replaced_non_terminal,
-                    random_seed=args.seed)
+                    random_state=args.seed)
 
         train_data += augmented_sentences
     else:
