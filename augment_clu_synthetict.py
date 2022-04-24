@@ -180,24 +180,20 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
     ori_parented_tree = ParentedTree.convert(original_sentence_tree.copy())
     ner_spans = find_all_ner_spans(original_sentence)
     original_pre_leaves = pre_leaves(ori_parented_tree)
-    shadow_ori_pre_leaves = deepcopy(original_pre_leaves)
-    pre_leaves_to_idx = {}
+    leaf_idx_to_parent_idx = {}
 
     if len(ner_spans) <= 0:
         return Tree.convert(ori_parented_tree), []
 
     for i, pre_leaf in enumerate(original_pre_leaves):
-        if str(pre_leaf) not in pre_leaves_to_idx:
-            pre_leaves_to_idx[str(pre_leaf)] = []
-        pre_leaves_to_idx[str(pre_leaf)].append(i)
+        leaf_idx_to_parent_idx[i] = ori_parented_tree.leaf_treeposition(i)[-1]
 
     for start_span, end_span in ner_spans:
         for i in range(start_span, end_span + 1):
             current_token = original_sentence.get_token(i)
             current_token_gold_label = current_token.get_label("gold")
             # use ParentedTree.treeposition()
-            key = str(shadow_ori_pre_leaves[i])
-            child_idx = pre_leaves_to_idx[key].index(i)
+            child_idx = leaf_idx_to_parent_idx[i]
             current_leaf = original_pre_leaves[i][child_idx]
             modified_pre_leaf_label = f"NER_{current_token_gold_label}_PLACEHOLDER"
             new_pre_leaf = ParentedTree.convert(Tree(modified_pre_leaf_label, [current_leaf]))
@@ -240,6 +236,11 @@ def find_all_ner_spans(original_sentence: Sentence) -> List[Tuple[int, int]]:
 
         if token.get_label("gold").startswith("I-") and (next_token is None or next_token.get_label("gold") == "O"):
             result.append((start_idx, i))
+            start_idx = -1
+            continue
+
+        if token.get_label("gold") == "O" and start_idx > 0:
+            result.append((start_idx, start_idx))
             start_idx = -1
 
     return result

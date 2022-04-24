@@ -1,4 +1,3 @@
-import traceback
 import unittest
 
 from nltk import Tree
@@ -76,11 +75,8 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
                     the/DET
                     thing/N))
         """)
-        try:
-            synthetic_tree, ner_spans = tree_to_synthetic_ner_tree(sample_sentence, sample_tree)
-        except Exception as e:
-            print(traceback.format_exc())
-            raise e
+        synthetic_tree, ner_spans = tree_to_synthetic_ner_tree(sample_sentence, sample_tree)
+
         sample_pre_leaves = pre_leaves(synthetic_tree)
         print(synthetic_tree)
         self.assertEqual("NER_B-something_PLACEHOLDER", sample_pre_leaves[1].label())
@@ -110,6 +106,51 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
         self.assertEqual(1, len(related_spans))
         self.assertEqual(related_spans[0], replacement_ner_spans[0])
 
+    def test(self):
+        sample_sentence_unparsed = """
+            Do O
+            not O
+            drive O
+            if O
+            taking O
+            flexeril B-treatment
+            and O
+            codeine B-treatment
+            . O
+            NEAR B-problem
+            SYNCOPE I-problem
+            Standardized O
+            Discharge O
+            Instructions O
+            : O
+        """
+        sample_tree = Tree.fromstring("""
+        (S
+          Do/VB
+          not/RB
+          (NP drive/VB if/IN)
+          (NP taking/VBG flexeril/NN)
+          (NP and/CC codeine/NN)
+          ./.
+          NEAR/NNP
+          (NP SYNCOPE/NNP Standardized/JJ)
+          (NP Discharge/NNP Instructions/NNPS :/:))
+        """)
+        sample_sentence = Sentence("sample-sentence")
+        for line in sample_sentence_unparsed.split("\n"):
+            line = line.strip()
+            if len(line) == 0:
+                continue
+            token_text, tag = line.split()
+            token = Token(token_text)
+            token.set_label("gold", tag)
+            sample_sentence.add_token(token)
+
+        synthetic_tree, ner_spans = tree_to_synthetic_ner_tree(sample_sentence, sample_tree)
+        self.assertEqual(3, len(ner_spans))
+        self.assertEqual("NER_B-treatment_PLACEHOLDER", synthetic_tree[3][1].label())
+        self.assertEqual("NER_B-treatment_PLACEHOLDER", synthetic_tree[4][1].label())
+        self.assertEqual("NER_B-problem_PLACEHOLDER", synthetic_tree[6].label())
 
 
 if __name__ == '__main__':
