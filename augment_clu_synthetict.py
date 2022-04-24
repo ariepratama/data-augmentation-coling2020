@@ -52,7 +52,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id]
     ner_spans = NER_SPANS_CACHE[original_sentence_id]
 
-    num_generated_samples = min(len(ner_spans), num_generated_samples)
+    # num_generated_samples = min(len(ner_spans), num_generated_samples)
 
     if num_generated_samples == 0:
         logging.info(
@@ -75,6 +75,10 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
         replacement_sentence = SENTENCE_ID_TO_SENTENCE[replacement_sentence_id]
         replacement_sentence_ner_spans = NER_SPANS_CACHE[replacement_sentence_id]
+        logging.info(
+            f"finding related ner spans, ner_category={ner_category} " +
+            f"replacement_sentence={replacement_sentence} " +
+            f"replacement_sentence_ner_spans={replacement_sentence_ner_spans}")
         related_ner_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_sentence_ner_spans)
 
         if len(related_ner_spans) > 0:
