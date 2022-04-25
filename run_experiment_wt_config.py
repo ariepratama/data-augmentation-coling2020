@@ -33,4 +33,11 @@ if __name__ == "__main__":
             os.environ["AUGMENTATION"] = config["augmentation"]
             os.environ["RANDOM_SEED"] = str(config["random_seed"])
             sub.run(
-                f"bash submit_job.sh {size} {run_datetime} {replaced_non_terminal} {num_generated_sentences} {augmentation} {random_seed}".split())
+                "bash submit_job.sh {} {} {} {} {} {}".format(
+                    size,
+                    run_datetime,
+                    replaced_non_terminal,
+                    num_generated_sentences,
+                    augmentation,
+                    random_seed
+                ).split())
