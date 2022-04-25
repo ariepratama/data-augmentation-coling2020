@@ -11,6 +11,7 @@ echo "run datetime: ${RUN_DATETIME}"
 echo "repalced non terminal: ${REPLACED_NON_TERMINAL}"
 echo "num generated sentences: ${NUM_GENERATED_SENTENCES}"
 echo "augmentation: ${AUGMENTATION}"
+echo "seed: ${RANDOM_SEED}"
 
 
 module load anaconda/2020
@@ -26,4 +27,5 @@ python main.py \
 --result_filepath ${LOG_DIR}/${DATA_SIZE}-sent-${AUGMENTATION}-${RUN_DATETIME}.log \
 --augmentation ${AUGMENTATION} \
 --replaced_non_terminal ${REPLACED_NON_TERMINAL} \
---num_generated_samples ${NUM_GENERATED_SENTENCES}
+--num_generated_samples ${NUM_GENERATED_SENTENCES} \
+--seed ${RANDOM_SEED}
