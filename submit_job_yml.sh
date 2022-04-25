@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python run_experiment_wt_config.py $1
+python3 run_experiment_wt_config.py $1
 
