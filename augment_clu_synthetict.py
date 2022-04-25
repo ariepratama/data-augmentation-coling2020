@@ -54,7 +54,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
     # num_generated_samples = min(len(ner_spans), num_generated_samples)
 
-    if num_generated_samples == 0:
+    if num_generated_samples == 0 or len(ner_spans) == 0:
         logging.info(
             f"Will not generate more sentences because num_generated_samples={num_generated_samples}" +
             f" ner_spans={ner_spans}")
