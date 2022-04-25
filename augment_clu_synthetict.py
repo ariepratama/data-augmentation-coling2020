@@ -67,7 +67,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     spans_to_be_replaced: List[Tuple[int, int]] = random.choices(ner_spans, k=num_generated_samples)
 
     for generation_id, (start_span_to_be_replaced, _) in enumerate(spans_to_be_replaced):
-        logging.info(f"Generating sentence number={generation_id}, start_span_to_replace={start_span_to_be_replaced}...")
+        # logging.info(f"Generating sentence number={generation_id}, start_span_to_replace={start_span_to_be_replaced}...")
         ner_node_sentence = find_ner_node_given_span(sentence_tree, start_span_to_be_replaced)
         begin_ner_token: Token = sentence.get_token(start_span_to_be_replaced)
         ner_category = begin_ner_token.get_label("gold").split("-")[-1]
@@ -75,14 +75,14 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
         replacement_sentence = SENTENCE_ID_TO_SENTENCE[replacement_sentence_id]
         replacement_sentence_ner_spans = NER_SPANS_CACHE[replacement_sentence_id]
-        logging.info(
-            f"finding related ner spans, ner_category={ner_category} " +
-            f"replacement_sentence={replacement_sentence} " +
-            f"replacement_sentence_ner_spans={replacement_sentence_ner_spans}")
+        # logging.info(
+        #     f"finding related ner spans, ner_category={ner_category} " +
+        #     f"replacement_sentence={replacement_sentence} " +
+        #     f"replacement_sentence_ner_spans={replacement_sentence_ner_spans}")
         related_ner_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_sentence_ner_spans)
 
         if len(related_ner_spans) > 0:
-            logging.info(f"related_ner_spans is not empty proceeding to replace ner {ner_category}")
+            # logging.info(f"related_ner_spans is not empty proceeding to replace ner {ner_category}")
             chosen_replacement_span = random.choice(related_ner_spans)
             replacement_sentence_tree = SYNTHETIC_TREES_CACHE[replacement_sentence_id]
             ner_node_replacement = find_ner_node_given_span(replacement_sentence_tree, chosen_replacement_span[0])
@@ -101,7 +101,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
             logging.info(f"Generated sentence: {generated_sentence}")
             generated_sentences.append(generated_sentence)
-    logging.info(f"Finished generate {len(generated_sentences)} sentences")
+    # logging.info(f"Finished generate {len(generated_sentences)} sentences")
     return generated_sentences
 
 
@@ -131,14 +131,14 @@ def tree_to_sentence(tree: Tree, original_sentence_id: str, generation_id: int) 
 
 
 def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
-    logging.info("populating SENTENCE_ID_TO_SENTENCE cache...")
+    # logging.info("populating SENTENCE_ID_TO_SENTENCE cache...")
     for train_sentence in train_corpus:
         SENTENCE_ID_TO_SENTENCE[train_sentence.idx] = train_sentence
 
     data = corpus_to_synthetic_trees(train_corpus, non_terminal=non_terminal, is_dev_mode=is_dev_mode)
     for sentence_id, (synthetic_tree, ner_spans, train_sentence) in data:
-        logging.info(
-            f"populating SYNTHETIC_TREES_CACHE, NER_SPANS_CACHE, CATEGORY_TO_SENTENCE_ID_MAP for sentence {sentence_id} ...")
+        # logging.info(
+        #     f"populating SYNTHETIC_TREES_CACHE, NER_SPANS_CACHE, CATEGORY_TO_SENTENCE_ID_MAP for sentence {sentence_id} ...")
         SYNTHETIC_TREES_CACHE[sentence_id] = synthetic_tree
         NER_SPANS_CACHE[sentence_id] = ner_spans
 
@@ -213,8 +213,8 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
             new_pre_leaf = ParentedTree.convert(Tree(modified_pre_leaf_label, [current_leaf]))
             # replace one
             original_pre_leaves[i][child_idx] = new_pre_leaf
-            logging.info(
-                f"modifying pre-leaf into{new_pre_leaf} for token {current_token}")
+            # logging.info(
+            #     f"modifying pre-leaf into{new_pre_leaf} for token {current_token}")
 
     return Tree.convert(ori_parented_tree), ner_spans
 

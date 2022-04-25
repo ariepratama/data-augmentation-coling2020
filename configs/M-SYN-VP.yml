@@ -1,0 +1,30 @@
+experiments:
+  - size: M
+    replaced_non_terminal: VP
+    num_generated_sentences: 5
+    augmentation: SYN
+    random_seed: 52
+
+  - size: M
+    replaced_non_terminal: VP
+    num_generated_sentences: 5
+    augmentation: SYN
+    random_seed: 152
+
+  - size: M
+    replaced_non_terminal: VP
+    num_generated_sentences: 5
+    augmentation: SYN
+    random_seed: 300
+
+  - size: M
+    replaced_non_terminal: VP
+    num_generated_sentences: 5
+    augmentation: SYN
+    random_seed: 30
+
+  - size: M
+    replaced_non_terminal: VP
+    num_generated_sentences: 5
+    augmentation: SYN
+    random_seed: 900

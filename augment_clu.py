@@ -48,7 +48,7 @@ def generate_sentences_by_grammar(sentence: Sentence,
     logging.info(f"Original sentence: {sentence}")
     for generation_idx, (target_parent, target_child_idx) in enumerate(
             selector.select(sentence_tree, actual_n_generated_samples)):
-        logging.info(f"selected sentence from selector, target_parent={target_parent} target_child_idx={target_child_idx}")
+        # logging.info(f"selected sentence from selector, target_parent={target_parent} target_child_idx={target_child_idx}")
         mutated_parent, _, selected_corpus_indexes = mutator.transform(target_parent, target_child_idx,
                                                                        random_seed=random_state)
         tok2tag = generate_tok2label(idx2sentence, selected_corpus_indexes, sentence)
@@ -119,9 +119,9 @@ def to_sentence(original_sentence, n_generated_sentence, leaves,
     bm_start, bm_end, am_start, am_end = find_before_and_after_mutation_idx(original_sentence, leaves,
                                                                             start_mutated_idx, end_mutated_idx)
     sentence_length_diff = len(leaves) - len(original_sentence.tokens)
-    logging.info(f"original sentence = {original_sentence}")
-    logging.info(f"mutation index: start={start_mutated_idx}, end={end_mutated_idx}")
-    logging.info(f"mutated leaves = {leaves}")
+    # logging.info(f"original sentence = {original_sentence}")
+    # logging.info(f"mutation index: start={start_mutated_idx}, end={end_mutated_idx}")
+    # logging.info(f"mutated leaves = {leaves}")
 
     for token_idx, leave in enumerate(leaves):
         text = leave
@@ -134,7 +134,7 @@ def to_sentence(original_sentence, n_generated_sentence, leaves,
             label = original_sentence.get_token(token_idx).get_label("gold")
         elif -1 < am_start <= token_idx:
             new_token_idx = token_idx - sentence_length_diff
-            logging.info(f"new_token_idx={new_token_idx}, am_start={am_start}, token_idx={token_idx}, end_mutated_idx={end_mutated_idx}, s={sentence_length_diff}")
+            # logging.info(f"new_token_idx={new_token_idx}, am_start={am_start}, token_idx={token_idx}, end_mutated_idx={end_mutated_idx}, s={sentence_length_diff}")
             label = original_sentence.get_token(new_token_idx).get_label("gold")
 
         token = Token(text)
@@ -157,7 +157,7 @@ def find_before_and_after_mutation_idx(original_sentence, leaves, start_mutated_
 
     bm_start, bm_end = 0, 0
     bm_end = start_mutated_idx - 1
-    logging.info(f"leaves: {leaves}, start: {start_mutated_idx} end: {end_mutated_idx}")
+    # logging.info(f"leaves: {leaves}, start: {start_mutated_idx} end: {end_mutated_idx}")
     first_after_mutation_token_text = leaves[end_mutated_idx]
 
     first_after_mutation_token_original_idx = 0
