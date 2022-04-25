@@ -9,7 +9,7 @@ export RANDOM_SEED=$6
 export DATA_DIR=/home/u26/ariesutiono/da-coling2020/data
 export LOG_DIR=/home/u26/ariesutiono/da-coling2020/logs
 
-export NAME_SUFFIX="${SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${RUN_DATETIME}"
+export NAME_SUFFIX="${SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
 
 sbatch --job-name=da-coling2020-${NAME_SUFFIX} \
 --output=/home/u26/ariesutiono/da-coling2020/logs/${NAME_SUFFIX}.sbatch.log \

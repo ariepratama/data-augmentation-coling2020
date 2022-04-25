@@ -24,7 +24,7 @@ python main.py \
 --data_folder ${DATA_DIR}/${DATA_SIZE}-sent \
 --embedding_type bert \
 --pretrained_dir allenai/scibert_scivocab_cased \
---result_filepath ${LOG_DIR}/${DATA_SIZE}-sent-${AUGMENTATION}-${RUN_DATETIME}.log \
+--result_filepath ${LOG_DIR}/sent-${DATA_SIZE}-${AUGMENTATION}-${REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}.log \
 --augmentation ${AUGMENTATION} \
 --replaced_non_terminal ${REPLACED_NON_TERMINAL} \
 --num_generated_samples ${NUM_GENERATED_SENTENCES} \
