@@ -13,7 +13,7 @@ export NAME_SUFFIX="${SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACE
 
 sbatch --job-name=da-coling2020-${NAME_SUFFIX} \
 --output=/home/u26/ariesutiono/da-coling2020/logs/${NAME_SUFFIX}.sbatch.log \
---time=01:00:00 \
+--time=02:00:00 \
 --partition=standard \
 --account=clu-ling \
 --mail-type=ALL \
