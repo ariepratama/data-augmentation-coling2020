@@ -186,7 +186,8 @@ def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2
                 logging.info("Running augmentation, replacement by grammar changes...")
                 augmented_sentences += generate_sentences_by_grammar(
                     s, args.num_generated_samples, args.replaced_non_terminal,
-                    train_corpus_trees, idx2sentence)
+                    train_corpus_trees, idx2sentence,
+                    random_state=args.seed)
 
             if "SYN" in args.augmentation:
                 logging.info("Running augmentation, replacement by synthetic tree...")

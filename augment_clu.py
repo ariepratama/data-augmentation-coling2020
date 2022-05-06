@@ -47,10 +47,10 @@ def generate_sentences_by_grammar(sentence: Sentence,
     mutator = RandomSelectedTreesXPMutator(non_terminal, corpus_tree)
     logging.info(f"Original sentence: {sentence}")
     for generation_idx, (target_parent, target_child_idx) in enumerate(
-            selector.select(sentence_tree, actual_n_generated_samples)):
-        # logging.info(f"selected sentence from selector, target_parent={target_parent} target_child_idx={target_child_idx}")
+            selector.select(sentence_tree, actual_n_generated_samples, random_seed=random_state)):
         mutated_parent, _, selected_corpus_indexes = mutator.transform(target_parent, target_child_idx,
                                                                        random_seed=random_state)
+        logging.info(f"GR, mutating from={target_parent} to={mutated_parent}")
         tok2tag = generate_tok2label(idx2sentence, selected_corpus_indexes, sentence)
         # get start and end of original sentence's mutated span
         start_mutated_idx, end_mutated_idx = get_start_end_of_span(target_parent, target_child_idx)

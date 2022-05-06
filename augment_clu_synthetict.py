@@ -1,10 +1,10 @@
 import logging
 import random
+from copy import deepcopy
 from typing import *
 
 from clu.daug.chunker import Chunker
 from nltk import Tree, ParentedTree
-from copy import deepcopy
 
 from data import Sentence, Token
 
@@ -75,14 +75,11 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
         replacement_sentence = SENTENCE_ID_TO_SENTENCE[replacement_sentence_id]
         replacement_sentence_ner_spans = NER_SPANS_CACHE[replacement_sentence_id]
-        # logging.info(
-        #     f"finding related ner spans, ner_category={ner_category} " +
-        #     f"replacement_sentence={replacement_sentence} " +
-        #     f"replacement_sentence_ner_spans={replacement_sentence_ner_spans}")
+
         related_ner_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_sentence_ner_spans)
 
         if len(related_ner_spans) > 0:
-            # logging.info(f"related_ner_spans is not empty proceeding to replace ner {ner_category}")
+
             chosen_replacement_span = random.choice(related_ner_spans)
             replacement_sentence_tree = SYNTHETIC_TREES_CACHE[replacement_sentence_id]
             ner_node_replacement = find_ner_node_given_span(replacement_sentence_tree, chosen_replacement_span[0])
