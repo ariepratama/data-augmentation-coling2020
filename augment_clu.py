@@ -47,7 +47,7 @@ def generate_sentences_by_grammar(sentence: Sentence,
     mutator = RandomSelectedTreesXPMutator(non_terminal, corpus_tree)
     logging.info(f"Original sentence: {sentence}")
     for generation_idx, (target_parent, target_child_idx) in enumerate(
-            selector.select(sentence_tree, actual_n_generated_samples, random_seed=random_state)):
+            selector.select(sentence_tree, random_seed=random_state)):
         mutated_parent, _, selected_corpus_indexes = mutator.transform(target_parent, target_child_idx,
                                                                        random_seed=random_state)
         logging.info(f"GR, mutating from={target_parent} to={mutated_parent}")

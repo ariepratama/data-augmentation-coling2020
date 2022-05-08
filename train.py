@@ -192,8 +192,11 @@ def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2
             if "SYN" in args.augmentation:
                 logging.info("Running augmentation, replacement by synthetic tree...")
                 augmented_sentences += generate_sentences_by_synthetic_tree(
-                    s, args.num_generated_samples,
-                    train_data, args.replaced_non_terminal,
+                    s,
+                    args.num_generated_samples,
+                    train_data,
+                    args.replaced_non_terminal,
+                    n_replaced_non_terminal=args.n_replaced_non_terminal,
                     random_state=args.seed)
 
         train_data += augmented_sentences

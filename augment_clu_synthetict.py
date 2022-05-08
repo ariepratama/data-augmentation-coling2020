@@ -30,6 +30,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
                                          num_generated_samples: int,
                                          train_corpus: List[Sentence],
                                          non_terminal: str,
+                                         n_replaced_non_terminal: int = 1,
                                          random_state: int = None,
                                          is_dev_mode: bool = False) -> List[Sentence]:
     """
@@ -79,7 +80,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
         related_ner_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_sentence_ner_spans)
 
         if len(related_ner_spans) > 0:
-
+            # n_replaced_non_terminal
             chosen_replacement_span = random.choice(related_ner_spans)
             replacement_sentence_tree = SYNTHETIC_TREES_CACHE[replacement_sentence_id]
             ner_node_replacement = find_ner_node_given_span(replacement_sentence_tree, chosen_replacement_span[0])

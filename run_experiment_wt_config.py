@@ -25,6 +25,7 @@ if __name__ == "__main__":
             num_generated_sentences = str(config["num_generated_sentences"])
             augmentation = config["augmentation"]
             random_seed = str(config["random_seed"])
+            time = config["time"]
 
             os.environ["SIZE"] = config["size"]
             os.environ["RUN_DATETIME"] = now_str
@@ -32,12 +33,14 @@ if __name__ == "__main__":
             os.environ["NUM_GENERATED_SENTENCES"] = str(config["num_generated_sentences"])
             os.environ["AUGMENTATION"] = config["augmentation"]
             os.environ["RANDOM_SEED"] = str(config["random_seed"])
+
             sub.run(
-                "bash submit_job.sh {} {} {} {} {} {}".format(
+                "bash submit_job.sh {} {} {} {} {} {} {}".format(
                     size,
                     run_datetime,
                     replaced_non_terminal,
                     num_generated_sentences,
                     augmentation,
-                    random_seed
+                    random_seed,
+                    time
                 ).split())

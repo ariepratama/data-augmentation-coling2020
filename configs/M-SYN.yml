@@ -4,30 +4,35 @@ experiments:
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 52
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 152
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 300
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 30
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 900
+    time: 00:30:00
 
 
   - size: M
@@ -35,87 +40,102 @@ experiments:
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 52
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 152
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 300
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 30
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: NP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 900
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 52
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 152
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 300
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 30
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 5
     augmentation: SYN
     random_seed: 900
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 52
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 152
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 300
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 30
+    time: 00:30:00
 
   - size: M
     replaced_non_terminal: VP
     num_generated_sentences: 10
     augmentation: SYN
     random_seed: 900
+    time: 00:30:00
