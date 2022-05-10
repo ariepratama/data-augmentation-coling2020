@@ -8,12 +8,13 @@ echo "data dir: ${DATA_DIR}"
 echo "log dir: ${LOG_DIR}"
 echo "data size: ${DATA_SIZE}"
 echo "run datetime: ${RUN_DATETIME}"
-echo "repalced non terminal: ${REPLACED_NON_TERMINAL}"
+echo "replaced non terminal: ${REPLACED_NON_TERMINAL}"
 echo "num generated sentences: ${NUM_GENERATED_SENTENCES}"
+echo "n replaced non terminal: ${N_REPLACED_NON_TERMINAL}"
 echo "augmentation: ${AUGMENTATION}"
 echo "seed: ${RANDOM_SEED}"
 
-export OUTPUT_DIR="development/${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
+export OUTPUT_DIR="development/${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
 mkdir -p ${OUTPUT_DIR}
 echo "storing output of models at ${OUTPUT_DIR}"
 
@@ -28,9 +29,10 @@ python main.py \
 --data_folder ${DATA_DIR}/${DATA_SIZE}-sent \
 --embedding_type bert \
 --pretrained_dir allenai/scibert_scivocab_cased \
---result_filepath ${LOG_DIR}/sent-${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}.log \
+--result_filepath ${LOG_DIR}/sent-${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}.log \
 --augmentation ${AUGMENTATION} \
 --replaced_non_terminal ${REPLACED_NON_TERMINAL} \
 --num_generated_samples ${NUM_GENERATED_SENTENCES} \
+--n_replaced_non_terminal ${N_REPLACED_NON_TERMINAL} \
 --seed ${RANDOM_SEED} \
 --output_dir ${OUTPUT_DIR}

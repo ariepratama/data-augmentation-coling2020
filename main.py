@@ -66,7 +66,7 @@ def parse_parameters(parser=None):
     parser.add_argument("--num_generated_samples", default=1, type=int)
 
     parser.add_argument("--replaced_non_terminal", default=None)
-    parser.add_argument("--n_replaced_non_terminal", default=1)
+    parser.add_argument("--n_replaced_non_terminal", default=1, type=int)
 
     parser.add_argument("--debug", action="store_true")
 
