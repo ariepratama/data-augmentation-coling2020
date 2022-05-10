@@ -53,7 +53,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id]
     ner_spans = NER_SPANS_CACHE[original_sentence_id]
 
-    # num_generated_samples = min(len(ner_spans), num_generated_samples)
+    logging.info(f"Original sentence: {sentence}, original sentence tree: {sentence_tree}")
 
     if num_generated_samples == 0 or len(ner_spans) == 0:
         logging.info(
@@ -68,7 +68,6 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     spans_to_be_replaced: List[Tuple[int, int]] = random.choices(ner_spans, k=num_generated_samples)
 
     for generation_id, (start_span_to_be_replaced, _) in enumerate(spans_to_be_replaced):
-        # logging.info(f"Generating sentence number={generation_id}, start_span_to_replace={start_span_to_be_replaced}...")
         ner_node_sentence = find_ner_node_given_span(sentence_tree, start_span_to_be_replaced)
         begin_ner_token: Token = sentence.get_token(start_span_to_be_replaced)
         ner_category = begin_ner_token.get_label("gold").split("-")[-1]
@@ -89,7 +88,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
             # replace the entire subtree
             # need to use ParentedTree.convert to lose the parent, otherwise the replacement will fail
-            logging.info(f"replacing node={ner_node_sentence} with {ner_node_replacement}")
+            # logging.info(f"replacing node={ner_node_sentence} with {ner_node_replacement}")
             ori_sentence_parent[ori_sentence_parent_idx] = ParentedTree.convert(ner_node_replacement)
             mutated_sentence_tree = ori_sentence_parent
             if mutated_sentence_tree.parent() is not None:
@@ -97,7 +96,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
             generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
 
-            logging.info(f"Generated sentence: {generated_sentence}")
+            logging.info(f"Generated sentence: {generated_sentence}, generated tree: {mutated_sentence_tree}")
             generated_sentences.append(generated_sentence)
     # logging.info(f"Finished generate {len(generated_sentences)} sentences")
     return generated_sentences
