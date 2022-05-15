@@ -1,6 +1,5 @@
 import logging
 import random
-from copy import deepcopy
 from typing import *
 
 from clu.daug.chunker import Chunker
@@ -12,6 +11,7 @@ SYNTHETIC_TREES_CACHE = {}
 NER_SPANS_CACHE = {}
 CATEGORY_TO_SENTENCE_ID_MAP = {}
 SENTENCE_ID_TO_SENTENCE = {}
+SENTENCE_ID_TO_NER_NONTERMINAL_NODES = {}
 
 
 def corpus_to_trees(dataset) -> List[Tree]:
@@ -52,10 +52,11 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     original_sentence_id = sentence.idx
     sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id]
     ner_spans = NER_SPANS_CACHE[original_sentence_id]
+    original_sentence_nonterminal_nodes = SENTENCE_ID_TO_NER_NONTERMINAL_NODES[original_sentence_id]
 
     logging.info(f"Original sentence: \"{sentence}\", original sentence tree: {sentence_tree}")
-
-    if num_generated_samples == 0 or len(ner_spans) == 0:
+    logging.info(f"Original non-terminal nodes: {original_sentence_nonterminal_nodes}")
+    if num_generated_samples == 0 or len(ner_spans) == 0 or len(original_sentence_nonterminal_nodes) == 0:
         logging.info(
             f"Will not generate more sentences because num_generated_samples={num_generated_samples}" +
             f" ner_spans={ner_spans}")
@@ -65,41 +66,27 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
         random.seed(random_state)
 
     # random sample with replacement
-    spans_to_be_replaced: List[Tuple[int, int]] = random.choices(ner_spans, k=n_replaced_non_terminal)
+    nodes_to_be_replaced: List[ParentedTree] = random.choices(
+        original_sentence_nonterminal_nodes,
+        k=n_replaced_non_terminal
+    )
 
     for generation_id in range(num_generated_samples):
         # need to refresh sentence_tree before generating new sentence
-        sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id]
-        generated_sentence = None
-        mutated_sentence_tree = None
-        for start_span_to_be_replaced, _ in spans_to_be_replaced:
-            ner_node_sentence = find_ner_node_given_span(sentence_tree, start_span_to_be_replaced)
-            begin_ner_token: Token = sentence.get_token(start_span_to_be_replaced)
-            ner_category = begin_ner_token.get_label("gold").split("-")[-1]
-            replacement_sentence_id = random.choice(CATEGORY_TO_SENTENCE_ID_MAP[ner_category])
 
-            replacement_sentence = SENTENCE_ID_TO_SENTENCE[replacement_sentence_id]
-            replacement_sentence_ner_spans = NER_SPANS_CACHE[replacement_sentence_id]
-
-            related_ner_spans = find_related_ner_spans(ner_category, replacement_sentence, replacement_sentence_ner_spans)
-
-            if len(related_ner_spans) > 0:
-                chosen_replacement_span = random.choice(related_ner_spans)
-                replacement_sentence_tree = SYNTHETIC_TREES_CACHE[replacement_sentence_id]
-                ner_node_replacement = find_ner_node_given_span(replacement_sentence_tree, chosen_replacement_span[0])
-                ori_sentence_parent = ner_node_sentence.parent()
-                ori_sentence_parent_idx = ner_node_sentence.parent_index()
-
-                # replace the entire subtree
-                # need to use ParentedTree.convert to lose the parent, otherwise the replacement will fail
-                # logging.info(f"replacing node={ner_node_sentence} with {ner_node_replacement}")
-                ori_sentence_parent[ori_sentence_parent_idx] = ParentedTree.convert(ner_node_replacement)
-                mutated_sentence_tree = ori_sentence_parent
-                if mutated_sentence_tree.parent() is not None:
-                    mutated_sentence_tree = ori_sentence_parent.parent()
-
-                generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
-                sentence_tree = mutated_sentence_tree
+        mutated_sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id].copy(deep=True)
+        for node_to_be_replaced in nodes_to_be_replaced:
+            replacement_sentence_id_candidates = set(SENTENCE_ID_TO_SENTENCE.keys())
+            replacement_sentence_id_candidates.remove(original_sentence_id)
+            replacement_sentence_id = random.choice(list(replacement_sentence_id_candidates))
+            related_nodes_from_replacement_sentence = SENTENCE_ID_TO_NER_NONTERMINAL_NODES[replacement_sentence_id]
+            if len(related_nodes_from_replacement_sentence) < 1:
+                logging.warning("cannot find related nodes to replace...")
+                continue
+            replacement_node = random.choice(related_nodes_from_replacement_sentence)
+            mutated_sentence_tree[node_to_be_replaced.treeposition()] = ParentedTree.convert(
+                replacement_node.copy(deep=True))
+        generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
 
         if generated_sentence is None:
             logging.warn("Will not generate sentence, cannot find related_ner_spans")
@@ -107,7 +94,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
         logging.info(f"Generated sentence: \"{generated_sentence}\", generated tree: {mutated_sentence_tree}")
         generated_sentences.append(generated_sentence)
-    # logging.info(f"Finished generate {len(generated_sentences)} sentences")
+
     return generated_sentences
 
 
@@ -143,9 +130,11 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
 
     data = corpus_to_synthetic_trees(train_corpus, non_terminal=non_terminal, is_dev_mode=is_dev_mode)
     for sentence_id, (synthetic_tree, ner_spans, train_sentence) in data:
-        # logging.info(
-        #     f"populating SYNTHETIC_TREES_CACHE, NER_SPANS_CACHE, CATEGORY_TO_SENTENCE_ID_MAP for sentence {sentence_id} ...")
         SYNTHETIC_TREES_CACHE[sentence_id] = synthetic_tree
+        SENTENCE_ID_TO_NER_NONTERMINAL_NODES[sentence_id] = find_related_ner_nonterminal_nodes(
+            synthetic_tree,
+            non_terminal
+        )
         NER_SPANS_CACHE[sentence_id] = ner_spans
 
         for start_ner_span, _ in ner_spans:
@@ -158,7 +147,31 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
             CATEGORY_TO_SENTENCE_ID_MAP[category].append(sentence.idx)
 
 
-def find_ner_node_given_span(tree: Tree, start_span: int) -> ParentedTree:
+def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str) -> List[Tree]:
+    """
+    Search all nodes that have this format: NER_{non_terminal} from a parented tree (synthetic tree).
+    """
+    if not isinstance(synthetic_tree, ParentedTree):
+        synthetic_tree = ParentedTree.convert(synthetic_tree)
+
+    visited_set = set()
+    exploration_queue = [synthetic_tree]
+    result = []
+    while not len(exploration_queue) == 0:
+        node_to_explore = exploration_queue.pop()
+        visited_set.add(node_to_explore.treeposition())
+
+        if node_to_explore.label() == f"NER_{non_terminal}":
+            result.append(node_to_explore)
+
+        for child in node_to_explore:
+            if isinstance(child, Tree) and child.treeposition() not in visited_set:
+                exploration_queue.append(child)
+
+    return result
+
+
+def find_ner_node_given_span(tree: Tree, start_span: int, non_terminal: str) -> ParentedTree:
     parented_tree = tree
     # do not convert if the tree has already had parents
     if not isinstance(tree, ParentedTree):
@@ -203,13 +216,13 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
     """
     ori_parented_tree = ParentedTree.convert(original_sentence_tree.copy())
     ner_spans = find_all_ner_spans(original_sentence)
-    original_pre_leaves = pre_leaves(ori_parented_tree)
+    original_pre_leafs = pre_leaves(ori_parented_tree)
     leaf_idx_to_parent_idx = {}
 
     if len(ner_spans) <= 0:
         return Tree.convert(ori_parented_tree), []
 
-    for i, pre_leaf in enumerate(original_pre_leaves):
+    for i, pre_leaf in enumerate(original_pre_leafs):
         leaf_idx_to_parent_idx[i] = ori_parented_tree.leaf_treeposition(i)[-1]
 
     for start_span, end_span in ner_spans:
@@ -218,13 +231,22 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
             current_token_gold_label = current_token.get_label("gold")
             # use ParentedTree.treeposition()
             child_idx = leaf_idx_to_parent_idx[i]
-            current_leaf = original_pre_leaves[i][child_idx]
+            current_leaf = original_pre_leafs[i][child_idx]
             modified_pre_leaf_label = f"NER_{current_token_gold_label}_PLACEHOLDER"
+            # will form e.g: (S (NP (NER_B-test_PLACEHOLDER token1/NN) ))
             new_pre_leaf = ParentedTree.convert(Tree(modified_pre_leaf_label, [current_leaf]))
             # replace one
-            original_pre_leaves[i][child_idx] = new_pre_leaf
-            # logging.info(
-            #     f"modifying pre-leaf into{new_pre_leaf} for token {current_token}")
+            original_pre_leafs[i][child_idx] = new_pre_leaf
+
+            pre_leaf_parent = original_pre_leafs[i][child_idx]
+
+            # skip the root non-terminal
+            while pre_leaf_parent.parent() is not None and pre_leaf_parent.parent().parent() is not None:
+                pre_leaf_parent = pre_leaf_parent.parent()
+                if pre_leaf_parent.label() is not None and "NER" not in pre_leaf_parent.label():
+                    # mark the parents as NER_
+                    new_label = f"NER_{pre_leaf_parent.label()}"
+                    pre_leaf_parent.set_label(new_label)
 
     return Tree.convert(ori_parented_tree), ner_spans
 

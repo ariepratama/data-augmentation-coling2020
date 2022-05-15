@@ -3,7 +3,7 @@ import unittest
 from nltk import Tree
 
 from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves, find_related_ner_spans, \
-    tree_to_sentence
+    tree_to_sentence, find_related_ner_nonterminal_nodes
 from data import Sentence, Token
 
 
@@ -80,6 +80,8 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
 
         sample_pre_leaves = pre_leaves(synthetic_tree)
         print(synthetic_tree)
+        self.assertEqual("S", synthetic_tree.label())
+        self.assertEqual("NER_NP", synthetic_tree[1].label())
         self.assertEqual("NER_B-something_PLACEHOLDER", sample_pre_leaves[1].label())
         self.assertEqual("NER_I-something_PLACEHOLDER", sample_pre_leaves[2].label())
 
@@ -178,6 +180,23 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
             "O O O O O B-treatment O B-treatment O B-problem I-problem O O O O",
             sentence_labels
         )
+
+    def test_find_related_ner_nonterminal_nodes(self):
+        sample_synthetic_tree = Tree.fromstring("""
+                (S
+                  Do/VB
+                  not/RB
+                  (NP drive/VB if/IN)
+                  (NER_NP taking/VBG (NER_B-treatment_PLACEHOLDER flexeril/NN))
+                  (NER_NP and/CC (NER_B-treatment_PLACEHOLDER codeine/NN))
+                  ./.
+                  (NER_B-problem_PLACEHOLDER NEAR/NNP)
+                  (NER_NP (NER_I-problem_PLACEHOLDER SYNCOPE/NNP) Standardized/JJ)
+                  (NP Discharge/NNP Instructions/NNPS :/:))
+                """)
+
+        nodes = find_related_ner_nonterminal_nodes(sample_synthetic_tree, "NP")
+        self.assertEqual(len(nodes), 3)
 
 
 if __name__ == '__main__':
