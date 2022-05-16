@@ -12,6 +12,7 @@ NER_SPANS_CACHE = {}
 CATEGORY_TO_SENTENCE_ID_MAP = {}
 SENTENCE_ID_TO_SENTENCE = {}
 SENTENCE_ID_TO_NER_NONTERMINAL_NODES = {}
+NER_NONTERMINAL_NODE_TO_SENTENCE_IDS = {}
 
 
 def corpus_to_trees(dataset) -> List[Tree]:
@@ -76,7 +77,14 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
         mutated_sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id].copy(deep=True)
         for node_to_be_replaced in nodes_to_be_replaced:
-            replacement_sentence_id_candidates = set(SENTENCE_ID_TO_SENTENCE.keys())
+            node_label = node_to_be_replaced.label()
+
+            if node_label not in NER_NONTERMINAL_NODE_TO_SENTENCE_IDS:
+                logging.warning(
+                    f"This should not happened, {node_label} should exists among {NER_NONTERMINAL_NODE_TO_SENTENCE_IDS.keys()}")
+                continue
+
+            replacement_sentence_id_candidates = set(set(NER_NONTERMINAL_NODE_TO_SENTENCE_IDS[node_label]))
             replacement_sentence_id_candidates.remove(original_sentence_id)
             replacement_sentence_id = random.choice(list(replacement_sentence_id_candidates))
             related_nodes_from_replacement_sentence = SENTENCE_ID_TO_NER_NONTERMINAL_NODES[replacement_sentence_id]
@@ -131,10 +139,18 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
     data = corpus_to_synthetic_trees(train_corpus, non_terminal=non_terminal, is_dev_mode=is_dev_mode)
     for sentence_id, (synthetic_tree, ner_spans, train_sentence) in data:
         SYNTHETIC_TREES_CACHE[sentence_id] = synthetic_tree
-        SENTENCE_ID_TO_NER_NONTERMINAL_NODES[sentence_id] = find_related_ner_nonterminal_nodes(
+        ner_non_terminal_nodes = find_related_ner_nonterminal_nodes(
             synthetic_tree,
             non_terminal
         )
+        SENTENCE_ID_TO_NER_NONTERMINAL_NODES[sentence_id] = ner_non_terminal_nodes
+        for ner_non_terminal_node in ner_non_terminal_nodes:
+            # this should be in format "NERNT_{actual_label}"
+            node_label = ner_non_terminal_node.label()
+            if node_label not in NER_NONTERMINAL_NODE_TO_SENTENCE_IDS:
+                NER_NONTERMINAL_NODE_TO_SENTENCE_IDS[node_label] = []
+            NER_NONTERMINAL_NODE_TO_SENTENCE_IDS[node_label].append(sentence_id)
+
         NER_SPANS_CACHE[sentence_id] = ner_spans
 
         for start_ner_span, _ in ner_spans:
