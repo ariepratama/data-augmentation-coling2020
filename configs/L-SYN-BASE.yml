@@ -1,0 +1,38 @@
+experiments:
+  - size: L
+    replaced_non_terminal: NP
+    num_generated_sentences:
+      - 5
+      - 10
+      - 20
+    augmentation: SYN
+    n_replace_non_terminals:
+      - 1
+      - 3
+      - 5
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 02:30:00
+
+  - size: L
+    replaced_non_terminal: VP
+    num_generated_sentences:
+      - 5
+      - 10
+      - 20
+    augmentation: SYN
+    n_replace_non_terminals:
+      - 1
+      - 3
+      - 5
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 02:30:00
