@@ -114,7 +114,7 @@ def tree_to_sentence(tree: Tree, original_sentence_id: str, generation_id: int) 
         except Exception as e:
             logging.error(f"something happens here, token_text={token_text}", e)
         token_label = "O"
-        if "NER" in pre_leaf.label():
+        if "NER" in pre_leaf.label().split("_"):
             token_label = pre_leaf.label().split("_")[1]
         token = Token(token_text, i)
         token.set_label("gold", token_label)
@@ -161,7 +161,7 @@ def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str) 
         node_to_explore = exploration_queue.pop()
         visited_set.add(node_to_explore.treeposition())
 
-        if node_to_explore.label() == f"NER_{non_terminal}":
+        if node_to_explore.label() == f"NERNT_{non_terminal}":
             result.append(node_to_explore)
 
         for child in node_to_explore:
@@ -180,7 +180,7 @@ def find_ner_node_given_span(tree: Tree, start_span: int, non_terminal: str) -> 
     tree_pre_leaves = pre_leaves(parented_tree)
     node_candidate = tree_pre_leaves[start_span]
 
-    while "NER" not in node_candidate.label() and node_candidate.parent() is not None:
+    while "NER" not in node_candidate.label().split("_") and node_candidate.parent() is not None:
         node_candidate = node_candidate.parent()
 
     return node_candidate
@@ -243,9 +243,9 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
             # skip the root non-terminal
             while pre_leaf_parent.parent() is not None and pre_leaf_parent.parent().parent() is not None:
                 pre_leaf_parent = pre_leaf_parent.parent()
-                if pre_leaf_parent.label() is not None and "NER" not in pre_leaf_parent.label():
+                if pre_leaf_parent.label() is not None and "NERNT" not in pre_leaf_parent.label():
                     # mark the parents as NER_
-                    new_label = f"NER_{pre_leaf_parent.label()}"
+                    new_label = f"NERNT_{pre_leaf_parent.label()}"
                     pre_leaf_parent.set_label(new_label)
 
     return Tree.convert(ori_parented_tree), ner_spans
