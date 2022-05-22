@@ -187,16 +187,18 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
                   Do/VB
                   not/RB
                   (NP drive/VB if/IN)
-                  (NER_NP taking/VBG (NER_B-treatment_PLACEHOLDER flexeril/NN))
-                  (NER_NP and/CC (NER_B-treatment_PLACEHOLDER codeine/NN))
+                  (NERNT_NP_treatment taking/VBG (NER_B-treatment flexeril/NN))
+                  (NERNT_NP_treatment and/CC (NER_B-treatment codeine/NN))
                   ./.
-                  (NER_B-problem_PLACEHOLDER NEAR/NNP)
-                  (NER_NP (NER_I-problem_PLACEHOLDER SYNCOPE/NNP) Standardized/JJ)
+                  (NER_B-problem NEAR/NNP)
+                  (NERNT_NP_problem (NER_I-problem SYNCOPE/NNP) Standardized/JJ)
                   (NP Discharge/NNP Instructions/NNPS :/:))
                 """)
 
-        nodes = find_related_ner_nonterminal_nodes(sample_synthetic_tree, "NP")
-        self.assertEqual(len(nodes), 3)
+        nodes = find_related_ner_nonterminal_nodes(sample_synthetic_tree, "NP", "treatment")
+        self.assertEqual(len(nodes), 2)
+        nodes = find_related_ner_nonterminal_nodes(sample_synthetic_tree, "NP", "problem")
+        self.assertEqual(len(nodes), 1)
 
 
 if __name__ == '__main__':

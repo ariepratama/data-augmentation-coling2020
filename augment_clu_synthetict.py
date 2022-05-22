@@ -2,6 +2,7 @@ import logging
 import random
 from typing import *
 
+import stanza
 from clu.daug.chunker import Chunker
 from nltk import Tree, ParentedTree
 
@@ -14,15 +15,18 @@ SENTENCE_ID_TO_SENTENCE = {}
 SENTENCE_ID_TO_NER_NONTERMINAL_NODES = {}
 NER_NONTERMINAL_NODE_TO_SENTENCE_IDS = {}
 
+NLP = stanza.Pipeline(lang="en", processors="tokenize,pos,constituency", tokenize_pretokenized=True)
 
-def corpus_to_trees(dataset) -> List[Tree]:
+
+def corpus_to_trees(dataset, nlp=NLP) -> List[Tree]:
     trees: List[Tree] = []
-    chunker: Chunker = Chunker.default()
 
     for sentence in dataset:
         token_texts = [token.text for token in sentence]
-        sentence_tree = chunker.transform(token_texts)[0]
-        trees.append(sentence_tree)
+        sentence_text = " ".join(token_texts)
+        doc = nlp(sentence_text)
+        for s in doc.sentences:
+            trees.append(Tree.fromstring(str(s.constituency.children[0])))
 
     return trees
 
@@ -139,13 +143,17 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
     data = corpus_to_synthetic_trees(train_corpus, non_terminal=non_terminal, is_dev_mode=is_dev_mode)
     for sentence_id, (synthetic_tree, ner_spans, train_sentence) in data:
         SYNTHETIC_TREES_CACHE[sentence_id] = synthetic_tree
-        ner_non_terminal_nodes = find_related_ner_nonterminal_nodes(
-            synthetic_tree,
-            non_terminal
-        )
+        ner_non_terminal_nodes = list()
+        ner_categories_in_sentence = get_all_ner_categories(train_sentence)
+        for ner_category in ner_categories_in_sentence:
+            ner_non_terminal_nodes += find_related_ner_nonterminal_nodes(
+                synthetic_tree,
+                non_terminal,
+                ner_category
+            )
         SENTENCE_ID_TO_NER_NONTERMINAL_NODES[sentence_id] = ner_non_terminal_nodes
         for ner_non_terminal_node in ner_non_terminal_nodes:
-            # this should be in format "NERNT_{actual_label}"
+            # this should be in format "NERNT_{actual_label}_{ner_category_1}_{ner_category_2}"
             node_label = ner_non_terminal_node.label()
             if node_label not in NER_NONTERMINAL_NODE_TO_SENTENCE_IDS:
                 NER_NONTERMINAL_NODE_TO_SENTENCE_IDS[node_label] = []
@@ -163,7 +171,15 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
             CATEGORY_TO_SENTENCE_ID_MAP[category].append(sentence.idx)
 
 
-def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str) -> List[Tree]:
+def get_all_ner_categories(sentence: Sentence) -> List[str]:
+    ner_categories = set()
+    for token in sentence:
+        ner_category = token.get_label("gold").split("-")[-1]
+        ner_categories.add(ner_category)
+    return list(ner_categories)
+
+
+def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str, ner_category: str) -> List[Tree]:
     """
     Search all nodes that have this format: NER_{non_terminal} from a parented tree (synthetic tree).
     """
@@ -177,7 +193,7 @@ def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str) 
         node_to_explore = exploration_queue.pop()
         visited_set.add(node_to_explore.treeposition())
 
-        if node_to_explore.label() == f"NERNT_{non_terminal}":
+        if f"NERNT_{non_terminal}" in node_to_explore.label() and ner_category in node_to_explore.label():
             result.append(node_to_explore)
 
         for child in node_to_explore:
@@ -212,14 +228,19 @@ def find_related_ner_spans(ner_category: Text, replacement_sentence: Sentence,
     return results
 
 
-def corpus_to_synthetic_trees(train_corpus: List[Sentence], non_terminal: str, is_dev_mode: bool = False) -> List[
+def corpus_to_synthetic_trees(
+        train_corpus: List[Sentence],
+        non_terminal: str,
+        is_dev_mode: bool = False,
+        nlp=NLP) -> List[
     Tuple[str, Tuple[Tree, List[Tuple[int, int]], Sentence]]]:
-    chunker: Chunker = Chunker.default(non_terminal=non_terminal, is_dev_mode=is_dev_mode)
-
     results: List[str, Tuple[Tree, List[Tuple[int, int]]]] = []
     for sentence in train_corpus:
-        token_texts = [token.text for token in sentence.tokens]
-        sentence_tree = chunker.transform(token_texts)[0]
+        token_texts = [token.text for token in sentence]
+        sentence_text = " ".join(token_texts)
+        doc = nlp(sentence_text)
+        # because stanza's tree will generate (ROOT (S ...)) and we expect only (S ...)
+        sentence_tree = Tree.fromstring(str(doc.sentences[0].constituency.children[0]))
         sentence_tree, ner_spans = tree_to_synthetic_ner_tree(sentence, sentence_tree)
         results.append((sentence.idx, (sentence_tree, ner_spans, sentence)))
 
@@ -248,8 +269,8 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
             # use ParentedTree.treeposition()
             child_idx = leaf_idx_to_parent_idx[i]
             current_leaf = original_pre_leafs[i][child_idx]
-            modified_pre_leaf_label = f"NER_{current_token_gold_label}_PLACEHOLDER"
-            # will form e.g: (S (NP (NER_B-test_PLACEHOLDER token1/NN) ))
+            modified_pre_leaf_label = f"NER_{current_token_gold_label}"
+            # will form e.g: (S (NP (NER_B-test token1/NN) ))
             new_pre_leaf = ParentedTree.convert(Tree(modified_pre_leaf_label, [current_leaf]))
             # replace one
             original_pre_leafs[i][child_idx] = new_pre_leaf
@@ -259,10 +280,16 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
             # skip the root non-terminal
             while pre_leaf_parent.parent() is not None and pre_leaf_parent.parent().parent() is not None:
                 pre_leaf_parent = pre_leaf_parent.parent()
+                new_label = pre_leaf_parent.label()
                 if pre_leaf_parent.label() is not None and "NERNT" not in pre_leaf_parent.label():
                     # mark the parents as NER_
-                    new_label = f"NERNT_{pre_leaf_parent.label()}"
-                    pre_leaf_parent.set_label(new_label)
+                    new_label = f"NERNT_{new_label}"
+
+                ner_category = current_token_gold_label.split("-")[-1]
+                if ner_category not in new_label:
+                    new_label = f"{new_label}_{ner_category}"
+
+                pre_leaf_parent.set_label(new_label)
 
     return Tree.convert(ori_parented_tree), ner_spans
 
