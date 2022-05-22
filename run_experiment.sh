@@ -14,7 +14,7 @@ echo "n replaced non terminal: ${N_REPLACED_NON_TERMINAL}"
 echo "augmentation: ${AUGMENTATION}"
 echo "seed: ${RANDOM_SEED}"
 
-export OUTPUT_DIR="development/${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
+export OUTPUT_DIR="/xdisk/hahnpowell/clu-daug/out/${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
 mkdir -p ${OUTPUT_DIR}
 echo "storing output of models at ${OUTPUT_DIR}"
 
