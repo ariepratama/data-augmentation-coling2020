@@ -1,9 +1,10 @@
+import traceback
 import unittest
 
-from nltk import Tree
+from nltk import Tree, ParentedTree
 
 from augment_clu_synthetict import find_all_ner_spans, tree_to_synthetic_ner_tree, pre_leaves, find_related_ner_spans, \
-    tree_to_sentence, find_related_ner_nonterminal_nodes
+    tree_to_sentence, find_related_ner_nonterminal_nodes, is_parent_of_pre_leaves
 from data import Sentence, Token
 
 
@@ -199,6 +200,40 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
         self.assertEqual(len(nodes), 2)
         nodes = find_related_ner_nonterminal_nodes(sample_synthetic_tree, "NP", "problem")
         self.assertEqual(len(nodes), 1)
+
+    def test_is_parent_of_pre_leaves(self):
+        sample_tree = ParentedTree.fromstring("""
+        (S
+          (NERNT_NP_problem
+            (NERNT_NP_problem
+              (NERNT_NNP_problem (NER_B-problem C5-6))
+              (NERNT_NN_problem (NER_I-problem disc))
+              (NERNT_NN_problem (NER_I-problem herniation)))
+            (NERNT_PP_problem
+              (IN with)
+              (NERNT_NP_problem
+                (NERNT_NN_problem (NER_B-problem cord))
+                (NERNT_NN_problem (NER_I-problem compression))
+                (CC and)
+                (NERNT_NN_problem (NER_B-problem myelopathy))))
+            (. .)))
+        """)
+        sample_node_1 = sample_tree[(0, 0, 0, 0, 0)]
+        self.assertFalse(is_parent_of_pre_leaves(sample_node_1, "NP"))
+
+        sample_node_2 = sample_tree[(0, 0, 0, 0)]
+        self.assertFalse(is_parent_of_pre_leaves(sample_node_2, "NP"))
+
+        # the node I want
+        sample_node_3 = sample_tree[(0, 0, 0)]
+        self.assertFalse(is_parent_of_pre_leaves(sample_node_3, "NP"))
+
+        sample_node_4 = sample_tree[(0, 0)]
+        self.assertTrue(is_parent_of_pre_leaves(sample_node_4, "NP"))
+
+        sample_node_5 = sample_tree[0]
+        self.assertFalse(is_parent_of_pre_leaves(sample_node_5, "NP"))
+
 
 
 if __name__ == '__main__':

@@ -3,7 +3,6 @@ import random
 from typing import *
 
 import stanza
-from clu.daug.chunker import Chunker
 from nltk import Tree, ParentedTree
 
 from data import Sentence, Token
@@ -75,6 +74,8 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
         original_sentence_nonterminal_nodes,
         k=n_replaced_non_terminal
     )
+
+    # TODO: make replacement to only replace the same category and only 1 level up
 
     for generation_id in range(num_generated_samples):
         # need to refresh sentence_tree before generating new sentence
@@ -179,7 +180,8 @@ def get_all_ner_categories(sentence: Sentence) -> List[str]:
     return list(ner_categories)
 
 
-def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str, ner_category: str) -> List[Tree]:
+def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str, ner_category: str,
+                                       is_only_one_level_up: bool = True) -> List[Tree]:
     """
     Search all nodes that have this format: NER_{non_terminal} from a parented tree (synthetic tree).
     """
@@ -193,7 +195,10 @@ def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str, 
         node_to_explore = exploration_queue.pop()
         visited_set.add(node_to_explore.treeposition())
 
-        if f"NERNT_{non_terminal}" in node_to_explore.label() and ner_category in node_to_explore.label():
+        if (
+                f"NERNT_{non_terminal}" in node_to_explore.label() and
+                ner_category in node_to_explore.label() and
+                (is_only_one_level_up and is_parent_of_pre_leaves(node_to_explore, non_terminal=non_terminal))):
             result.append(node_to_explore)
 
         for child in node_to_explore:
@@ -240,7 +245,8 @@ def corpus_to_synthetic_trees(
         sentence_text = " ".join(token_texts)
         doc = nlp(sentence_text)
         # because stanza's tree will generate (ROOT (S ...)) and we expect only (S ...)
-        sentence_tree = Tree.fromstring(str(doc.sentences[0].constituency.children[0]))
+        sentence_tree = Tree.fromstring(str(doc.sentences[0].constituency))
+        sentence_tree.set_label("S")
         sentence_tree, ner_spans = tree_to_synthetic_ner_tree(sentence, sentence_tree)
         results.append((sentence.idx, (sentence_tree, ner_spans, sentence)))
 
@@ -292,6 +298,33 @@ def tree_to_synthetic_ner_tree(original_sentence: Sentence, original_sentence_tr
                 pre_leaf_parent.set_label(new_label)
 
     return Tree.convert(ori_parented_tree), ner_spans
+
+
+def is_parent_of_pre_leaves(node: ParentedTree, non_terminal: str) -> bool:
+    # don't have children, means the node is leaf
+    if len(node) == 0 or not isinstance(node, Tree):
+        return False
+
+    if non_terminal not in node.label().split("_"):
+        return False
+
+    children_labels = set()
+    visited_set = set()
+    exploration_queue = [node]
+
+    while len(exploration_queue) >= 1:
+        current_node = exploration_queue.pop()
+        visited_set.add(current_node.treeposition())
+        for child in current_node:
+            if isinstance(child, Tree):
+                splitted_label = child.label().split("_")
+                original_label = splitted_label[0] if len(splitted_label) == 1 else splitted_label[1]
+                children_labels.add(original_label)
+
+                if child.treeposition() not in visited_set:
+                    exploration_queue.append(child)
+
+    return non_terminal not in children_labels
 
 
 def pre_leaves(tree) -> List[Tree]:
