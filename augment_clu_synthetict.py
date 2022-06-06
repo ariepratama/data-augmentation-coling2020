@@ -201,11 +201,11 @@ def find_related_ner_nonterminal_nodes(synthetic_tree: Tree, non_terminal: str, 
     while not len(exploration_queue) == 0:
         node_to_explore = exploration_queue.pop()
         visited_set.add(node_to_explore.treeposition())
-
         if (
                 f"NERNT_{non_terminal}" in node_to_explore.label() and
                 ner_category in node_to_explore.label() and
-                (is_only_one_level_up and is_parent_of_pre_leaves(node_to_explore, non_terminal=non_terminal))):
+                (not is_only_one_level_up or
+                 (is_only_one_level_up and is_parent_of_pre_leaves(node_to_explore, non_terminal=non_terminal)))):
             result.append(node_to_explore)
 
         for child in node_to_explore:

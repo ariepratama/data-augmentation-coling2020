@@ -201,6 +201,34 @@ class TestAugmentCluSyntheticT(unittest.TestCase):
         nodes = find_related_ner_nonterminal_nodes(sample_synthetic_tree, "NP", "problem")
         self.assertEqual(len(nodes), 1)
 
+    def test_find_related_ner_nonterminal_nodes_one_level_up_false(self):
+        sample_synthetic_tree = Tree.fromstring("""
+                (S
+                  Do/VB
+                  not/RB
+                  (NP drive/VB if/IN)
+                  (NERNT_NP_treatment (NERNT_NP_treatment taking/VBG (NER_B-treatment flexeril/NN)))
+                  (NERNT_NP_treatment and/CC (NER_B-treatment codeine/NN))
+                  ./.
+                  (NER_B-problem NEAR/NNP)
+                  (NERNT_NP_problem (NER_I-problem SYNCOPE/NNP) Standardized/JJ)
+                  (NP Discharge/NNP Instructions/NNPS :/:))
+                """)
+
+        nodes = find_related_ner_nonterminal_nodes(
+            sample_synthetic_tree,
+            "NP",
+            "treatment",
+            is_only_one_level_up=False
+        )
+        self.assertEqual(len(nodes), 3)
+        nodes = find_related_ner_nonterminal_nodes(
+            sample_synthetic_tree,
+            "NP",
+            "problem",
+            is_only_one_level_up=False)
+        self.assertEqual(len(nodes), 1)
+
     def test_is_parent_of_pre_leaves(self):
         sample_tree = ParentedTree.fromstring("""
         (S
