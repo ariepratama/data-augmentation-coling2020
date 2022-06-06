@@ -20,7 +20,7 @@ if __name__ == "__main__":
     final_sentences = []
     for sentence in corpus.train:
         logging.info(f"Original sentence={sentence}")
-        augmented_sentences = generate_sentences_by_synthetic_tree(sentence, 5, corpus.train, "ADJP",
+        augmented_sentences = generate_sentences_by_synthetic_tree(sentence, 5, corpus.train, "VP",
                                                                    n_replaced_non_terminal=5, random_state=30)
         final_sentences += augmented_sentences
     gold_tag_ids = [[tag_dict.get_idx(t.get_label("gold")) for t in s] for s in final_sentences]
