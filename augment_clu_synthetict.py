@@ -91,6 +91,13 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
 
             replacement_sentence_id_candidates = set(set(NER_NONTERMINAL_NODE_TO_SENTENCE_IDS[node_label]))
             replacement_sentence_id_candidates.remove(original_sentence_id)
+
+            if len(replacement_sentence_id_candidates) < 1:
+                logging.warning(
+                    f"There's no candidate to replace node with label: {node_label}, skipping..."
+                )
+                continue
+
             replacement_sentence_id = random.choice(list(replacement_sentence_id_candidates))
             related_nodes_from_replacement_sentence = SENTENCE_ID_TO_NER_NONTERMINAL_NODES[replacement_sentence_id]
             if len(related_nodes_from_replacement_sentence) < 1:

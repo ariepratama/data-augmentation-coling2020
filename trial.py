@@ -15,13 +15,13 @@ logging.basicConfig(
 
 if __name__ == "__main__":
     logging.info("loading corpus...")
-    corpus = ConllCorpus("development", "data/S-sent/train.txt", "data/S-sent/dev.txt", "data/S-sent/test.txt")
+    corpus = ConllCorpus("development", "data/M-sent/train.txt", "data/M-sent/dev.txt", "data/M-sent/test.txt")
     tag_dict = corpus.build_tag_dict("gold")
     final_sentences = []
     for sentence in corpus.train:
         logging.info(f"Original sentence={sentence}")
-        augmented_sentences = generate_sentences_by_synthetic_tree(sentence, 10, corpus.train, "VP",
-                                                                   n_replaced_non_terminal=3, random_state=300)
+        augmented_sentences = generate_sentences_by_synthetic_tree(sentence, 5, corpus.train, "PP",
+                                                                   n_replaced_non_terminal=1, random_state=30)
         final_sentences += augmented_sentences
     gold_tag_ids = [[tag_dict.get_idx(t.get_label("gold")) for t in s] for s in final_sentences]
     for s in final_sentences:
