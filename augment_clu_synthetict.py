@@ -1,3 +1,4 @@
+import copy
 import logging
 import random
 from typing import *
@@ -69,19 +70,26 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
     if random_state:
         random.seed(random_state)
 
-    # random sample with replacement
-    nodes_to_be_replaced: List[ParentedTree] = random.choices(
-        original_sentence_nonterminal_nodes,
-        k=n_replaced_non_terminal
-    )
-
-    # TODO: make replacement to only replace the same category and only 1 level up
-
     for generation_id in range(num_generated_samples):
         # need to refresh sentence_tree before generating new sentence
 
         mutated_sentence_tree = SYNTHETIC_TREES_CACHE[original_sentence_id].copy(deep=True)
-        for node_to_be_replaced in nodes_to_be_replaced:
+        # random sample with replacement
+        for i in range(n_replaced_non_terminal):
+            ner_categories_in_sentence = get_all_ner_categories(sentence)
+            ner_non_terminal_nodes = []
+            for ner_category in ner_categories_in_sentence:
+                ner_non_terminal_nodes += find_related_ner_nonterminal_nodes(
+                    mutated_sentence_tree,
+                    non_terminal,
+                    ner_category,
+                    is_only_one_level_up=False
+                )
+            if len(ner_non_terminal_nodes) < 1:
+                logging.warning("No ner non terminal nodes to be replaced, skipping...")
+                continue
+
+            node_to_be_replaced = random.choice(ner_non_terminal_nodes)
             node_label = node_to_be_replaced.label()
 
             if node_label not in NER_NONTERMINAL_NODE_TO_SENTENCE_IDS:
@@ -90,7 +98,8 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
                 continue
 
             replacement_sentence_id_candidates = set(set(NER_NONTERMINAL_NODE_TO_SENTENCE_IDS[node_label]))
-            replacement_sentence_id_candidates.remove(original_sentence_id)
+            if original_sentence_id in replacement_sentence_id_candidates:
+                replacement_sentence_id_candidates.remove(original_sentence_id)
 
             if len(replacement_sentence_id_candidates) < 1:
                 logging.warning(
@@ -104,6 +113,7 @@ def generate_sentences_by_synthetic_tree(sentence: Sentence,
                 logging.warning("cannot find related nodes to replace...")
                 continue
             replacement_node = random.choice(related_nodes_from_replacement_sentence)
+            logging.info(f"replacing node position: {node_to_be_replaced.treeposition()}, from tree: {mutated_sentence_tree}...")
             mutated_sentence_tree[node_to_be_replaced.treeposition()] = ParentedTree.convert(
                 replacement_node.copy(deep=True))
         generated_sentence = tree_to_sentence(mutated_sentence_tree, original_sentence_id, generation_id)
@@ -157,7 +167,8 @@ def populate_caches(sentence, train_corpus, non_terminal, is_dev_mode):
             ner_non_terminal_nodes += find_related_ner_nonterminal_nodes(
                 synthetic_tree,
                 non_terminal,
-                ner_category
+                ner_category,
+                is_only_one_level_up=False
             )
         SENTENCE_ID_TO_NER_NONTERMINAL_NODES[sentence_id] = ner_non_terminal_nodes
         for ner_non_terminal_node in ner_non_terminal_nodes:
