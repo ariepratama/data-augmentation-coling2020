@@ -36,4 +36,5 @@ python main.py \
 --num_generated_samples ${NUM_GENERATED_SENTENCES} \
 --n_replaced_non_terminal ${N_REPLACED_NON_TERMINAL} \
 --seed ${RANDOM_SEED} \
---output_dir ${OUTPUT_DIR}
+--output_dir ${OUTPUT_DIR} \
+--log_filepath ${OUTPUT_DIR}/development.log

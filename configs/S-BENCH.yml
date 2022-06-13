@@ -1,0 +1,30 @@
+experiments:
+  - size: S
+    replaced_non_terminal: XP
+    num_generated_sentences:
+      - 1
+    augmentation: SR
+    n_replace_non_terminals:
+      - 1
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 01:30:00
+
+  - size: S
+    replaced_non_terminal: XP
+    num_generated_sentences:
+      - 1
+    augmentation: MR
+    n_replace_non_terminals:
+      - 1
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 01:30:00
