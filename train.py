@@ -23,6 +23,7 @@ from augment import generate_sentences_by_shuffle_within_segments, generate_sent
     generate_sentences_by_replace_token, generate_sentences_by_synonym_replacement
 from augment_clu import generate_sentences_by_grammar
 from augment_clu_synthetict import generate_sentences_by_synthetic_tree
+from augment_bert import augment_sentence_wt_lm
 from data import get_spans
 
 logger = logging.getLogger(__name__)
@@ -198,7 +199,16 @@ def train_epoch(args, encoder, mlp, crf, optimizer, train_data, epoch, category2
                     args.replaced_non_terminal,
                     n_replaced_non_terminal=args.n_replaced_non_terminal,
                     random_state=args.seed)
-
+            if "LM" in args.augmentation:
+                logging.info("Running augmentation, replacement by language model...")
+                generated_sentences, _, _ = augment_sentence_wt_lm(
+                    s,
+                    seed=args.seed,
+                    n_replacement=args.n_replaced_non_terminal,
+                    cuda_device=args.device,
+                    num_generated_samples=args.num_generated_samples
+                )
+                augmented_sentences += generated_sentences
         train_data += augmented_sentences
     else:
         logger.info("No data augmentation used")
