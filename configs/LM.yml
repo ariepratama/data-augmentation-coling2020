@@ -35,7 +35,7 @@ experiments:
       - 300
       - 30
       - 900
-    time: 01:30:00
+    time: 02:30:00
 
   - size: L
     replaced_non_terminal: XP
@@ -54,4 +54,4 @@ experiments:
       - 300
       - 30
       - 900
-    time: 02:30:00
+    time: 05:30:00
