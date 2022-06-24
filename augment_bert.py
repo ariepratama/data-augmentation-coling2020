@@ -48,11 +48,14 @@ def augment_sentence_wt_lm(sentence: Sentence,
     token_idx_candidates = []
     replacement_tokens = []
     np.random.seed(seed)
+    candidate_tokens = [sentence[m].text for m in masked_token_id_candidates]
+    logging.info(f"candidate tokens to be replaced: {candidate_tokens}")
     for generation_id in range(num_generated_samples):
-        masked_token_id_candidates = np.random.choice(masked_token_id_candidates, size=n_replacement)
+        n_replacement = min(len(masked_token_id_candidates), n_replacement)
+        chosen_candidates = set(np.random.choice(masked_token_id_candidates, size=n_replacement, replace=False))
 
         tokens = sentence_to_tokens(sentence)
-        tokens = mask_token_by_ids(tokens, masked_token_id_candidates)
+        tokens = mask_token_by_ids(tokens, chosen_candidates)
 
         inputs = tokenizer(tokens, return_tensors="pt", is_split_into_words=True).to(device)
         with torch.no_grad():
@@ -61,12 +64,12 @@ def augment_sentence_wt_lm(sentence: Sentence,
 
         predicted_token_id = logits[0, mask_token_index].argmax(axis=-1)
         mask_replacement_tokens = word_tokenize(tokenizer.decode(predicted_token_id))
-        augmented_sentence = sentence_wt_replacement(sentence, masked_token_id_candidates, mask_replacement_tokens,
+        augmented_sentence = sentence_wt_replacement(sentence, chosen_candidates, mask_replacement_tokens,
                                                      generation_id=generation_id)
         logging.info(
-            f"Generated sentence: {augmented_sentence}, masked_token_id_candidates: {masked_token_id_candidates}, mask_replacement_tokens: {mask_replacement_tokens}")
+            f"Generated sentence: {augmented_sentence}, masked_token_id_candidates: {chosen_candidates}, mask_replacement_tokens: {mask_replacement_tokens}")
         augmented_sentences += [augmented_sentence]
-        token_idx_candidates += [masked_token_id_candidates]
+        token_idx_candidates += [chosen_candidates]
         replacement_tokens += [mask_replacement_tokens]
     return augmented_sentences, token_idx_candidates, replacement_tokens
 
