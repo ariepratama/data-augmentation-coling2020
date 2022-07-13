@@ -14,6 +14,7 @@ echo "num generated sentences: ${NUM_GENERATED_SENTENCES}"
 echo "n replaced non terminal: ${N_REPLACED_NON_TERMINAL}"
 echo "augmentation: ${AUGMENTATION}"
 echo "seed: ${RANDOM_SEED}"
+echo "pretrined_dir: ${PRETRAINED_DIR}"
 export OUTPUT_FILE="${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
 export OUTPUT_DIR="/xdisk/hahnpowell/clu-daug/out/${OUTPUT_FILE}"
 mkdir -p ${OUTPUT_DIR}

@@ -26,6 +26,9 @@ if __name__ == "__main__":
             augmentation = config["augmentation"]
             time = str(config["time"])
             n_replace_non_terminals = config["n_replace_non_terminals"]
+            pretrained_dir = "allenai/scibert_scivocab_cased"
+            if "pretrained_dir" in config:
+                pretrained_dir = config["pretrained_dir"]
 
             random_seeds = config["random_seeds"]
             for n_generated_sentence in num_generated_sentences:
@@ -37,15 +40,18 @@ if __name__ == "__main__":
                         os.environ["NUM_GENERATED_SENTENCES"] = str(n_generated_sentence)
                         os.environ["AUGMENTATION"] = config["augmentation"]
                         os.environ["RANDOM_SEED"] = str(random_seed)
+                        os.environ["PRETRAINED_DIR"] = pretrained_dir
+
                         cmd = "bash submit_job.sh {} {} {} {} {} {} {} {}".format(
-                                size,
-                                run_datetime,
-                                replaced_non_terminal,
-                                n_generated_sentence,
-                                augmentation,
-                                random_seed,
-                                time,
-                                n_replace_no_terminal
-                            )
+                            size,
+                            run_datetime,
+                            replaced_non_terminal,
+                            n_generated_sentence,
+                            augmentation,
+                            random_seed,
+                            time,
+                            n_replace_no_terminal,
+                            pretrained_dir
+                        )
                         print(f"running '{cmd}'")
                         sub.run(cmd.split())
