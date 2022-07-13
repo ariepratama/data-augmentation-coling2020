@@ -42,7 +42,7 @@ if __name__ == "__main__":
                         os.environ["RANDOM_SEED"] = str(random_seed)
                         os.environ["PRETRAINED_DIR"] = pretrained_dir
 
-                        cmd = "bash submit_job.sh {} {} {} {} {} {} {} {}".format(
+                        cmd = "bash submit_job.sh {} {} {} {} {} {} {} {} {}".format(
                             size,
                             run_datetime,
                             replaced_non_terminal,
