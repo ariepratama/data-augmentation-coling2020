@@ -8,7 +8,7 @@ experiments:
       - 20
     augmentation: LM
     n_replace_non_terminals:
-      - 5
+      - 1
       - 3
       - 5
     random_seeds:
