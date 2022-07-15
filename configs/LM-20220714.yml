@@ -3,7 +3,7 @@ experiments:
     pretrained_dir: ariesutiono/scibert-lm-const-finetuned-20
     replaced_non_terminal: XP
     num_generated_sentences:
-      - 1
+      - 5
       - 10
       - 20
     augmentation: LM
