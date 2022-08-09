@@ -1,0 +1,60 @@
+experiments:
+  - size: S
+    pretrained_dir: ariesutiono/scibert-lm-v2-finetuned-20
+    replaced_non_terminal: VP
+    num_generated_sentences:
+      - 5
+      - 10
+      - 20
+    augmentation: SYN
+    n_replace_non_terminals:
+      - 1
+      - 3
+      - 5
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 02:00:00
+
+  - size: M
+    pretrained_dir: ariesutiono/scibert-lm-v2-finetuned-20
+    replaced_non_terminal: VP
+    num_generated_sentences:
+      - 5
+      - 10
+      - 20
+    augmentation: SYN
+    n_replace_non_terminals:
+      - 1
+      - 3
+      - 5
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 04:30:00
+
+  - size: L
+    pretrained_dir: ariesutiono/scibert-lm-v2-finetuned-20
+    replaced_non_terminal: VP
+    num_generated_sentences:
+      - 5
+      - 10
+      - 20
+    augmentation: SYN
+    n_replace_non_terminals:
+      - 1
+      - 3
+      - 5
+    random_seeds:
+      - 52
+      - 152
+      - 300
+      - 30
+      - 900
+    time: 07:30:00
