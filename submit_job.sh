@@ -10,8 +10,8 @@ export TIME=$7
 export N_REPLACED_NON_TERMINAL=$8
 export PRETRAINED_DIR=$9
 export DATA_DIR=/home/u26/ariesutiono/da-coling2020/data
-export LOG_DIR=/xdisk/hahnpowell/clu-daug/logs
-export RESULT_DIR=/xdisk/hahnpowell/clu-daug/result-logs
+export LOG_DIR=/home/u26/ariesutiono/da-coling2020-run/logs
+export RESULT_DIR=/home/u26/ariesutiono/da-coling2020-run/result-logs
 
 export NAME_SUFFIX="${SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
 
