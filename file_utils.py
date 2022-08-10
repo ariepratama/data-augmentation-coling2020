@@ -3,6 +3,7 @@ import os
 
 import torch
 from google.cloud import storage
+from pathlib import Path
 
 storage_client = None
 
@@ -24,11 +25,14 @@ def save_to_gcs(state_dict, output_dir: str, file_name: str):
     output_bucket = storage_client.get_bucket("pandl_1")
     dir = output_dir.split("/")[-1]
 
-    src_file_path = os.path.join(f"/tmp/{dir}", file_name)
+    local_dir = f"/tmp/{dir}"
+    Path(local_dir).mkdir(parents=True, exist_ok=True)
+
+    src_file_path = os.path.join(local_dir, file_name)
     blob = output_bucket.blob(f"out/{dir}/{file_name}")
     blob.upload_from_filename(src_file_path)
 
-    torch.save(state_dict, os.path.join(f"/tmp/{dir}", file_name))
+    torch.save(state_dict, os.path.join(local_dir, file_name))
 
 
 def load_from_gcs(output_dir: str, file_name: str):
