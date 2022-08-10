@@ -25,6 +25,7 @@ from augment_clu import generate_sentences_by_grammar
 from augment_clu_synthetict import generate_sentences_by_synthetic_tree
 from augment_bert import augment_sentence_wt_lm
 from data import get_spans
+from file_utils import load_from_local, save_to_local
 
 logger = logging.getLogger(__name__)
 
@@ -155,9 +156,12 @@ def final_test(args, encoder, mlp, crf, test_data, name):
     encoder.eval()
     mlp.eval()
     crf.eval()
-    encoder.load_state_dict(torch.load(os.path.join(args.output_dir, "encoder.pt")))
-    mlp.load_state_dict(torch.load(os.path.join(args.output_dir, "mlp.pt")))
-    crf.load_state_dict(torch.load(os.path.join(args.output_dir, "crf.pt")))
+    # encoder.load_state_dict(torch.load(os.path.join(args.output_dir, "encoder.pt")))
+    # mlp.load_state_dict(torch.load(os.path.join(args.output_dir, "mlp.pt")))
+    # crf.load_state_dict(torch.load(os.path.join(args.output_dir, "crf.pt")))
+    encoder.load_state_dict(load_from_local(args.output_dir, "encoder.pt"))
+    mlp.load_state_dict(load_from_local(args.output_dir, "mlp.pt"))
+    crf.load_state_dict(load_from_local(args.output_dir, "crf.pt"))
     data_loader = DataLoader(test_data, batch_size=args.eval_bs, collate_fn=list)
     test_score = evaluate(encoder, mlp, crf, data_loader, os.path.join(args.output_dir, "%s.tsv" % name), True)
     return test_score.to_dict()
@@ -288,9 +292,12 @@ def train(args, encoder, mlp, crf, train_data, dev_data, category2mentions, labe
         if dev_score == scheduler.best or "best_epoch" not in args.result:
             args.result["best_epoch"] = epoch
             logger.info("New best model found")
-            torch.save(encoder.state_dict(), os.path.join(args.output_dir, "encoder.pt"))
-            torch.save(mlp.state_dict(), os.path.join(args.output_dir, "mlp.pt"))
-            torch.save(crf.state_dict(), os.path.join(args.output_dir, "crf.pt"))
+            # torch.save(encoder.state_dict(), os.path.join(args.output_dir, "encoder.pt"))
+            # torch.save(mlp.state_dict(), os.path.join(args.output_dir, "mlp.pt"))
+            # torch.save(crf.state_dict(), os.path.join(args.output_dir, "crf.pt"))
+            save_to_local(encoder.state_dict(), args.output_dir, "encoder.pt")
+            save_to_local(mlp.state_dict(), args.output_dir, "mlp.pt")
+            save_to_local(crf.state_dict(), args.output_dir, "crf.pt")
         else:
             logger.info(f"No improvement since last {epoch - args.result['best_epoch']} epochs, "
                         f"best score is {scheduler.best}")
