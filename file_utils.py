@@ -29,10 +29,11 @@ def save_to_gcs(state_dict, output_dir: str, file_name: str):
     Path(local_dir).mkdir(parents=True, exist_ok=True)
 
     src_file_path = os.path.join(local_dir, file_name)
+    torch.save(state_dict, src_file_path)
+
     blob = output_bucket.blob(f"out/{dir}/{file_name}")
     blob.upload_from_filename(src_file_path)
 
-    torch.save(state_dict, os.path.join(local_dir, file_name))
 
 
 def load_from_gcs(output_dir: str, file_name: str):
