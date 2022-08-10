@@ -19,7 +19,7 @@ def save_to_gcs(state_dict, output_dir: str, file_name: str):
     global storage_client
 
     if not storage_client:
-        storage_client = storage.client()
+        storage_client = storage.Client()
 
     output_bucket = storage_client.get_bucket("pandl_1")
     dir = output_dir.split("/")[-1]
@@ -35,7 +35,7 @@ def load_from_gcs(output_dir: str, file_name: str):
     global storage_client
 
     if not storage_client:
-        storage_client = storage.client()
+        storage_client = storage.Client()
     output_bucket = storage_client.get_bucket("pandl_1")
     dir = output_dir.split("/")[-1]
     model_blob = output_bucket.get_blob(f"out/{dir}/{file_name}")
