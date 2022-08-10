@@ -13,19 +13,19 @@ import itertools
 import logging
 import os
 import time
-import torch
 from collections import defaultdict
 
+import torch
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data.dataloader import DataLoader
 
 from augment import generate_sentences_by_shuffle_within_segments, generate_sentences_by_replace_mention, \
     generate_sentences_by_replace_token, generate_sentences_by_synonym_replacement
+from augment_bert import augment_sentence_wt_lm
 from augment_clu import generate_sentences_by_grammar
 from augment_clu_synthetict import generate_sentences_by_synthetic_tree
-from augment_bert import augment_sentence_wt_lm
 from data import get_spans
-from file_utils import load_from_local, save_to_local
+from file_utils import load_from_gcs, save_to_gcs
 
 logger = logging.getLogger(__name__)
 
@@ -159,9 +159,9 @@ def final_test(args, encoder, mlp, crf, test_data, name):
     # encoder.load_state_dict(torch.load(os.path.join(args.output_dir, "encoder.pt")))
     # mlp.load_state_dict(torch.load(os.path.join(args.output_dir, "mlp.pt")))
     # crf.load_state_dict(torch.load(os.path.join(args.output_dir, "crf.pt")))
-    encoder.load_state_dict(load_from_local(args.output_dir, "encoder.pt"))
-    mlp.load_state_dict(load_from_local(args.output_dir, "mlp.pt"))
-    crf.load_state_dict(load_from_local(args.output_dir, "crf.pt"))
+    encoder.load_state_dict(load_from_gcs(args.output_dir, "encoder.pt"))
+    mlp.load_state_dict(load_from_gcs(args.output_dir, "mlp.pt"))
+    crf.load_state_dict(load_from_gcs(args.output_dir, "crf.pt"))
     data_loader = DataLoader(test_data, batch_size=args.eval_bs, collate_fn=list)
     test_score = evaluate(encoder, mlp, crf, data_loader, os.path.join(args.output_dir, "%s.tsv" % name), True)
     return test_score.to_dict()
@@ -295,9 +295,9 @@ def train(args, encoder, mlp, crf, train_data, dev_data, category2mentions, labe
             # torch.save(encoder.state_dict(), os.path.join(args.output_dir, "encoder.pt"))
             # torch.save(mlp.state_dict(), os.path.join(args.output_dir, "mlp.pt"))
             # torch.save(crf.state_dict(), os.path.join(args.output_dir, "crf.pt"))
-            save_to_local(encoder.state_dict(), args.output_dir, "encoder.pt")
-            save_to_local(mlp.state_dict(), args.output_dir, "mlp.pt")
-            save_to_local(crf.state_dict(), args.output_dir, "crf.pt")
+            save_to_gcs(encoder.state_dict(), args.output_dir, "encoder.pt")
+            save_to_gcs(mlp.state_dict(), args.output_dir, "mlp.pt")
+            save_to_gcs(crf.state_dict(), args.output_dir, "crf.pt")
         else:
             logger.info(f"No improvement since last {epoch - args.result['best_epoch']} epochs, "
                         f"best score is {scheduler.best}")

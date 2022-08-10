@@ -19,6 +19,7 @@ export OUTPUT_FILE="${DATA_SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${RE
 export OUTPUT_DIR="/home/u26/ariesutiono/da-coling2020-run/out/${OUTPUT_FILE}"
 mkdir -p ${OUTPUT_DIR}
 echo "storing output of models at ${OUTPUT_DIR}"
+export GOOGLE_APPLICATION_CREDENTIALS=/home/u26/ariesutiono/ua-hlt-4df52347e779.jsonng2020
 
 
 module load anaconda/2020
