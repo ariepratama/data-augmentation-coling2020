@@ -5,14 +5,21 @@ Copyright (c) 2020 - for information on the respective copyright owner see the N
 SPDX-License-Identifier: Apache-2.0
 """
 
-import argparse, json, logging, numpy, os, random, sys, torch
+import argparse
+import json
+import logging
+import numpy
+import os
+import random
+import sys
+import torch
 
-from data import ConllCorpus
-from train import train, final_test
-from models import TransformerEncoder, LinearCRF, MLP
 from augment import get_category2mentions, get_label2tokens, get_idx2sentence
 from augment_clu import corpus_to_trees
-
+from data import ConllCorpus
+from file_utils import save_log_to_gcs
+from models import TransformerEncoder, LinearCRF, MLP
+from train import train, final_test
 
 logger = logging.getLogger(__name__)
 
@@ -114,10 +121,14 @@ if __name__ == "__main__":
     encoder = TransformerEncoder(args, device)
     mlp = MLP(encoder.output_dim, len(tag_dict), encoder.output_dim, 1).to(device)
     crf = LinearCRF(tag_dict, device)
-    dev_scores = train(args, encoder, mlp, crf, corpus.train, corpus.dev, category2mentions, label2tokens, idx2sentence, train_corpus_trees)
+    dev_scores = train(args, encoder, mlp, crf, corpus.train, corpus.dev, category2mentions, label2tokens, idx2sentence,
+                       train_corpus_trees)
 
     args.result["dev_result"] = final_test(args, encoder, mlp, crf, corpus.dev, "dev")
     args.result["test_result"] = final_test(args, encoder, mlp, crf, corpus.test, "test")
 
     with open(args.result_filepath, "w") as f:
         json.dump(vars(args), f, indent=4)
+
+    save_log_to_gcs(args.log_filepath)
+    os.remove(args.log_filepath)
