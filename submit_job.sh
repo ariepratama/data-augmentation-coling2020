@@ -16,7 +16,7 @@ export RESULT_DIR=/home/u26/ariesutiono/da-coling2020-run/result-logs
 export NAME_SUFFIX="${SIZE}-${AUGMENTATION}-${NUM_GENERATED_SENTENCES}-${REPLACED_NON_TERMINAL}-${N_REPLACED_NON_TERMINAL}-${RANDOM_SEED}-${RUN_DATETIME}"
 
 sbatch --job-name=da-coling2020-${NAME_SUFFIX} \
---output=${LOG_DIR}/${NAME_SUFFIX}.sbatch.log \
+--output=/tmp/${NAME_SUFFIX}.sbatch.log \
 --time=${TIME} \
 --partition=standard \
 --account=clu-ling \
