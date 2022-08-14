@@ -31,7 +31,7 @@ echo "running main script..."
 python main.py \
 --data_folder ${DATA_DIR}/${DATA_SIZE}-sent \
 --embedding_type bert \
---pretrained_dir allenai/scibert_scivocab_cased \
+--pretrained_dir ${PRETRAINED_DIR} \
 --result_filepath ${RESULT_DIR}/sent-${OUTPUT_FILE}.log \
 --augmentation ${AUGMENTATION} \
 --replaced_non_terminal ${REPLACED_NON_TERMINAL} \
