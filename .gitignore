@@ -3,4 +3,7 @@ logs/
 *.log
 __pycache__/
 _trial_temp/
-notebooks/
+notebooks/data/
+*Untitled.ipynb
+*.ipynb_checkpoints
+.DS_Store
